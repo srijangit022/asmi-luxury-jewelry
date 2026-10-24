@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sms-1792754079572-519",
+    "recipient": "+91 89106 10231",
+    "phoneCleaned": "8910610231",
+    "timestamp": "2026-10-23T11:14:39.572Z",
+    "formattedTime": "23/10/2026, 4:44:39 pm",
+    "provider": "fast2sms",
+    "status": "gateway_not_configured",
+    "notes": "No active SMS Gateway API key (Fast2SMS or Twilio) configured in Store Settings."
+  },
+  {
+    "id": "sms-1792753870986-58",
+    "recipient": "+91 90733 66465",
+    "phoneCleaned": "9073366465",
+    "timestamp": "2026-10-23T11:11:10.986Z",
+    "formattedTime": "23/10/2026, 4:41:10 pm",
+    "provider": "fast2sms",
+    "status": "routed_to_patron_email",
+    "notes": "Routed to linked patron email rajcertificate2005@gmail.com because SMS gateway is pending configuration."
+  },
+  {
+    "id": "sms-1792753735279-667",
+    "recipient": "+91 99999 88888",
+    "phoneCleaned": "9999988888",
+    "timestamp": "2026-10-23T11:08:55.279Z",
+    "formattedTime": "23/10/2026, 4:38:55 pm",
+    "provider": "fast2sms",
+    "status": "gateway_not_configured",
+    "notes": "No active SMS Gateway API key (Fast2SMS or Twilio) configured in Store Settings."
+  },
+  {
+    "id": "sms-1792753720969-391",
+    "recipient": "+91 90733 66465",
+    "phoneCleaned": "9073366465",
+    "timestamp": "2026-10-23T11:08:40.969Z",
+    "formattedTime": "23/10/2026, 4:38:40 pm",
+    "provider": "fast2sms",
+    "status": "routed_to_patron_email",
+    "notes": "Routed to linked patron email rajcertificate2005@gmail.com because SMS gateway is pending configuration."
+  }
+]

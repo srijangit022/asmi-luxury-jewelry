@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <!-- 8-Pointed Royal Star Motif -->
+    <path id="star8" d="M 0,-18 L 4,-6 L 16,-6 L 7,2 L 11,14 L 0,7 L -11,14 L -7,2 L -16,-6 L -4,-6 Z" 
+          fill="rgba(212, 175, 55, 0.18)" stroke="#E5C158" stroke-width="1.3" stroke-linejoin="round" />
+    
+    <!-- Fine Diamond Floret -->
+    <path id="floret" d="M 0,-8 L 8,0 L 0,8 L -8,0 Z" 
+          fill="rgba(245, 222, 147, 0.22)" stroke="#F5DE93" stroke-width="1.1" />
+    
+    <!-- Glowing Gem Node -->
+    <circle id="gem" cx="0" cy="0" r="2.5" fill="#FFE28A" />
+    <circle id="gemGlow" cx="0" cy="0" r="4.5" fill="rgba(212, 175, 55, 0.25)" />
+  </defs>
+
+  <g stroke="#D4AF37" fill="none">
+    <!-- Diagonal Trellis Lattice Lines (Bold 22K Gold Filigree) -->
+    <line x1="0" y1="0" x2="120" y2="120" stroke="#D4AF37" stroke-width="1.0" stroke-dasharray="6,4" opacity="0.8" />
+    <line x1="120" y1="0" x2="0" y2="120" stroke="#D4AF37" stroke-width="1.0" stroke-dasharray="6,4" opacity="0.8" />
+    
+    <!-- Primary Diamond Cartouche Borders -->
+    <line x1="60" y1="0" x2="120" y2="60" stroke="#E5C158" stroke-width="1.3" opacity="0.95" />
+    <line x1="120" y1="60" x2="60" y2="120" stroke="#E5C158" stroke-width="1.3" opacity="0.95" />
+    <line x1="60" y1="120" x2="0" y2="60" stroke="#E5C158" stroke-width="1.3" opacity="0.95" />
+    <line x1="0" y1="60" x2="60" y2="0" stroke="#E5C158" stroke-width="1.3" opacity="0.95" />
+
+    <!-- Secondary Diamond Cartouche Frames (Inner Royal Concentric Lattice) -->
+    <rect x="30" y="30" width="60" height="60" transform="rotate(45 60 60)" stroke="#F5DE93" stroke-width="1.1" opacity="0.85" />
+    <rect x="42" y="42" width="36" height="36" transform="rotate(45 60 60)" stroke="#D4AF37" stroke-width="0.9" stroke-dasharray="4,3" opacity="0.75" />
+
+    <!-- Center 8-Pointed Royal Star & Sunburst Medallion -->
+    <g transform="translate(60, 60)">
+      <use href="#star8" />
+      <circle cx="0" cy="0" r="6" stroke="#F5DE93" stroke-width="1.0" />
+      <use href="#gemGlow" />
+      <use href="#gem" />
+    </g>
+
+    <!-- Corner Star Quarters (100% Seamless Continuous Repeat) -->
+    <g transform="translate(0, 0)">
+      <use href="#star8" />
+      <circle cx="0" cy="0" r="6" stroke="#F5DE93" stroke-width="1.0" />
+      <use href="#gemGlow" />
+      <use href="#gem" />
+    </g>
+    <g transform="translate(120, 0)">
+      <use href="#star8" />
+      <circle cx="0" cy="0" r="6" stroke="#F5DE93" stroke-width="1.0" />
+      <use href="#gemGlow" />
+      <use href="#gem" />
+    </g>
+    <g transform="translate(0, 120)">
+      <use href="#star8" />
+      <circle cx="0" cy="0" r="6" stroke="#F5DE93" stroke-width="1.0" />
+      <use href="#gemGlow" />
+      <use href="#gem" />
+    </g>
+    <g transform="translate(120, 120)">
+      <use href="#star8" />
+      <circle cx="0" cy="0" r="6" stroke="#F5DE93" stroke-width="1.0" />
+      <use href="#gemGlow" />
+      <use href="#gem" />
+    </g>
+
+    <!-- Edge Midpoint Florets & Kundan Nodes -->
+    <g transform="translate(60, 0)"><use href="#floret" /><use href="#gem" /></g>
+    <g transform="translate(120, 60)"><use href="#floret" /><use href="#gem" /></g>
+    <g transform="translate(60, 120)"><use href="#floret" /><use href="#gem" /></g>
+    <g transform="translate(0, 60)"><use href="#floret" /><use href="#gem" /></g>
+  </g>
+</svg>

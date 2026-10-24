@@ -1,0 +1,41 @@
+[
+  {
+    "id": "rev-001",
+    "productId": "asmi-custom-1791976015427",
+    "productName": "Wine Royal Fresh Water Pearl with AD",
+    "reviewerName": "Meera Singhania",
+    "city": "Mumbai, Maharashtra",
+    "rating": 5,
+    "date": "14 Sep 2026",
+    "title": "Breathtaking Lustre & Royal Craftsmanship!",
+    "comment": "The Wine Royal Fresh Water Pearl set was the highlight of my wedding reception. The deep wine luster and silky drape in person are divine. The IGL certificate and luxury velvet box made the unboxing feel like royalty.",
+    "verified": true,
+    "photo": "assets/images/prod-asmi-custom-1791976015427-1792741714178-5r87t.png"
+  },
+  {
+    "id": "rev-003",
+    "productId": "asmi-st-001",
+    "productName": "Floral Diamond Brooch & Choker Pendant",
+    "reviewerName": "Rhea Kapoor",
+    "city": "New Delhi",
+    "rating": 5,
+    "date": "04 Sep 2026",
+    "title": "My Favorite Statement Jewel",
+    "comment": "The 2-in-1 brooch and necklace centerpiece is pure perfection. The micro-set VVS stones sparkle brilliantly in any light. Everyone at the gala was inquiring where I acquired it.",
+    "verified": true,
+    "photo": "assets/images/diamond-brooch.png"
+  },
+  {
+    "id": "rev-004",
+    "productId": "asmi-em-003",
+    "productName": "The Sitara Emerald & Button Pearl Choker",
+    "reviewerName": "Dr. Priya Sharma",
+    "city": "Kolkata, West Bengal",
+    "rating": 5,
+    "date": "28 Aug 2026",
+    "title": "True Royal Heritage Craftsmanship",
+    "comment": "The emerald-cut stones and delicate natural button pearl hangings are breathtaking. The 22K gold lattice is so comfortable against the skin. Worth every single rupee.",
+    "verified": true,
+    "photo": "assets/images/emerald-sitara.png"
+  }
+]

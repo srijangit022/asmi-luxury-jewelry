@@ -1,0 +1,22 @@
+{
+  "name": "asmi-luxury-jewelry",
+  "version": "1.0.0",
+  "description": "ASMI Haute Joaillerie Luxury E-Commerce & WordPress Theme with Persistent Local & Cloud Sync Engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "jewelry",
+    "luxury",
+    "ecommerce",
+    "wordpress-theme",
+    "woocommerce"
+  ],
+  "author": "ASMI Haute Joaillerie Atelier",
+  "license": "Proprietary",
+  "dependencies": {
+    "nodemailer": "^10.0.13"
+  }
+}

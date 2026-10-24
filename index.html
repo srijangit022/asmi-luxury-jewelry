@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"/>
+  <meta name="theme-color" content="#070707" id="metaThemeColor"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <title>ASMI's Collection | Luxury Pearls, Emeralds & Fine Handcrafted Jewelry</title>
+  <meta name="description" content="Explore ASMI's Collection of luxury handcrafted jewelry, glowing South Sea pearls, rich green emeralds, and sparkling American diamonds."/>
+  <meta name="keywords" content="luxury jewelry, basra pearls, emerald choker, bis hallmark, diamonds, royal kundan, 22k gold, handcrafted necklaces"/>
+  <meta name="author" content="ASMI Haute Joaillerie Atelier"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://asmijewelry.com/"/>
+
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:title" content="ASMI's Collection | Luxury Pearls, Emeralds & Fine Handcrafted Jewelry"/>
+  <meta property="og:description" content="Explore ASMI's Collection of luxury handcrafted jewelry, glowing South Sea pearls, rich green emeralds, and sparkling American diamonds."/>
+  <meta property="og:image" content="assets/images/hero-pearl-model.jpg"/>
+  <meta property="og:url" content="https://asmijewelry.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ASMI's Collection"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="ASMI's Collection | Luxury Pearls, Emeralds & Fine Handcrafted Jewelry"/>
+  <meta name="twitter:description" content="Explore ASMI's Collection of luxury handcrafted jewelry, glowing South Sea pearls, rich green emeralds, and sparkling American diamonds."/>
+  <meta name="twitter:image" content="assets/images/hero-pearl-model.jpg"/>
+  
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Custom Design System CSS -->
+  <link rel="stylesheet" href="css/styles.css?v=9.0.0"/>
+  <script>
+    (function() {
+      try {
+        var s = JSON.parse(localStorage.getItem("asmi_site_settings") || "null");
+        if (!s) {
+          try {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "data/settings.json?_t=" + Date.now(), false);
+            xhr.send(null);
+            if (xhr.status === 200 || xhr.status === 0) {
+              s = JSON.parse(xhr.responseText);
+              try { localStorage.setItem("asmi_site_settings", xhr.responseText); } catch(e) {}
+            }
+          } catch (err) {}
+        }
+        if (s && s.announcementActive === false) {
+          document.documentElement.classList.add("hide-announcement");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SPARKLING DIAMOND STARS BACKGROUND
+       ========================================================================== -->
+  <div class="luxury-bg-canvas-wrapper" id="luxuryBgWrapper" aria-hidden="true">
+    <canvas id="luxuryBgCanvas"></canvas>
+    <div class="luxury-bg-vignette"></div>
+  </div>
+
+  <!-- Top Announcement Ribbon Bar -->
+  <div id="siteAnnouncementBanner" class="announcement-ribbon">
+    <span id="announcementBannerText">✦ COMPLIMENTARY INSURED ARMORED DELIVERY &amp; BIS 916 HALLMARK CERTIFICATION ACROSS INDIA ✦</span>
+  </div>
+  <script>
+    (function() {
+      try {
+        var s = JSON.parse(localStorage.getItem("asmi_site_settings") || "null");
+        var banner = document.getElementById("siteAnnouncementBanner");
+        var textEl = document.getElementById("announcementBannerText");
+        if (s) {
+          if (s.announcementActive === false && banner) {
+            banner.style.display = "none";
+            banner.classList.add("hidden-ribbon");
+          } else if (s.announcementActive === true && banner) {
+            banner.style.display = "block";
+            banner.classList.remove("hidden-ribbon");
+          }
+          if (typeof s.announcementText === "string" && textEl) {
+            textEl.textContent = s.announcementText;
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- ==========================================================================
+       MAIN NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      
+      <!-- Left: 3-Line Menu Trigger & Brand Logo -->
+      <div class="nav-left-group">
+        <!-- Three-line Menu Button -->
+        <button class="side-menu-trigger" onclick="openSideMenu()" title="Open Navigation Menu" aria-label="Open Navigation Menu">
+          <span class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </span>
+          <span class="label-caps" style="font-size: 0.6875rem; letter-spacing: 0.12em;">Menu</span>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="#" class="brand-logo">
+          <span class="brand-logo-text">
+            ASMI'S <span style="font-style: italic; color: var(--gold-primary); font-weight: 300;">Collection</span>
+          </span>
+          <span class="brand-logo-sub">
+            Fine Pearls &amp; Handcrafted Jewelry
+          </span>
+        </a>
+      </div>
+
+      <!-- Center: VIP Concierge & AI Jewelry Concierge Calling Options -->
+      <div class="nav-center-group" style="display: flex; align-items: center; gap: 0.6rem;">
+        <a href="tel:+919876543210" class="nav-phone-pill" id="navPhoneLink" title="Call VIP Concierge Support">
+          <i class="fa-solid fa-phone"></i>
+          <span class="phone-text" id="navPhoneText">+91 98765 43210</span>
+        </a>
+        <a href="javascript:void(0)" onclick="supportManager.openSupportModal('ai')" class="nav-phone-pill nav-ai-concierge-pill" id="navAiConciergeHeaderPill" title="AI Jewelry Concierge - 24/7 Fine Jewelry Guidance">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span class="phone-text">AI Jewelry Concierge</span>
+        </a>
+      </div>
+
+      <!-- Right: Currency, Dark/Light Mode, Search, Wishlist, Bag, Book Call -->
+      <div class="nav-actions">
+        <!-- Multi-Currency Switcher (INR / USD) -->
+        <div class="nav-currency-pill" title="Select Store Currency (INR / USD)">
+          <i class="fa-solid fa-globe" style="font-size: 0.72rem; color: var(--gold-primary); margin-right: 0.2rem;"></i>
+          <select id="currencySelector" onchange="setCurrency(this.value)" class="currency-select-input" style="background: transparent; border: none; color: var(--gold-primary); font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none;">
+            <option value="INR" style="background: var(--bg-surface); color: var(--text-primary);">₹ INR</option>
+            <option value="USD" style="background: var(--bg-surface); color: var(--text-primary);">$ USD</option>
+          </select>
+        </div>
+
+        <!-- Dark / Light Mode Switcher Pill -->
+        <button class="nav-theme-btn" id="headerThemeToggle" onclick="toggleTheme()" title="Switch between Dark (Noir) and Light (Ivoire) Modes" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon theme-icon"></i>
+          <span class="theme-label">Dark Mode</span>
+        </button>
+
+        <!-- Search Bar Button -->
+        <button onclick="toggleSearchBar()" class="nav-icon-btn" title="Search Luxury Jewelry (Press Ctrl+K or /)" aria-label="Search Jewelry">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Wishlist Button -->
+        <button onclick="openWishlistDrawer()" class="nav-icon-btn" title="Saved Favorites" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count-badge" style="position: absolute; top: -4px; right: -4px; background: var(--ruby-primary); color: #fff; font-size: 0.625rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50% !important; display: none; align-items: center; justify-content: center; border: 1px solid var(--bg-primary);">0</span>
+        </button>
+
+        <!-- Shopping Bag Button -->
+        <button onclick="openCartDrawer()" class="nav-icon-btn" title="Shopping Bag" aria-label="Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge" style="position: absolute; top: -4px; right: -4px; background: var(--gold-primary); color: #070707; font-size: 0.625rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50% !important; display: none; align-items: center; justify-content: center; border: 1px solid var(--bg-primary);">0</span>
+        </button>
+
+        <!-- My Orders & Tracking Button -->
+        <button onclick="ordersManager.openOrdersModal()" class="nav-icon-btn" title="My Orders &amp; Package Tracking" aria-label="My Orders">
+          <i class="fa-solid fa-truck-fast"></i>
+        </button>
+
+        <!-- AI Jewelry Concierge Button -->
+        <button onclick="supportManager.openSupportModal('ai')" class="nav-icon-btn nav-ai-concierge-btn" id="navAiConciergeBtn" title="AI Jewelry Concierge (24/7 Intelligent Fine Jewelry Assistant)" aria-label="AI Jewelry Concierge">
+          <span class="nav-ai-icon-box">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span class="ai-micro-tag">AI</span>
+          </span>
+        </button>
+
+        <!-- Patron Account / Sign In Pill -->
+        <button class="nav-auth-btn" id="navAuthBtn" onclick="authManager.handleNavAuthClick()" title="Patron Login / VIP Portal" aria-label="Patron Account">
+          <i class="fa-solid fa-user" id="navAuthIcon"></i>
+          <span class="nav-auth-text" id="navAuthText">Sign In / VIP</span>
+        </button>
+
+        <!-- Book Consultation Action -->
+        <a href="#consultationSection" class="btn-primary" style="padding: 0.55rem 1.15rem; font-size: 0.6875rem; white-space: nowrap;">
+          Book Call
+        </a>
+      </div>
+    </div>
+
+    <!-- Interactive Search Bar Popdown -->
+    <div id="searchDropdown" class="search-popdown-bar">
+      <div class="search-popdown-inner">
+        <form onsubmit="handleSearchSubmit(event)" style="display: flex; align-items: center; gap: 0.85rem; width: 100%;">
+          <i class="fa-solid fa-magnifying-glass" style="color: var(--gold-primary); font-size: 1.1rem; flex-shrink: 0;"></i>
+          <input type="text" id="searchInputMain" class="search-input-field" placeholder="Search by gemstone, pearl necklace, green emerald ring, choker set, diamond earrings..." autocomplete="off"/>
+          <button type="button" id="clearSearchBtn" onclick="clearSearch()" style="background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 0.3rem; font-size: 0.9rem;" title="Clear Search">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+          <button type="submit" class="btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.75rem; white-space: nowrap;">
+            Search Catalog
+          </button>
+          <button type="button" onclick="closeSearchBar()" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.25rem; padding: 0.35rem;" title="Close Search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </form>
+        
+        <!-- Popular Quick Search Suggestions -->
+        <div class="search-suggestions-row">
+          <span class="label-micro" style="color: var(--gold-primary);">Popular Searches:</span>
+          <button type="button" class="search-tag-pill" onclick="quickSearch('pearl')">Glowing Pearls</button>
+          <button type="button" class="search-tag-pill" onclick="quickSearch('emerald')">Green Emeralds</button>
+          <button type="button" class="search-tag-pill" onclick="quickSearch('diamond')">Diamonds</button>
+          <button type="button" class="search-tag-pill" onclick="quickSearch('ring')">Solitaire Rings</button>
+          <button type="button" class="search-tag-pill" onclick="quickSearch('choker')">Choker Sets</button>
+          <button type="button" class="search-tag-pill" onclick="quickSearch('polki')">Royal Polki Kundan</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO - LUXURY DARK MONOCHROME & GOLD ATELIER SHOWCASE
+       ========================================================================== -->
+  <section class="hero-diagonal-section unzipped" id="heroSection">
+    
+    <!-- Left: Black Section (Typography & Luxury Writings) -->
+    <div class="hero-black-pane">
+      <div class="hero-black-content">
+        
+        <!-- Luxury Badge -->
+        <div class="hero-black-badge">
+          <span class="dot"></span>
+          <span class="label-caps" id="heroBadgeText" style="color: var(--gold-primary); font-size: 0.6875rem; letter-spacing: 0.16em;">New Haute Joaillerie 2025</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-black-title">
+          <span id="heroTitleTop">Discover Handcrafted</span> <br/>
+          <span class="gold-gradient-text" id="heroTitleHighlight" style="font-style: italic; font-weight: 400;">Luxury &amp; Elegance</span>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="hero-black-desc" id="heroDescription">
+          A breathtaking collection of glowing Basra pearls, royal Colombian emeralds, and sparkling uncut diamonds — crafted with love for timeless royal elegance.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-black-actions">
+          <a href="#vaultSection" class="btn-primary" id="heroCtaPrimaryLink" onclick="filterByCategory('pearls'); document.getElementById('vaultSection').scrollIntoView({behavior: 'smooth'});">
+            <span id="heroCtaPrimaryText">Explore Pearl Sets</span>
+          </a>
+          <a href="#vaultSection" class="btn-hero-white" id="heroCtaSecondaryLink" onclick="document.getElementById('vaultSection').scrollIntoView({behavior: 'smooth'});">
+            <i class="fa-solid fa-gem text-xs"></i>
+            <span id="heroCtaSecondaryText">Curated Vault</span>
+          </a>
+        </div>
+
+        <!-- Spec Trust Counters -->
+        <div class="hero-black-stats">
+          <div>
+            <p class="hero-stat-value" id="heroStat1Value">Grade AAA</p>
+            <p class="hero-stat-label" id="heroStat1Label">Natural Luster Pearls</p>
+          </div>
+          <div>
+            <p class="hero-stat-value" id="heroStat2Value">VVS1 Sparkle</p>
+            <p class="hero-stat-label" id="heroStat2Label">Certified Gemstones</p>
+          </div>
+          <div>
+            <p class="hero-stat-value" id="heroStat3Value">Pure 22K</p>
+            <p class="hero-stat-label" id="heroStat3Label">BIS Hallmark Gold</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right: White Section with Model (Model has black background inside frame) -->
+    <div class="hero-white-pane">
+      <div class="hero-model-showcase">
+        
+        <div class="hero-model-frame">
+          <img src="assets/images/hero-pearl-model.jpg" fetchpriority="high" decoding="async" alt="Indian royal model wearing handcrafted glowing multi-strand pearl jewelry set" class="hero-model-img" id="heroModelImg"/>
+        </div>
+
+        <!-- Masterpiece Showcase Card (Positioned outside the image frame) -->
+        <div class="hero-floating-card">
+          <div style="min-width: 0; display: flex; flex-direction: column; gap: 2px;">
+            <span class="label-micro" id="heroFloatingSubtitle" style="color: var(--gold-primary); letter-spacing: 0.12em; font-size: 0.65rem; line-height: 1; display: block;">Asmi's Limited Collection</span>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <h3 id="heroFloatingTitle" style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-primary); margin: 0; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;">Wine Royal Fresh Water Pearl with AD</h3>
+              <p id="heroFloatingPrice" style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--gold-primary); font-weight: 700; margin: 0; line-height: 1.25; white-space: nowrap;">₹2,340</p>
+            </div>
+          </div>
+          <button class="btn-primary" id="heroFloatingBtn" style="padding: 0.45rem 1rem; font-size: 0.7rem; white-space: nowrap; flex-shrink: 0;" onclick="acquireHeroSet()">
+            <span id="heroFloatingBtnText">Acquire Set</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         AUTHENTIC 3D JACKET UNZIPPING OVERLAY & METALLIC CHAIN
+         ========================================================================== -->
+    <div class="fat-zipper-overlay" id="fatZipperOverlay">
+      
+      <!-- 3D Perspective Stage -->
+      <div class="jacket-3d-stage">
+        
+        <!-- Left Jacket Panel (Foldable Lapel & Leather Shell) -->
+        <div class="jacket-panel jacket-panel-left" id="jacketFlapLeft" onclick="openHeroZipper()">
+          <!-- Outer Leather Shell -->
+          <div class="jacket-shell">
+            <div class="jacket-leather-texture"></div>
+            <div class="jacket-stitch-line stitch-left"></div>
+            <div class="jacket-lapel-emboss">
+              <span class="brand-monogram">ASMI</span>
+              <span class="brand-tagline">Haute Joaillerie Atelier</span>
+            </div>
+          </div>
+
+          <!-- Left Zipper Tape & Chunky Silver Teeth -->
+          <div class="zipper-tape-edge zipper-tape-left">
+            <div class="zipper-top-stop left-stop"></div>
+            <div class="zipper-chunky-teeth teeth-left"></div>
+          </div>
+
+          <!-- Dynamic Cloth Fold Shadow -->
+          <div class="jacket-fold-shadow"></div>
+        </div>
+
+        <!-- Right Jacket Panel (Foldable Lapel & Leather Shell) -->
+        <div class="jacket-panel jacket-panel-right" id="jacketFlapRight" onclick="openHeroZipper()">
+          <!-- Outer Leather Shell -->
+          <div class="jacket-shell">
+            <div class="jacket-leather-texture"></div>
+            <div class="jacket-stitch-line stitch-right"></div>
+            <div class="jacket-lapel-emboss">
+              <span class="vault-seal"><i class="fa-solid fa-gem" style="color: var(--gold-primary); margin-right: 0.35rem;"></i> ROYAL VAULT</span>
+              <span class="brand-tagline">Fine Pearls &amp; Emeralds</span>
+            </div>
+          </div>
+
+          <!-- Right Zipper Tape & Chunky Silver Teeth -->
+          <div class="zipper-tape-edge zipper-tape-right">
+            <div class="zipper-top-stop right-stop"></div>
+            <div class="zipper-chunky-teeth teeth-right"></div>
+          </div>
+
+          <!-- Dynamic Cloth Fold Shadow -->
+          <div class="jacket-fold-shadow"></div>
+        </div>
+
+      </div>
+
+      <!-- Heavy-Duty Metal Slider & Pull Tab Assembly -->
+      <div class="fat-zipper-slider-assembly" id="fatZipperSliderAssembly" onclick="toggleHeroZipper(event)" title="Click or scroll down to unzip the jacket">
+        <!-- Slider Head (Chunky Metal Casting) -->
+        <div class="zipper-slider-head">
+          <div class="slider-side-ridge left-ridge"></div>
+          <div class="slider-channel"></div>
+          <div class="slider-side-ridge right-ridge"></div>
+          <div class="slider-bridge-crown"></div>
+        </div>
+        
+        <!-- Swivel Ring Link -->
+        <div class="zipper-swivel-link"></div>
+
+        <!-- Chunky Metal Pull Tab (Exact reference from heavy jacket zip) -->
+        <div class="fat-zipper-puller">
+          <div class="puller-grip-slots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="puller-logo-text">ASMI</span>
+          <div class="puller-hole-cutout"></div>
+        </div>
+
+        <!-- Action Prompt Badge -->
+        <div class="zipper-action-badge" id="zipperActionBadge">
+          <i class="fa-solid fa-angles-down animate-bounce-custom"></i>
+          <span>Click Zip or Scroll Down to Open Jacket</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Re-Zip Floating Button (Visible when unzipped) -->
+    <button class="hero-rezip-btn" id="heroRezipBtn" onclick="toggleHeroZipper(event)" title="Zip Up Jacket">
+      <i class="fa-solid fa-lock"></i>
+      <span>Zip Up Jacket</span>
+    </button>
+
+  </section>
+
+
+
+  <!-- ==========================================================================
+       THE IMPERIAL JEWELRY VAULT (CATALOG & FILTERS)
+       ========================================================================== -->
+  <section class="vault-section" id="vaultSection">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      
+      <!-- Catalog Header & Controls -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
+        <div>
+          <span class="label-caps" id="catalogBadgeText" style="color: var(--gold-primary); display: block; margin-bottom: 0.35rem;">Curated Collections</span>
+          <h2 id="catalogHeading" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-primary);">
+            Explore Our Luxury Jewelry
+          </h2>
+          <p id="catalogSubtitle" style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem;">
+            Displaying all handcrafted pieces
+          </p>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="category-filter-row" style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+          <button class="filter-pill active" data-category="all">All Jewelry</button>
+          <button class="filter-pill" data-category="pearls">Glowing Pearls</button>
+          <button class="filter-pill" data-category="emeralds">Green Emeralds</button>
+          <button class="filter-pill" data-category="stones">Sparkling Diamonds</button>
+          <button class="filter-pill" data-category="polki">Royal Kundan</button>
+        </div>
+
+        <!-- Sort Select & Catalogue PDF Export -->
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <label class="label-micro" style="color: var(--text-muted);">Sort By:</label>
+            <select id="sortSelector" style="background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.4rem 0.75rem; font-size: 0.75rem; cursor: pointer;">
+              <option value="coveted">Most Popular</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="newest">Newest Designs</option>
+            </select>
+          </div>
+          <button type="button" onclick="exportStorefrontCataloguePDF()" class="btn-secondary" style="font-size: 0.72rem; padding: 0.42rem 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; border: 1px solid var(--gold-primary); color: var(--gold-primary); background: rgba(212, 175, 55, 0.08); font-weight: 600; cursor: pointer;" title="Download High-Resolution Jewelry Catalog (PDF)">
+            <i class="fa-solid fa-file-pdf"></i> Download Catalogue (PDF)
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;" id="vaultProductsGrid">
+        <!-- Injected via app.js -->
+      </div>
+
+      <!-- Bespoke Commission Banner -->
+      <div style="background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--bg-surface) 50%, var(--bg-secondary) 100%); border: 1px solid var(--border-color); padding: 2.5rem; margin-top: 4rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
+        <div>
+          <h3 id="catalogBespokeTitle" style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--text-primary);">Looking for Custom Wedding Jewelry?</h3>
+          <p id="catalogBespokeDesc" style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.25rem;">Our master jewelers create customized bridal necklaces with natural pearls and certified emeralds tailored to your vision.</p>
+        </div>
+        <a href="#consultationSection" id="catalogBespokeBtnText" class="btn-primary">
+          Book Design Session
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDITORIAL HIGH-FASHION CAMPAIGN (LOOKBOOK)
+       ========================================================================== -->
+  <section class="editorial-section" id="editorialSection">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 3.5rem auto;">
+        <span class="label-caps" id="editorialBadge" style="color: var(--gold-primary); display: block; margin-bottom: 0.35rem;">Style Lookbook</span>
+        <h2 id="editorialHeading" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-primary);">
+          Worn by Modern Icons
+        </h2>
+        <p id="editorialQuote" style="font-style: italic; font-family: var(--font-serif); color: var(--text-secondary); margin-top: 0.5rem; font-size: 1.05rem;">
+          "Timeless royal charm crafted for the modern woman."
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+        
+        <!-- Editorial Muse 1 - Pearl Cascade -->
+        <div class="editorial-card">
+          <img src="assets/images/hero-pearl-model.jpg" id="lookbook1Img" loading="lazy" decoding="async" alt="Indian royal model wearing glowing natural pearl set" class="editorial-img"/>
+          
+          <!-- Hotspot 1 -->
+          <div class="hotspot-pin" style="top: 55%; left: 48%;">
+            <div class="hotspot-dot">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="hotspot-card-popover">
+              <span class="label-micro" style="color: var(--gold-primary);">Featured Look</span>
+              <h4 id="lookbook1PieceName" style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--text-primary); margin: 2px 0;">Wine Royal Fresh Water Pearl with AD</h4>
+              <p id="lookbook1Price" style="font-family: var(--font-serif); color: var(--gold-primary); font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">₹2,340</p>
+              <button class="btn-primary" style="padding: 0.35rem 0.75rem; font-size: 0.6rem; width: 100%;" onclick="quickAddLookbook(1)">
+                Get The Look
+              </button>
+            </div>
+          </div>
+
+          <div style="position: absolute; bottom: 0; inset-x: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%); padding: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <span class="label-micro" id="lookbook1Style" style="color: var(--gold-primary);">Style 01</span>
+              <p id="lookbook1Title" style="font-family: var(--font-serif); font-size: 1.2rem; color: #FFFFFF;">The Royal Pearl Cascade</p>
+            </div>
+            <button class="btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.65rem;" onclick="openLookbookQuickView(1)">
+              View Piece
+            </button>
+          </div>
+        </div>
+
+        <!-- Editorial Muse 2 - Colombian Emerald -->
+        <div class="editorial-card">
+          <img src="assets/images/muse-emerald-model.jpg" id="lookbook2Img" loading="lazy" decoding="async" alt="Indian bride wearing Colombian green emerald and diamond choker set" class="editorial-img"/>
+          
+          <!-- Hotspot 2 -->
+          <div class="hotspot-pin" style="top: 52%; left: 50%;">
+            <div class="hotspot-dot">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="hotspot-card-popover">
+              <span class="label-micro" style="color: var(--gold-primary);">Masterpiece</span>
+              <h4 id="lookbook2PieceName" style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--text-primary); margin: 2px 0;">Imperial Emerald Choker</h4>
+              <p id="lookbook2Price" style="font-family: var(--font-serif); color: var(--gold-primary); font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">₹8,999</p>
+              <button class="btn-primary" style="padding: 0.35rem 0.75rem; font-size: 0.6rem; width: 100%;" onclick="quickAddLookbook(2)">
+                Get The Look
+              </button>
+            </div>
+          </div>
+
+          <div style="position: absolute; bottom: 0; inset-x: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%); padding: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <span class="label-micro" id="lookbook2Style" style="color: var(--gold-primary);">Style 02</span>
+              <p id="lookbook2Title" style="font-family: var(--font-serif); font-size: 1.2rem; color: #FFFFFF;">Imperial Green Emerald</p>
+            </div>
+            <button class="btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.65rem;" onclick="openLookbookQuickView(2)">
+              View Piece
+            </button>
+          </div>
+        </div>
+
+        <!-- Editorial Muse 3 - Ruby & Polki Kundan -->
+        <div class="editorial-card">
+          <img src="assets/images/muse-polki-model.jpg" id="lookbook3Img" loading="lazy" decoding="async" alt="Indian royal muse wearing Burmese ruby and uncut diamond Polki choker set" class="editorial-img"/>
+          
+          <!-- Hotspot 3 -->
+          <div class="hotspot-pin" style="top: 50%; left: 50%;">
+            <div class="hotspot-dot">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="hotspot-card-popover">
+              <span class="label-micro" style="color: var(--gold-primary);">Royal Bridal</span>
+              <h4 id="lookbook3PieceName" style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--text-primary); margin: 2px 0;">The Sitara Emerald &amp; Button Pearl Choker</h4>
+              <p id="lookbook3Price" style="font-family: var(--font-serif); color: var(--gold-primary); font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">₹6,999</p>
+              <button class="btn-primary" style="padding: 0.35rem 0.75rem; font-size: 0.6rem; width: 100%;" onclick="quickAddLookbook(3)">
+                Get The Look
+              </button>
+            </div>
+          </div>
+
+          <div style="position: absolute; bottom: 0; inset-x: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%); padding: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <span class="label-micro" id="lookbook3Style" style="color: var(--gold-primary);">Style 03</span>
+              <p id="lookbook3Title" style="font-family: var(--font-serif); font-size: 1.2rem; color: #FFFFFF;">Royal Emerald &amp; Button Pearl</p>
+            </div>
+            <button class="btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.65rem;" onclick="openLookbookQuickView(3)">
+              View Piece
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ARTISANAL PROVENANCE & TRUST PILLARS
+       ========================================================================== -->
+  <section style="padding: 5rem 1.5rem; border-top: 1px solid var(--border-color);" id="provenanceSection">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; text-align: center;">
+        <div style="width: 50px; height: 50px; border-radius: 50% !important; background: rgba(212,175,55,0.1); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); margin: 0 auto 1.25rem auto;">
+          <i class="fa-solid fa-hands-holding-circle text-lg"></i>
+        </div>
+        <h3 id="pillar1Title" style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">100% Handcrafted</h3>
+        <p id="pillar1Desc" style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">Every stone and pearl is hand-set with precision by fourth-generation master artisans.</p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; text-align: center;">
+        <div style="width: 50px; height: 50px; border-radius: 50% !important; background: rgba(212,175,55,0.1); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); margin: 0 auto 1.25rem auto;">
+          <i class="fa-solid fa-certificate text-lg"></i>
+        </div>
+        <h3 id="pillar2Title" style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">Certified Quality</h3>
+        <p id="pillar2Desc" style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">Each jewel comes with an authentic laboratory certificate for metal purity and stone quality.</p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; text-align: center;">
+        <div style="width: 50px; height: 50px; border-radius: 50% !important; background: rgba(212,175,55,0.1); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); margin: 0 auto 1.25rem auto;">
+          <i class="fa-solid fa-shield-halved text-lg"></i>
+        </div>
+        <h3 id="pillar3Title" style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">Insured Safe Delivery</h3>
+        <p id="pillar3Desc" style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">Shipped in tamper-proof sealed velvet luxury boxes with 100% transit insurance worldwide.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COMMUNITY & CLIENT REVIEWS SHOWCASE (UNIVERSAL REVIEWS & PHOTO GALLERY)
+       ========================================================================== -->
+  <section class="reviews-section" id="reviewsSection">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      
+      <!-- Section Header -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-hairline); padding-bottom: 1.5rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+            <span class="label-caps" id="reviewsBadge" style="color: var(--gold-primary);">Haute Joaillerie Patrons</span>
+            <span class="verified-buyer-pill"><i class="fa-solid fa-circle-check"></i> 100% Authentic Feedback</span>
+          </div>
+          <h2 id="reviewsHeading" style="font-size: 2.25rem; font-weight: 300; color: var(--text-primary);">
+            Client Reviews &amp; <span class="gold-gradient-text" style="font-style: italic;">Heirloom Stories</span>
+          </h2>
+          <p id="reviewsCountBadge" style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.35rem;">
+            Based on Verified Client Reviews
+          </p>
+        </div>
+
+        <!-- Rating overview & CTA -->
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <div style="text-align: right;">
+            <div style="display: flex; align-items: center; gap: 0.35rem; justify-content: flex-end;">
+              <span id="reviewsAvgScore" style="font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--gold-primary);">5.0 / 5.0</span>
+              <div style="color: var(--gold-primary); font-size: 0.875rem;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="label-micro" style="color: var(--text-muted);">Exceptional Client Satisfaction</p>
+          </div>
+
+          <button class="btn-primary" onclick="reviewsManager.openSubmitReviewModal()" style="padding: 0.75rem 1.4rem;">
+            <i class="fa-solid fa-pen-nib" style="margin-right: 0.4rem;"></i> Write a Review
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Pills Row -->
+      <div class="reviews-filter-bar">
+        <span class="label-micro" style="color: var(--gold-primary); margin-right: 0.5rem; align-self: center;">Filter Reviews:</span>
+        <button class="review-filter-pill active" data-filter="all" onclick="reviewsManager.renderHomeReviews('all')">
+          <i class="fa-solid fa-list-ul"></i> All Reviews
+        </button>
+        <button class="review-filter-pill" data-filter="photos" onclick="reviewsManager.renderHomeReviews('photos')">
+          <i class="fa-solid fa-camera"></i> With Photos (Wide View)
+        </button>
+        <button class="review-filter-pill" data-filter="5stars" onclick="reviewsManager.renderHomeReviews('5stars')">
+          <i class="fa-solid fa-star"></i> 5-Star Heirlooms
+        </button>
+        <button class="review-filter-pill" data-filter="pearls" onclick="reviewsManager.renderHomeReviews('pearls')">
+          <i class="fa-solid fa-circle-dot"></i> Pearl Collections
+        </button>
+        <button class="review-filter-pill" data-filter="emeralds" onclick="reviewsManager.renderHomeReviews('emeralds')">
+          <i class="fa-solid fa-gem"></i> Emerald Sets
+        </button>
+      </div>
+
+      <!-- Reviews Grid (Rendered dynamically by ReviewsManager) -->
+      <div class="reviews-grid" id="homeReviewsGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VIP ATELIER CONSULTATION & REVIEWS
+       ========================================================================== -->
+  <section style="padding: 6rem 1.5rem;" id="consultationSection">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+      
+      <!-- Left Patron Accolades -->
+      <div>
+        <span class="label-caps" id="consultationBadge" style="color: var(--gold-primary); display: block; margin-bottom: 0.35rem;">Happy Customers</span>
+        <h2 id="consultationHeading" style="font-size: 2.5rem; font-weight: 300; color: var(--text-primary); margin-bottom: 1.5rem;">
+          Loved by Buyers Worldwide
+        </h2>
+
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; gap: 0.25rem; color: var(--gold-primary); margin-bottom: 1rem; font-size: 0.875rem;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p id="consultationFeaturedQuote" style="font-family: var(--font-serif); font-style: italic; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            "The Zambian emerald choker was the highlight of my wedding reception. The sparkle and quality are simply unbelievable, and everyone kept asking where I got it!"
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50% !important; background: rgba(212,175,55,0.15); border: 1px solid var(--gold-primary); color: var(--gold-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8125rem;">
+              MS
+            </div>
+            <div>
+              <p id="consultationFeaturedAuthor" style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);">Meera Singhania</p>
+              <p id="consultationFeaturedMeta" class="label-micro" style="color: var(--text-muted);">Verified Buyer • Custom Wedding Set</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+          <div style="border: 1px solid var(--border-hairline); padding: 1rem;">
+            <p id="consultationStat1Val" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold-primary);">4.98 / 5.0</p>
+            <p id="consultationStat1Lbl" class="label-micro" style="color: var(--text-muted); margin-top: 2px;">Average Rating (840+ Reviews)</p>
+          </div>
+          <div style="border: 1px solid var(--border-hairline); padding: 1rem;">
+            <p id="consultationStat2Val" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold-primary);">100%</p>
+            <p id="consultationStat2Lbl" class="label-micro" style="color: var(--text-muted); margin-top: 2px;">Authentic Certification</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right VIP Salon Consultation Booking Form -->
+      <div style="background-color: var(--bg-card); border: 1px solid var(--gold-primary); padding: 2.5rem; box-shadow: var(--shadow-plinth); position: relative;">
+        <span class="product-tag tag-ruby" style="top: -12px; right: 2rem; left: auto;">VIP Booking</span>
+        
+        <h3 id="consultationCardTitle" style="font-size: 1.85rem; color: var(--text-primary); margin-bottom: 0.5rem;">Book a Free Design Consultation</h3>
+        <p id="consultationCardDesc" style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+          Talk directly with our jewelry designers to customize your necklace length, pearl color, or design a custom bridal set.
+        </p>
+
+        <form id="consultationForm" onsubmit="handleConciergeSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Your Full Name *</label>
+              <input type="text" required class="form-input" placeholder="e.g. Aaryahi Roy"/>
+            </div>
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Email Address *</label>
+              <input type="email" required class="form-input" placeholder="name@domain.com"/>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Phone / WhatsApp Number</label>
+              <input type="tel" class="form-input" placeholder="+91 98200 12345"/>
+            </div>
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Meeting Type</label>
+              <select class="form-input">
+                <option>Virtual Video Call (Zoom / WhatsApp)</option>
+                <option>Flagship Store Visit</option>
+                <option>Custom Wedding Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Any Special Request or Message</label>
+            <textarea class="form-input" rows="3" placeholder="Tell us about your favorite stones, wedding date, or custom size requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="margin-top: 0.5rem;">
+            Request Consultation
+          </button>
+
+          <div id="consultationSuccess" style="display: none;"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CUSTOMER SUPPORT & AI CONCIERGE SECTION
+       ========================================================================== -->
+  <section class="support-showcase-section" id="supportSection">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <!-- Section Header -->
+      <div style="text-align: center; max-width: 780px; margin: 0 auto 3.5rem;">
+        <span class="label-caps" style="color: var(--gold-primary);"><i class="fa-solid fa-headset" style="margin-right: 0.4rem;"></i> 24/7 PATRON CONCIERGE &amp; HELP DESK</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2.65rem; font-weight: 300; color: var(--text-primary); margin: 0.4rem 0 0.85rem;">
+          Customer Support &amp; AI Concierge
+        </h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+          Experience effortless luxury assistance. Consult our interactive AI assistant for instant answers, chat live with our Master Atelier Admins, or manage one-click item cancellations with immediate email receipts.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Support Grid -->
+      <div class="support-cards-grid">
+        <!-- Card 1: AI Concierge -->
+        <div class="support-card-item highlight-card">
+          <div class="support-card-icon gold">
+            <i class="fa-solid fa-sparkles"></i>
+          </div>
+          <div class="support-card-badge">Instant 24/7</div>
+          <h3 class="support-card-title">AI Jewelry Concierge</h3>
+          <p class="support-card-desc">
+            Instant guidance on BIS 916 hallmark authenticity, custom choker sizing, gemstone care, and order shipment milestone tracking.
+          </p>
+          <button class="btn-primary support-card-btn" onclick="supportManager.openSupportModal('ai')">
+            <i class="fa-solid fa-comments" style="margin-right: 0.35rem;"></i> Ask AI Assistant
+          </button>
+        </div>
+
+        <!-- Card 2: Live Admin Chat -->
+        <div class="support-card-item">
+          <div class="support-card-icon emerald">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div class="support-card-badge">Master Artisans</div>
+          <h3 class="support-card-title">Live Atelier Admin Chat</h3>
+          <p class="support-card-desc">
+            Direct dialogue with our master jewelers and administrators for bespoke commissions, custom necklace lengths, and urgent inquiries.
+          </p>
+          <button class="btn-secondary support-card-btn" onclick="supportManager.openSupportModal('admin')">
+            <i class="fa-solid fa-crown" style="margin-right: 0.35rem; color: var(--gold-primary);"></i> Chat with Admin
+          </button>
+        </div>
+
+        <!-- Card 3: Order Item Cancellations -->
+        <div class="support-card-item">
+          <div class="support-card-icon ruby">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <div class="support-card-badge">Self-Service</div>
+          <h3 class="support-card-title">Item Cancellations &amp; Returns</h3>
+          <p class="support-card-desc">
+            Easily cancel individual ordered items from your dashboard. Instant email alerts are sent to the admin with patron details and to your registered inbox.
+          </p>
+          <button class="btn-secondary support-card-btn" onclick="ordersManager.openOrdersModal()">
+            <i class="fa-solid fa-ban" style="margin-right: 0.35rem; color: #ef4444;"></i> Manage / Cancel Items
+          </button>
+        </div>
+
+        <!-- Card 4: Official Hotline & Contact -->
+        <div class="support-card-item">
+          <div class="support-card-icon sapphire">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="support-card-badge">Configured Desk</div>
+          <h3 class="support-card-title">Direct Helpline &amp; Email</h3>
+          <p class="support-card-desc">
+            Connect directly with our dedicated concierge specialists via phone, WhatsApp hotline, or private email assistance.
+          </p>
+          <div class="support-direct-contacts">
+            <a href="tel:+919876543210" id="suppDirectPhoneLink" class="support-direct-link">
+              <i class="fa-solid fa-phone"></i> <span id="suppDirectPhoneText">+91 98765 43210</span>
+            </a>
+            <a href="mailto:support@asmijewelry.com" id="suppDirectEmailLink" class="support-direct-link">
+              <i class="fa-solid fa-envelope"></i> <span id="suppDirectEmailText">support@asmijewelry.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Support FAQ Strip -->
+      <div class="support-faq-strip">
+        <div class="support-faq-item">
+          <div class="support-faq-q"><i class="fa-solid fa-circle-question gold-icon"></i> How do item cancellations work?</div>
+          <p class="support-faq-a">You can cancel any item before delivery in your "My Orders" tab. Our Master Atelier Admin is immediately emailed with all your patron details, and a cancellation confirmation receipt is delivered to your inbox.</p>
+        </div>
+        <div class="support-faq-item">
+          <div class="support-faq-q"><i class="fa-solid fa-truck-fast gold-icon"></i> When will my package arrive?</div>
+          <p class="support-faq-a">Every heirloom is securely transported via BlueDart Armored Express Logistics with an estimated delivery window of 10 to 12 business days and 5-stage milestone tracking.</p>
+        </div>
+        <div class="support-faq-item">
+          <div class="support-faq-q"><i class="fa-solid fa-certificate gold-icon"></i> Are all gemstones &amp; gold certified?</div>
+          <p class="support-faq-a">Yes. Every piece features official government BIS 916 laser hallmarking and arrives with an embossed Certificate of Authenticity with serialized QR verification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN FOOTER & VERIFIED PAYMENT GATEWAYS
+       ========================================================================== -->
+  <footer style="border-top: 1px solid var(--border-color); padding: 5rem 1.5rem 2rem 1.5rem;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      
+      <!-- Newsletter Top Row -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; border-bottom: 1px solid var(--border-hairline); padding-bottom: 3.5rem; margin-bottom: 3.5rem;">
+        <div>
+          <span class="label-caps" id="footerNewsletterBadge" style="color: var(--gold-primary); display: block; margin-bottom: 0.35rem;">VIP Club</span>
+          <h3 id="footerNewsletterTitle" style="font-size: 2rem; color: var(--text-primary);">Join the ASMI VIP Club</h3>
+          <p id="footerNewsletterDesc" style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem;">Get early access to new jewelry launches, special sales, and private design previews.</p>
+        </div>
+        <form onsubmit="event.preventDefault(); window.showToast('Subscribed', 'Thank you for joining the ASMI VIP Club!');" style="display: flex; gap: 0.5rem; width: 100%; max-width: 440px;">
+          <input type="email" required placeholder="Enter your email address..." class="form-input" style="flex: 1;"/>
+          <button type="submit" class="btn-primary" style="padding: 0.85rem 1.5rem; font-size: 0.6875rem;">Join VIP</button>
+        </form>
+      </div>
+
+      <!-- Links Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem; font-size: 0.8125rem;">
+        <div>
+          <span id="footerBrandTitle" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-primary); display: block; margin-bottom: 0.5rem;">
+            ASMI'S <span style="font-style: italic; color: var(--gold-primary);">Collection</span>
+          </span>
+          <p id="footerAboutText" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Creating timeless luxury jewelry with genuine pearls, emeralds, and sparkling stones since 2012.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+            <a href="https://instagram.com/asmi_luxury_atelier" id="footerInstagramLink" target="_blank" style="width: 34px; height: 34px; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary); text-decoration: none;" title="Follow us on Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+            <a href="https://facebook.com/asmiclassicjewelry" id="footerFacebookLink" target="_blank" style="width: 34px; height: 34px; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary); text-decoration: none;" title="Follow us on Facebook"><i class="fa-brands fa-facebook text-sm"></i></a>
+            <a href="https://wa.me/919876543210" id="footerWhatsappLink" target="_blank" style="width: 34px; height: 34px; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: #10B981; text-decoration: none;" title="Chat with Concierge on WhatsApp"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+            <a href="tel:+919876543210" id="footerPhoneLink" style="width: 34px; height: 34px; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); text-decoration: none;" title="Call VIP Concierge"><i class="fa-solid fa-phone text-xs"></i></a>
+            <a href="mailto:concierge@asmijewelry.com" id="footerEmailLink" style="width: 34px; height: 34px; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary); text-decoration: none;" title="Send Concierge Email"><i class="fa-regular fa-envelope text-xs"></i></a>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+            <span><i class="fa-solid fa-phone" style="color: var(--gold-primary); margin-right: 0.35rem;"></i> Direct: <strong id="footerPhoneText" style="color: var(--text-primary);">+91 98765 43210</strong></span>
+            <span><i class="fa-brands fa-whatsapp" style="color: #10B981; margin-right: 0.35rem;"></i> WhatsApp: <strong id="footerWhatsappText" style="color: var(--text-primary);">+91 98765 43210</strong></span>
+            <span><i class="fa-regular fa-envelope" style="color: var(--gold-primary); margin-right: 0.35rem;"></i> Email: <strong id="footerEmailText" style="color: var(--text-primary);">concierge@asmijewelry.com</strong></span>
+            <span><i class="fa-solid fa-location-dot" style="color: var(--gold-primary); margin-right: 0.35rem;"></i> Atelier: <strong id="footerAddress" style="color: var(--text-secondary); font-weight: 500;">ASMI Flagship Atelier &amp; Vault, Heritage Gold Quadrant, Mumbai 400001</strong></span>
+            <span><i class="fa-regular fa-clock" style="color: var(--gold-primary); margin-right: 0.35rem;"></i> Hours: <strong id="footerHours" style="color: var(--text-secondary); font-weight: 500;">Mon - Sat: 11:00 AM - 8:00 PM IST (Appointments Recommended)</strong></span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="label-caps" style="color: var(--text-primary); margin-bottom: 1rem;">Shop Categories</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem;">
+            <li><a href="#vaultSection" style="color: var(--text-secondary); text-decoration: none;">Pearl Necklaces &amp; Chokers</a></li>
+            <li><a href="#vaultSection" style="color: var(--text-secondary); text-decoration: none;">Zambian Emerald Sets</a></li>
+            <li><a href="#vaultSection" style="color: var(--text-secondary); text-decoration: none;">Solitaire Rings &amp; Bangles</a></li>
+            <li><a href="#vaultSection" style="color: var(--text-secondary); text-decoration: none;">Royal Kundan &amp; Polki</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="label-caps" style="color: var(--text-primary); margin-bottom: 1rem;">Customer Care</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem;">
+            <li><a href="javascript:void(0)" onclick="supportManager.openSupportModal('ai')" style="color: var(--gold-primary); text-decoration: none; font-weight: 600;"><i class="fa-solid fa-wand-magic-sparkles text-xs" style="margin-right: 0.35rem;"></i>AI Jewelry Concierge</a></li>
+            <li><a href="#consultationSection" style="color: var(--text-secondary); text-decoration: none;">Book Consultation</a></li>
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Jewelry Care Guide</a></li>
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Shipping &amp; Delivery Info</a></li>
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Authenticity Certificate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="label-caps" style="color: var(--text-primary); margin-bottom: 1rem;">Trust &amp; Privacy</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem;">
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">100% Genuine Guarantee</a></li>
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">14-Day Free Returns</a></li>
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Verified Payment Gateways Bar (Exclusively UPI) -->
+      <div style="border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); padding: 1.5rem 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+          <span class="label-micro" style="color: var(--text-secondary); font-weight: 600;">Accepted Payment Mode:</span>
+          <span style="background: rgba(212, 175, 55, 0.12); border: 1px solid var(--gold-primary); padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);"><i class="fa-solid fa-bolt" style="margin-right: 0.25rem;"></i> UPI QR &amp; Instant Apps</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600; color: var(--text-primary);"><i class="fa-brands fa-google text-blue-400" style="margin-right: 0.25rem;"></i> Google Pay UPI</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-mobile-screen-button text-purple-400" style="margin-right: 0.25rem;"></i> PhonePe</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-wallet text-cyan-400" style="margin-right: 0.25rem;"></i> Paytm UPI</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-building-columns text-emerald-400" style="margin-right: 0.25rem;"></i> BHIM / Any Bank UPI</span>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div style="padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.875rem; color: var(--text-primary); font-weight: 500; padding-left: clamp(0px, 8vw, 7.5rem);">
+        <p style="margin: 0; color: var(--text-secondary); opacity: 0.9;">Handcrafted with love for fine pearls, emeralds &amp; luxury jewelry.</p>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-left: auto;">
+          <p id="footerCopyright" style="margin: 0; color: var(--text-primary); opacity: 0.95; font-weight: 600;">© 2026 ASMI's Collection. All Rights Reserved.</p>
+          <button onclick="window.open('admin.html', '_blank')" style="background: rgba(212, 175, 55, 0.12); border: 1px solid var(--gold-primary); color: var(--gold-primary); padding: 0.45rem 0.95rem; font-size: 0.75rem; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; font-weight: 600;" title="Master Atelier Console (Password Protected: Asmi@2026)">
+            <i class="fa-solid fa-lock text-xs"></i> Atelier Admin Console
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- ==========================================================================
+       DRAWER BACKDROP & SIDE PANELS
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeCartDrawer(); closeWishlistDrawer(); closeSideMenu();"></div>
+
+  <!-- ==========================================================================
+       SIDE NAVIGATION MENU DRAWER (OPENS ON 3-LINE BUTTON CLICK)
+       ========================================================================== -->
+  <div class="side-drawer side-drawer-left" id="sideMenuDrawer">
+    <div class="drawer-header" style="padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <span class="label-micro" style="color: var(--gold-primary); letter-spacing: 0.2em;">Exclusive Navigation</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-top: 2px;">ASMI'S Collection</h3>
+      </div>
+      <button onclick="closeSideMenu()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;" title="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" style="padding: 0; overflow-y: auto;">
+      <!-- Mobile Patron VIP Auth Status Card -->
+      <div id="mobilePatronAuthCard" style="padding: 1rem 1.5rem; background: var(--bg-card); border-bottom: 1px solid var(--border-color);"></div>
+
+      <!-- VIP Quick Shortcut Banner for Mode Switcher, Orders & Reviews -->
+      <div style="padding: 0.85rem 1.25rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
+        <button type="button" class="btn-secondary" style="padding: 0.55rem 0.4rem; font-size: 0.6875rem; display: flex; align-items: center; justify-content: center; gap: 0.35rem; white-space: nowrap;" onclick="toggleTheme()" title="Switch Light / Dark Mode">
+          <i class="fa-solid fa-moon theme-icon" style="color: var(--gold-primary);"></i>
+          <span class="theme-label" style="font-size: 0.65rem;">Theme</span>
+        </button>
+        <button type="button" class="btn-secondary" style="padding: 0.55rem 0.4rem; font-size: 0.6875rem; display: flex; align-items: center; justify-content: center; gap: 0.35rem; white-space: nowrap;" onclick="closeSideMenu(); ordersManager.openOrdersModal();">
+          <i class="fa-solid fa-truck-fast" style="color: var(--gold-primary);"></i> Orders
+        </button>
+        <button type="button" class="btn-secondary" style="padding: 0.55rem 0.4rem; font-size: 0.6875rem; display: flex; align-items: center; justify-content: center; gap: 0.35rem; white-space: nowrap;" onclick="closeSideMenu(); document.getElementById('reviewsSection').scrollIntoView({behavior: 'smooth'});">
+          <i class="fa-solid fa-star" style="color: var(--gold-primary);"></i> Reviews
+        </button>
+      </div>
+
+      <nav class="side-nav-links">
+        
+        <!-- SECTION 1: CLIENT PORTAL & ORDERS -->
+        <div style="padding: 0.85rem 1.5rem 0.35rem 1.5rem; background: rgba(212, 175, 55, 0.04); border-bottom: 1px solid var(--border-hairline);">
+          <span class="label-micro" style="color: var(--gold-primary); letter-spacing: 0.16em;">Orders &amp; Patron Portal</span>
+        </div>
+
+        <!-- AI Jewelry Concierge -->
+        <a href="javascript:void(0)" class="side-nav-item" onclick="closeSideMenu(); supportManager.openSupportModal('ai');">
+          <div class="side-nav-icon" style="color: var(--gold-primary); background: rgba(212, 175, 55, 0.12); border-color: var(--gold-primary);">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div class="side-nav-text">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+              <span class="side-nav-title" style="color: var(--gold-primary); font-weight: 600;">AI Jewelry Concierge</span>
+              <span class="order-status-pill status-delivered" style="font-size: 0.55rem; padding: 0.2rem 0.45rem;">24/7 Live AI</span>
+            </div>
+            <span class="side-nav-desc">Instant guidance on hallmarks, sizing, gemstones &amp; orders</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 1. My Orders & Package Tracker -->
+        <a href="javascript:void(0)" class="side-nav-item" onclick="closeSideMenu(); ordersManager.openOrdersModal();">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="side-nav-text">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+              <span class="side-nav-title">My Orders &amp; Tracking</span>
+              <span class="order-status-pill status-transit" style="font-size: 0.55rem; padding: 0.2rem 0.45rem;">10-12 Days</span>
+            </div>
+            <span class="side-nav-desc">Track package live (5 milestones) &amp; order history</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 2. Patron Reviews & Photo Stories -->
+        <a href="#reviewsSection" class="side-nav-item" onclick="closeSideMenu(); document.getElementById('reviewsSection').scrollIntoView({behavior: 'smooth'});">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="side-nav-text">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+              <span class="side-nav-title">Client Reviews &amp; Stories</span>
+              <span class="verified-buyer-pill" style="font-size: 0.55rem; padding: 0.2rem 0.45rem;">★ 5.0 Rating</span>
+            </div>
+            <span class="side-nav-desc">Read reviews, browse photos in wide lightbox view</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 3. Write a Review Action -->
+        <a href="javascript:void(0)" class="side-nav-item" onclick="closeSideMenu(); reviewsManager.openSubmitReviewModal();">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Write a Review</span>
+            <span class="side-nav-desc">Share rating, comments &amp; upload JPEG/PNG photo</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- SECTION 2: VAULT & HIGH JEWELRY -->
+        <div style="padding: 0.85rem 1.5rem 0.35rem 1.5rem; background: rgba(255, 255, 255, 0.02); border-bottom: 1px solid var(--border-hairline); border-top: 1px solid var(--border-hairline);">
+          <span class="label-micro" style="color: var(--text-muted); letter-spacing: 0.16em;">High Jewelry Vault</span>
+        </div>
+
+        <!-- 4. Exclusive Jewelry -->
+        <a href="#heroSection" class="side-nav-item" onclick="closeSideMenu();">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Exclusive Jewelry</span>
+            <span class="side-nav-desc">Signature heirlooms, bespoke creations &amp; grand sets</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 5. Glowing Pearls -->
+        <a href="#vaultSection" class="side-nav-item" onclick="closeSideMenu(); filterByCategory('pearls'); document.getElementById('vaultSection').scrollIntoView({behavior: 'smooth'});">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-circle-dot"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Glowing Pearls</span>
+            <span class="side-nav-desc">Basra, South Sea &amp; Tahitian hand-strung pearls</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 6. Royal Emeralds -->
+        <a href="#vaultSection" class="side-nav-item" onclick="closeSideMenu(); filterByCategory('emeralds'); document.getElementById('vaultSection').scrollIntoView({behavior: 'smooth'});">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Royal Emeralds</span>
+            <span class="side-nav-desc">Certified Colombian &amp; Zambian deep green emeralds</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 7. Sparkling Diamonds -->
+        <a href="#vaultSection" class="side-nav-item" onclick="closeSideMenu(); filterByCategory('stones'); document.getElementById('vaultSection').scrollIntoView({behavior: 'smooth'});">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Sparkling Diamonds</span>
+            <span class="side-nav-desc">Flawless cut solitaires, bridal chokers &amp; uncut Polki</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- SECTION 3: ATELIER EXPERIENCES -->
+        <div style="padding: 0.85rem 1.5rem 0.35rem 1.5rem; background: rgba(255, 255, 255, 0.02); border-bottom: 1px solid var(--border-hairline); border-top: 1px solid var(--border-hairline);">
+          <span class="label-micro" style="color: var(--text-muted); letter-spacing: 0.16em;">Atelier Experiences</span>
+        </div>
+
+
+
+        <!-- 9. Style Gallery -->
+        <a href="#editorialSection" class="side-nav-item" onclick="closeSideMenu(); document.getElementById('editorialSection').scrollIntoView({behavior: 'smooth'});">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Style Gallery</span>
+            <span class="side-nav-desc">High fashion editorial shoots &amp; styling inspiration</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+
+        <!-- 10. Why Choose Us -->
+        <a href="#provenanceSection" class="side-nav-item" onclick="closeSideMenu(); document.getElementById('provenanceSection').scrollIntoView({behavior: 'smooth'});">
+          <div class="side-nav-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="side-nav-text">
+            <span class="side-nav-title">Why Choose Us</span>
+            <span class="side-nav-desc">BIS hallmark, 100% certified gemstones &amp; insured safe delivery</span>
+          </div>
+          <i class="fa-solid fa-chevron-right side-nav-arrow"></i>
+        </a>
+      </nav>
+
+      <!-- SECTION 4: PREFERENCES & SETTINGS (MOBILE COMPATIBLE) -->
+      <div style="padding: 0.85rem 1.5rem; background: var(--bg-surface); border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
+        <!-- Currency Selector -->
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <i class="fa-solid fa-globe" style="color: var(--gold-primary); font-size: 0.8rem;"></i>
+          <span class="label-micro" style="color: var(--text-muted);">Currency:</span>
+          <select id="currencySelectorDrawer" onchange="setCurrency(this.value)" class="currency-select-input" style="background: var(--bg-card); border: 1px solid var(--border-color); color: var(--gold-primary); font-size: 0.75rem; font-weight: 700; padding: 0.35rem 0.5rem; cursor: pointer; outline: none;">
+            <option value="INR" style="background: var(--bg-surface); color: var(--text-primary);">₹ INR</option>
+            <option value="USD" style="background: var(--bg-surface); color: var(--text-primary);">$ USD</option>
+          </select>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button type="button" onclick="toggleTheme()" class="btn-secondary" style="padding: 0.4rem 0.75rem; font-size: 0.6875rem; display: flex; align-items: center; gap: 0.35rem;" title="Switch Dark / Light Mode">
+          <i class="fa-solid fa-moon theme-icon" style="color: var(--gold-primary);"></i>
+          <span class="theme-label" style="font-size: 0.65rem;">Dark Mode</span>
+        </button>
+      </div>
+
+      <!-- Side Drawer Concierge & Quick Contact Box -->
+      <div style="padding: 1.5rem; background: var(--bg-surface); border-top: 1px solid var(--border-color); margin-top: 0.5rem;">
+        <span class="label-micro" style="color: var(--gold-primary); display: block; margin-bottom: 0.5rem;">Private Concierge Service</span>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.4;">
+          Speak with our certified master gemologist for custom jewelry commissions or valuation.
+        </p>
+        <a href="#consultationSection" class="btn-primary" style="width: 100%; text-align: center; display: block; padding: 0.65rem 1rem; font-size: 0.75rem;" onclick="closeSideMenu(); document.getElementById('consultationSection').scrollIntoView({behavior: 'smooth'});">
+          <i class="fa-solid fa-calendar-check" style="margin-right: 0.4rem;"></i> Book Private Consultation
+        </a>
+        <div style="margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+          <span><i class="fa-solid fa-phone" style="color: var(--gold-primary); margin-right: 0.3rem;"></i> +1 (800) ASMI-GEM</span>
+          <span><i class="fa-solid fa-shield-halved" style="color: var(--gold-primary); margin-right: 0.3rem;"></i> Insured Vault</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SLIDING CART DRAWER
+       ========================================================================== -->
+  <div class="side-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div>
+        <span class="label-micro" style="color: var(--gold-primary);">Your Bag</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary);">Shopping Bag</h3>
+      </div>
+      <button onclick="closeCartDrawer()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Empty State -->
+      <div id="cartEmptyState" style="text-align: center; padding: 4rem 1rem; display: none;">
+        <i class="fa-solid fa-bag-shopping" style="font-size: 2.5rem; color: var(--gold-primary); opacity: 0.6; margin-bottom: 1rem;"></i>
+        <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">Your Bag is Empty</h4>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">Discover our beautiful selection of natural pearls, green emeralds, and diamonds.</p>
+        <button class="btn-primary" onclick="closeCartDrawer(); document.getElementById('vaultSection').scrollIntoView({behavior: 'smooth'});">
+          Browse Jewelry
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cartItemsList"></div>
+
+      <!-- Coupon & Privilege Code Input -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1rem; margin-top: 1.5rem;">
+        <span class="label-micro" style="color: var(--gold-primary); display: block; margin-bottom: 0.35rem;">Have a Discount Code?</span>
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="text" id="couponCodeInput" class="form-input" placeholder="e.g. ROYAL10, ASMI2025" style="padding: 0.5rem 0.75rem; font-size: 0.75rem; text-transform: uppercase;"/>
+          <button class="btn-solid-dark" style="padding: 0.5rem 1rem; font-size: 0.6875rem;" onclick="cartManager.validateCoupon(document.getElementById('couponCodeInput').value); cartManager.saveCart();">
+            Apply
+          </button>
+        </div>
+        <p style="font-size: 0.65rem; color: var(--text-muted); margin-top: 0.35rem;">Tip: Use code <strong>ROYAL10</strong> for 10% off or <strong>ASMI500</strong> for ₹500 off.</p>
+      </div>
+
+      <!-- Gift wrap toggle -->
+      <div style="display: flex; align-items: center; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-color); padding: 0.85rem 1rem; margin-top: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fa-solid fa-gift" style="color: var(--gold-primary);"></i>
+          <div>
+            <p style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);">Luxury Velvet Gift Box</p>
+            <p class="label-micro" style="color: var(--text-muted);">Includes gold ribbon &amp; personalized message</p>
+          </div>
+        </div>
+        <input type="checkbox" id="giftWrapCheck" onchange="cartManager.giftWrap = this.checked; cartManager.saveCart();" style="accent-color: var(--gold-primary); width: 16px; height: 16px; cursor: pointer;"/>
+      </div>
+    </div>
+
+    <!-- Cart Summary & Proceed to Checkout -->
+    <div class="drawer-footer" id="cartSummarySection">
+      <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem;">
+        <span style="color: var(--text-muted);">Subtotal:</span>
+        <span id="cartSubtotalDisplay" style="color: var(--text-primary); font-weight: 600;">₹0</span>
+      </div>
+      
+      <div id="cartDiscountRow" style="display: none; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem; color: #10B981;">
+        <span>Special Discount:</span>
+        <span id="cartDiscountDisplay" style="font-weight: 600;">-₹0</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem;">
+        <span id="cartShippingLabel" style="color: var(--text-muted);">Delivery (Within 500gm):</span>
+        <span id="cartShippingDisplay" style="color: var(--gold-primary); font-weight: 600;">₹50</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.75rem;">
+        <span style="color: var(--text-muted);">GST (3% Jewelry Tax):</span>
+        <span id="cartTaxDisplay" style="color: var(--text-primary);">₹0</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-size: 1.15rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-bottom: 1.25rem;">
+        <span style="font-family: var(--font-serif); font-weight: 600; color: var(--text-primary);">Total Amount:</span>
+        <span id="cartTotalDisplay" style="font-family: var(--font-serif); color: var(--gold-primary); font-weight: 700;">₹0</span>
+      </div>
+
+      <button class="btn-primary" style="width: 100%;" onclick="checkoutManager.openCheckout()">
+        <i class="fa-solid fa-lock" style="margin-right: 0.5rem;"></i> Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       WISHLIST VAULT DRAWER
+       ========================================================================== -->
+  <div class="side-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <div>
+        <span class="label-micro" style="color: var(--gold-primary);">Saved Items</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary);">Your Wishlist</h3>
+      </div>
+      <button onclick="closeWishlistDrawer()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="wishlistItemsList">
+      <!-- Injected via app.js -->
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PRODUCT QUICK VIEW & MAGNIFICATION LOUPE MODAL
+       ========================================================================== -->
+  <div class="quickview-modal-backdrop" id="quickviewModalBackdrop" onclick="if(event.target === this) closeQuickView();">
+    <div class="quickview-modal-container">
+      
+      <div style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <span class="label-caps" style="color: var(--gold-primary);">Jewelry Inspection &amp; Details</span>
+        <button onclick="closeQuickView()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); flex: 1; overflow-y: auto;">
+        
+        <!-- Left Loupe Box with Multi-Image Gallery Thumbnails -->
+        <div style="display: flex; flex-direction: column; background: var(--bg-surface); border-right: 1px solid var(--border-color);">
+          <div class="loupe-container" id="qvLoupeBox" style="flex: 1; min-height: 380px;">
+            <img src="" alt="Jewelry Inspection" class="loupe-image" id="qvImage"/>
+            <div style="position: absolute; bottom: 1rem; inset-x: 0; text-align: center; pointer-events: none;">
+              <span class="label-micro" style="background: rgba(0,0,0,0.7); color: #fff; padding: 0.35rem 0.75rem; border: 1px solid var(--border-color);">
+                <i class="fa-solid fa-crosshairs" style="color: var(--gold-primary); margin-right: 0.35rem;"></i> Hover over image to zoom
+              </span>
+            </div>
+          </div>
+
+          <!-- Multi-Angle Gallery Thumbnails (Up to 10 Angles) -->
+          <div style="padding: 0.85rem 1.25rem; border-top: 1px solid var(--border-hairline); background: var(--bg-card);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <span class="label-micro" style="color: var(--gold-primary);"><i class="fa-solid fa-images" style="margin-right: 0.3rem;"></i> Available Angles &amp; Views</span>
+              <span id="qvImageCountBadge" class="label-micro" style="color: var(--text-muted);"></span>
+            </div>
+            <div id="qvGalleryThumbnails" style="display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.35rem;"></div>
+          </div>
+        </div>
+
+        <!-- Right Details & Customizer -->
+        <div style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 id="qvTitle" style="font-size: 1.75rem; color: var(--text-primary); line-height: 1.2; margin-bottom: 0.25rem;"></h3>
+            <p id="qvSubtitle" class="label-micro" style="color: var(--gold-primary); margin-bottom: 1rem;"></p>
+            
+            <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.25rem;">
+              <span id="qvPrice" class="price-display" style="font-size: 1.85rem;"></span>
+              <span id="qvStock" class="label-micro" style="color: #10B981; font-weight: 700;"></span>
+            </div>
+
+            <p id="qvDescription" style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;"></p>
+
+            <!-- Specs Grid -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1rem; font-size: 0.75rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Main Gemstone:</span>
+                <span id="qvGemstone" style="color: var(--text-primary); font-weight: 600;"></span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Accent Stones:</span>
+                <span id="qvAccent" style="color: var(--text-primary); font-weight: 600;"></span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Metal Material:</span>
+                <span id="qvMetal" style="color: var(--text-primary); font-weight: 600;"></span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Hallmark:</span>
+                <span id="qvHallmark" style="color: var(--gold-primary); font-weight: 700;"></span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Actions -->
+          <div style="display: flex; gap: 1rem; border-top: 1px solid var(--border-hairline); padding-top: 1.5rem;">
+            <button class="btn-primary" style="flex: 1;" onclick="handleQuickViewBuyNow()">
+              <i class="fa-solid fa-lock" style="margin-right: 0.5rem;"></i> Buy Now
+            </button>
+            <button class="btn-secondary" style="flex: 1;" onclick="handleQuickViewAddToCart()">
+              + Add To Bag
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MULTI-STEP CHECKOUT & PAYMENT GATEWAYS MODAL
+       ========================================================================== -->
+  <div class="checkout-modal-backdrop" id="checkoutModalBackdrop" onclick="if(event.target === this) checkoutManager.closeCheckout();">
+    <div class="checkout-modal-container">
+      
+      <!-- Modal Header -->
+      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-surface);">
+        <div>
+          <span class="label-micro" style="color: var(--gold-primary);">256-Bit SSL Encrypted &amp; Protected</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary);">Secure Checkout</h3>
+        </div>
+        <button onclick="checkoutManager.closeCheckout()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Step Indicator Tabs -->
+      <div class="checkout-step-indicator">
+        <div class="step-tab active" data-step="1">
+          <span>1. Delivery Address</span>
+        </div>
+        <div class="step-tab" data-step="2">
+          <span>2. Payment Method</span>
+        </div>
+        <div class="step-tab" data-step="3">
+          <span>3. Verification</span>
+        </div>
+        <div class="step-tab" data-step="4">
+          <span>4. Order Confirmation</span>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div style="padding: 2rem; flex: 1; overflow-y: auto;">
+        
+        <!-- STEP 1: SHIPPING & 3-ADDRESS LOGISTICS SELECTOR -->
+        <div class="checkout-step-content" id="checkoutStep_1">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+            
+            <div id="checkoutAddressSelectorContainer">
+              <!-- Dynamically populated by checkoutManager.renderAddressSelector() -->
+            </div>
+
+            <!-- Order Preview in Step 1 -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem; height: fit-content;">
+              <h4 class="label-caps" style="color: var(--text-primary); margin-bottom: 1rem;">Order Summary</h4>
+              <div id="checkoutSummaryList"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 2: MULTI-OPTION PAYMENT GATEWAY (UPI, CARDS, NET BANKING, 0% EMI, INTERNATIONAL, WALLETS) -->
+        <div class="checkout-step-content" id="checkoutStep_2" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <span class="label-caps" style="color: var(--gold-primary); display: block; margin-bottom: 0.2rem;">Step 2: Choose Payment Method</span>
+              <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary); margin: 0;">Haute Joaillerie Secure Gateway</h4>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <span style="background: rgba(212, 175, 55, 0.12); border: 1px solid var(--gold-primary); color: var(--gold-primary); padding: 0.35rem 0.75rem; font-size: 0.6875rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <i class="fa-solid fa-lock"></i> 256-Bit SSL
+              </span>
+              <span style="background: rgba(16, 185, 129, 0.12); border: 1px solid #10B981; color: #10B981; padding: 0.35rem 0.75rem; font-size: 0.6875rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <i class="fa-solid fa-shield-halved"></i> 100% Insured
+              </span>
+            </div>
+          </div>
+
+          <!-- Payment Method Category Selection Tabs -->
+          <div class="pay-method-nav" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem; margin-bottom: 1.25rem;">
+            <button type="button" class="pay-tab-btn active" data-paytab="upi" onclick="checkoutManager.switchPaymentTab('upi')">
+              <i class="fa-solid fa-bolt" style="font-size: 1.1rem;"></i>
+              <span>UPI &amp; QR</span>
+            </button>
+            <button type="button" class="pay-tab-btn" data-paytab="card" onclick="checkoutManager.switchPaymentTab('card')">
+              <i class="fa-solid fa-credit-card" style="font-size: 1.1rem;"></i>
+              <span>Credit / Debit</span>
+            </button>
+            <button type="button" class="pay-tab-btn" data-paytab="netbanking" onclick="checkoutManager.switchPaymentTab('netbanking')">
+              <i class="fa-solid fa-building-columns" style="font-size: 1.1rem;"></i>
+              <span>Net Banking</span>
+            </button>
+            <button type="button" class="pay-tab-btn" data-paytab="international" onclick="checkoutManager.switchPaymentTab('international')">
+              <i class="fa-solid fa-globe" style="font-size: 1.1rem;"></i>
+              <span>PayPal / Global</span>
+            </button>
+          </div>
+
+          <!-- PANEL 1: UPI & DYNAMIC QR -->
+          <div id="payPanel_upi" class="pay-panel" style="display: block;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; align-items: start; background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem;">
+              
+              <!-- Left: Dynamic QR Code Box -->
+              <div style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.25rem; position: relative;">
+                <span class="label-micro" style="color: var(--gold-primary); letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">
+                  ✦ SCAN WITH ANY UPI APP ✦
+                </span>
+
+                <!-- SVG Realistic UPI QR Frame -->
+                <div class="upi-qr-box" style="width: 170px; height: 170px; margin: 0 auto 0.75rem auto; padding: 8px; background: #fff; border: 2px solid var(--gold-primary); box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);">
+                  <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;">
+                    <rect width="100" height="100" fill="#ffffff"/>
+                    <rect x="8" y="8" width="28" height="28" fill="#111111"/>
+                    <rect x="13" y="13" width="18" height="18" fill="#ffffff"/>
+                    <rect x="16" y="16" width="12" height="12" fill="#8C6E17"/>
+                    
+                    <rect x="64" y="8" width="28" height="28" fill="#111111"/>
+                    <rect x="69" y="13" width="18" height="18" fill="#ffffff"/>
+                    <rect x="72" y="16" width="12" height="12" fill="#8C6E17"/>
+                    
+                    <rect x="8" y="64" width="28" height="28" fill="#111111"/>
+                    <rect x="13" y="69" width="18" height="18" fill="#ffffff"/>
+                    <rect x="16" y="72" width="12" height="12" fill="#8C6E17"/>
+                    
+                    <rect x="42" y="12" width="16" height="8" fill="#111"/>
+                    <rect x="42" y="24" width="8" height="16" fill="#111"/>
+                    <rect x="54" y="24" width="6" height="8" fill="#111"/>
+                    <rect x="42" y="44" width="16" height="16" fill="#8C6E17"/>
+                    <rect x="12" y="44" width="20" height="6" fill="#111"/>
+                    <rect x="24" y="54" width="10" height="6" fill="#111"/>
+                    <rect x="64" y="44" width="28" height="8" fill="#111"/>
+                    <rect x="64" y="56" width="10" height="24" fill="#111"/>
+                    <rect x="78" y="56" width="14" height="8" fill="#111"/>
+                    <rect x="78" y="68" width="14" height="24" fill="#111"/>
+                    <rect x="42" y="64" width="16" height="8" fill="#111"/>
+                    <rect x="42" y="76" width="8" height="16" fill="#111"/>
+                    <rect x="54" y="84" width="6" height="8" fill="#8C6E17"/>
+                  </svg>
+                </div>
+
+                <p style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.15rem;">ASMI HAUTE JOAILLERIE ATELIER</p>
+                <p class="label-micro" style="color: var(--text-muted); margin-bottom: 0.5rem;">Official UPI ID: <strong style="color: var(--gold-primary);">asmi.jewelry@icici</strong></p>
+
+                <button type="button" class="btn-solid-dark" style="font-size: 0.6875rem; padding: 0.35rem 0.75rem;" onclick="navigator.clipboard?.writeText('asmi.jewelry@icici'); if (window.showToast) window.showToast('UPI Copied', 'Official UPI ID copied: asmi.jewelry@icici');">
+                  <i class="fa-regular fa-copy" style="margin-right: 0.35rem; color: var(--gold-primary);"></i> Copy UPI ID
+                </button>
+              </div>
+
+              <!-- Right: UPI Apps & VPA Field -->
+              <div>
+                <span class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Select Your UPI App:</span>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.4rem; margin-bottom: 1rem;">
+                  <button type="button" class="pay-sub-pill active" data-upiapp="Google Pay" onclick="checkoutManager.setUpiApp('Google Pay')">
+                    <i class="fa-brands fa-google text-blue-400"></i> GPay
+                  </button>
+                  <button type="button" class="pay-sub-pill" data-upiapp="PhonePe" onclick="checkoutManager.setUpiApp('PhonePe')">
+                    <i class="fa-solid fa-mobile-screen-button text-purple-400"></i> PhonePe
+                  </button>
+                  <button type="button" class="pay-sub-pill" data-upiapp="Paytm" onclick="checkoutManager.setUpiApp('Paytm')">
+                    <i class="fa-solid fa-wallet text-cyan-400"></i> Paytm
+                  </button>
+                  <button type="button" class="pay-sub-pill" data-upiapp="BHIM" onclick="checkoutManager.setUpiApp('BHIM')">
+                    <i class="fa-solid fa-building-columns text-emerald-400"></i> BHIM
+                  </button>
+                  <button type="button" class="pay-sub-pill" data-upiapp="CRED" onclick="checkoutManager.setUpiApp('CRED')">
+                    <i class="fa-solid fa-shield-halved text-amber-400"></i> CRED
+                  </button>
+                  <button type="button" class="pay-sub-pill" data-upiapp="Amazon Pay" onclick="checkoutManager.setUpiApp('Amazon Pay')">
+                    <i class="fa-brands fa-amazon text-yellow-400"></i> Amazon
+                  </button>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                  <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Or Enter UPI ID / Virtual Payment Address (VPA)</label>
+                  <div style="display: flex; gap: 0.5rem;">
+                    <input type="text" id="upi_vpa_input" class="form-input" placeholder="e.g. yourname@okhdfcbank" value="patron@upi" style="font-size: 0.8125rem; flex: 1;"/>
+                    <button type="button" class="btn-secondary" style="padding: 0 0.85rem; font-size: 0.6875rem;" onclick="if (window.showToast) window.showToast('UPI Request Sent', 'Payment collect request transmitted to your UPI App.');">
+                      Request
+                    </button>
+                  </div>
+                </div>
+
+                <div style="background: rgba(212, 175, 55, 0.06); border: 1px solid var(--border-hairline); padding: 0.75rem; font-size: 0.72rem; color: var(--text-secondary); line-height: 1.4;">
+                  <div style="display: flex; align-items: center; gap: 0.35rem; color: var(--gold-primary); font-weight: 700; margin-bottom: 0.2rem;">
+                    <i class="fa-solid fa-shield-check"></i> Instant NPCI UPI Authorization
+                  </div>
+                  <p style="margin: 0; font-size: 0.68rem; color: var(--text-muted);">Zero convenience surcharge. Orders verified in real time with instant BIS 916 Hallmark certificate issuance.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- PANEL 2: CREDIT & DEBIT CARDS -->
+          <div id="payPanel_card" class="pay-panel" style="display: none;">
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem;">
+              
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid var(--border-hairline); padding-bottom: 0.75rem;">
+                <span class="label-micro" style="color: var(--text-muted);">Supported Global Cards:</span>
+                <div style="display: flex; gap: 0.5rem; font-size: 1.25rem; color: var(--gold-primary);">
+                  <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                  <i class="fa-brands fa-cc-mastercard" title="MasterCard"></i>
+                  <i class="fa-brands fa-cc-amex" title="American Express"></i>
+                  <i class="fa-brands fa-cc-diners-club" title="Diners Club"></i>
+                  <i class="fa-regular fa-credit-card" title="RuPay Global"></i>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                <div>
+                  <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Card Number *</label>
+                  <div style="position: relative;">
+                    <input type="text" id="card_number_input" maxlength="19" class="form-input" placeholder="4111 2222 3333 4444" style="font-size: 0.875rem; letter-spacing: 0.1em; font-family: monospace; padding-right: 2.5rem;" oninput="checkoutManager.formatCardInput(this)"/>
+                    <i class="fa-solid fa-credit-card" id="cardBrandIcon" style="position: absolute; right: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--gold-primary); font-size: 1rem;"></i>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Cardholder Name (as on card) *</label>
+                  <input type="text" id="card_holder_input" class="form-input" placeholder="e.g. PRIYA SHARMA" style="font-size: 0.8125rem; text-transform: uppercase;" value="VALUED PATRON"/>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div>
+                    <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Expiry Date (MM/YY) *</label>
+                    <input type="text" id="card_expiry_input" maxlength="5" class="form-input" placeholder="MM/YY" style="font-size: 0.875rem; text-align: center; font-family: monospace;" oninput="checkoutManager.formatExpiryInput(this)"/>
+                  </div>
+                  <div>
+                    <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">CVV / CVC (3-4 Digits) *</label>
+                    <div style="position: relative;">
+                      <input type="password" id="card_cvv_input" maxlength="4" class="form-input" placeholder="•••" style="font-size: 0.875rem; text-align: center; letter-spacing: 0.2em; font-family: monospace;"/>
+                      <i class="fa-solid fa-lock" style="position: absolute; right: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.75rem;" title="3 digits on back or 4 digits on Amex front"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--text-secondary); cursor: pointer; margin-top: 0.25rem;">
+                  <input type="checkbox" id="card_save_checkbox" checked style="accent-color: var(--gold-primary);"/>
+                  <span>Securely save this card for future acquisitions (RBI Tokenized &amp; 100% Encrypted)</span>
+                </label>
+
+                <div style="background: rgba(212, 175, 55, 0.06); border: 1px solid var(--border-hairline); padding: 0.75rem; font-size: 0.72rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                  <i class="fa-solid fa-shield-halved" style="color: var(--gold-primary); font-size: 1.1rem; flex-shrink: 0;"></i>
+                  <span>Transactions are routed through <strong>3D Secure 2.0 OTP Authorization</strong> directly with your issuing bank.</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- PANEL 3: NET BANKING (50+ BANKS) -->
+          <div id="payPanel_netbanking" class="pay-panel" style="display: none;">
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem;">
+              
+              <span class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.75rem;">Popular Indian &amp; Global Banks:</span>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem; margin-bottom: 1.25rem;">
+                <button type="button" class="pay-bank-card selected" data-bank="HDFC Bank" onclick="checkoutManager.setBank('HDFC Bank')">
+                  <i class="fa-solid fa-building-columns" style="font-size: 1.2rem; color: #004C8F;"></i>
+                  <span>HDFC Bank</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-bank="ICICI Bank" onclick="checkoutManager.setBank('ICICI Bank')">
+                  <i class="fa-solid fa-building-columns" style="font-size: 1.2rem; color: #B02A30;"></i>
+                  <span>ICICI Bank</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-bank="State Bank of India (SBI)" onclick="checkoutManager.setBank('State Bank of India (SBI)')">
+                  <i class="fa-solid fa-building-columns" style="font-size: 1.2rem; color: #2D68C4;"></i>
+                  <span>SBI</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-bank="Axis Bank" onclick="checkoutManager.setBank('Axis Bank')">
+                  <i class="fa-solid fa-building-columns" style="font-size: 1.2rem; color: #97144D;"></i>
+                  <span>Axis Bank</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-bank="Kotak Mahindra Bank" onclick="checkoutManager.setBank('Kotak Mahindra Bank')">
+                  <i class="fa-solid fa-building-columns" style="font-size: 1.2rem; color: #EE1C25;"></i>
+                  <span>Kotak Bank</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-bank="Punjab National Bank (PNB)" onclick="checkoutManager.setBank('Punjab National Bank (PNB)')">
+                  <i class="fa-solid fa-building-columns" style="font-size: 1.2rem; color: #A20A27;"></i>
+                  <span>PNB</span>
+                </button>
+              </div>
+
+              <div>
+                <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Or Select from 50+ Other Scheduled Banks</label>
+                <select id="netbanking_bank_select" class="form-input" style="font-size: 0.8125rem;" onchange="checkoutManager.setBank(this.value)">
+                  <option value="HDFC Bank">HDFC Bank</option>
+                  <option value="ICICI Bank">ICICI Bank</option>
+                  <option value="State Bank of India (SBI)">State Bank of India (SBI)</option>
+                  <option value="Axis Bank">Axis Bank</option>
+                  <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                  <option value="Punjab National Bank (PNB)">Punjab National Bank (PNB)</option>
+                  <option value="Bank of Baroda">Bank of Baroda</option>
+                  <option value="IndusInd Bank">IndusInd Bank</option>
+                  <option value="IDFC FIRST Bank">IDFC FIRST Bank</option>
+                  <option value="Federal Bank">Federal Bank</option>
+                  <option value="Yes Bank">Yes Bank</option>
+                  <option value="Canara Bank">Canara Bank</option>
+                  <option value="Union Bank of India">Union Bank of India</option>
+                  <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                  <option value="HSBC India">HSBC India</option>
+                  <option value="Citi Bank India">Citi Bank India</option>
+                  <option value="RBL Bank">RBL Bank</option>
+                  <option value="DBS Bank">DBS Bank India</option>
+                  <option value="Bandhan Bank">Bandhan Bank</option>
+                  <option value="South Indian Bank">South Indian Bank</option>
+                  <option value="Indian Bank">Indian Bank</option>
+                  <option value="Central Bank of India">Central Bank of India</option>
+                </select>
+              </div>
+
+              <div style="margin-top: 1rem; background: rgba(212, 175, 55, 0.06); border: 1px solid var(--border-hairline); padding: 0.75rem; font-size: 0.72rem; color: var(--text-secondary);">
+                <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--gold-primary); margin-right: 0.35rem;"></i>
+                You will be seamlessly connected to your bank's secure netbanking portal to authorize payment.
+              </div>
+
+            </div>
+          </div>
+
+          <!-- PANEL 5: INTERNATIONAL & PAYPAL -->
+          <div id="payPanel_international" class="pay-panel" style="display: none;">
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.5rem;">
+              
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--border-hairline); padding-bottom: 0.75rem;">
+                <div>
+                  <span class="label-caps" style="color: var(--gold-primary); font-size: 0.7rem;">Global Patrons &amp; NRI Concierge</span>
+                  <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin: 0.15rem 0 0 0;">Worldwide Multi-Currency Checkout</h4>
+                </div>
+                <span class="category-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); font-size: 0.65rem;">
+                  <i class="fa-solid fa-plane"></i> Global Insured Air Transit
+                </span>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+                <button type="button" class="pay-bank-card selected" data-intl="PayPal Express" onclick="checkoutManager.setInternational('PayPal Express')">
+                  <i class="fa-brands fa-paypal" style="font-size: 1.5rem; color: #003087;"></i>
+                  <span>PayPal Express</span>
+                  <span class="label-micro" style="color: #10B981; font-size: 0.6rem;">Instant NRI Checkout</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-intl="Stripe Global 3DS" onclick="checkoutManager.setInternational('Stripe Global 3DS')">
+                  <i class="fa-brands fa-stripe" style="font-size: 1.5rem; color: #635BFF;"></i>
+                  <span>Stripe Global 3DS</span>
+                  <span class="label-micro" style="color: var(--gold-primary); font-size: 0.6rem;">135+ Currencies</span>
+                </button>
+                <button type="button" class="pay-bank-card" data-intl="Armored Wire Transfer (SWIFT)" onclick="checkoutManager.setInternational('Armored Wire Transfer (SWIFT)')">
+                  <i class="fa-solid fa-landmark-flag" style="font-size: 1.5rem; color: var(--gold-primary);"></i>
+                  <span>Royal SWIFT Wire</span>
+                  <span class="label-micro" style="color: var(--text-muted); font-size: 0.6rem;">Bespoke Vault Protocol</span>
+                </button>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div>
+                  <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Settlement Currency</label>
+                  <select id="intl_currency_select" class="form-input" style="font-size: 0.8125rem;">
+                    <option value="USD">USD ($) - United States Dollar</option>
+                    <option value="EUR">EUR (€) - Eurozone</option>
+                    <option value="GBP">GBP (£) - British Pound</option>
+                    <option value="AED">AED (د.إ) - UAE Dirham</option>
+                    <option value="CAD">CAD ($) - Canadian Dollar</option>
+                    <option value="AUD">AUD ($) - Australian Dollar</option>
+                    <option value="SGD">SGD ($) - Singapore Dollar</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Country of Origin</label>
+                  <input type="text" id="intl_country_input" class="form-input" placeholder="e.g. United States / UAE / UK" value="United States" style="font-size: 0.8125rem;"/>
+                </div>
+              </div>
+
+              <div style="background: rgba(212, 175, 55, 0.06); border: 1px solid var(--border-hairline); padding: 0.75rem; font-size: 0.72rem; color: var(--text-secondary);">
+                <i class="fa-solid fa-passport" style="color: var(--gold-primary); margin-right: 0.35rem;"></i>
+                Includes 100% Comprehensive Transit Insurance, Customs Documentation, &amp; BIS Authenticity Certificate translation.
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.75rem; border-top: 1px solid var(--border-hairline); padding-top: 1.5rem; flex-wrap: wrap; gap: 0.75rem;">
+            <button type="button" class="btn-secondary" onclick="checkoutManager.goToStep(1)">
+              <i class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Address
+            </button>
+            <button type="button" class="btn-primary" id="btnCompletePayment" onclick="checkoutManager.processPayment()" style="padding: 0.85rem 1.75rem; font-size: 0.8125rem;">
+              <i class="fa-solid fa-shield-check" style="margin-right: 0.5rem; color: var(--gold-primary);"></i> Confirm &amp; Authorize Payment
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: SECURITY AUTHENTICATION PROGRESS -->
+        <div class="checkout-step-content" id="checkoutStep_3" style="display: none; text-align: center; padding: 4rem 1rem;">
+          <div class="animate-spin-slow" style="width: 80px; height: 80px; border: 3px solid var(--border-color); border-top-color: var(--gold-primary); margin: 0 auto 2rem auto;"></div>
+          <span class="label-caps" style="color: var(--gold-primary); display: block; margin-bottom: 0.5rem;">Secure Bank Verification</span>
+          <h3 id="paymentStatusText" style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.5rem;">
+            Connecting with secure bank server...
+          </h3>
+          <div style="width: 100%; max-width: 440px; height: 6px; background: var(--bg-surface); border: 1px solid var(--border-color); margin: 0 auto; overflow: hidden;">
+            <div id="paymentProgressBar" style="width: 15%; height: 100%; background: var(--gold-primary); transition: width 0.4s ease;"></div>
+          </div>
+        </div>
+
+        <!-- STEP 4: ORDER CONFIRMATION & CERTIFICATE RECEIPT -->
+        <div class="checkout-step-content" id="checkoutStep_4" style="display: none;">
+          <div id="orderConfirmationContent"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MY ORDERS MODAL & ORDER HISTORY
+       ========================================================================== -->
+  <div class="orders-modal-backdrop" id="ordersModalBackdrop" onclick="if(event.target === this) ordersManager.closeOrdersModal();">
+    <div class="orders-modal-container">
+      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-surface); flex-shrink: 0;">
+        <div>
+          <span class="label-micro" style="color: var(--gold-primary);">Real-Time Order &amp; Delivery Tracking</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary);">My Orders &amp; Heirloom Shipments</h3>
+        </div>
+        <button onclick="ordersManager.closeOrdersModal()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;" title="Close Orders">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="orders-modal-scrollable" id="ordersListContainer" tabindex="0">
+        <!-- Rendered by ordersManager.renderOrdersList() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       5-STAGE PACKAGE TRACKER MODAL (10-12 DAYS DELIVERY TIMELINE)
+       ========================================================================== -->
+  <div class="orders-modal-backdrop" id="trackerModalBackdrop" onclick="if(event.target === this) ordersManager.closePackageTracker();">
+    <div class="orders-modal-container" style="max-width: 680px;">
+      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-surface); flex-shrink: 0;">
+        <div>
+          <span class="label-micro" style="color: var(--gold-primary);"><i class="fa-solid fa-shield-halved"></i> 100% Insured Armored Transit</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary);">Track Your Package (5 Milestones)</h3>
+        </div>
+        <button onclick="ordersManager.closePackageTracker()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;" title="Close Tracker">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="orders-modal-scrollable" id="trackerModalScrollContainer" tabindex="0">
+        <!-- Package Info Summary Card -->
+        <div style="background-color: var(--bg-surface); border: 1px solid var(--border-color); padding: 1.25rem; margin-bottom: 1.75rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div>
+              <span class="label-micro" style="color: var(--text-muted); display: block;">Order Reference</span>
+              <span id="trk_orderId" style="font-family: monospace; font-size: 0.875rem; font-weight: 700; color: var(--gold-primary);">ASM-2026-784109</span>
+            </div>
+            <div>
+              <span class="label-micro" style="color: var(--text-muted); display: block;">Tracking AWB Number</span>
+              <span id="trk_trackingId" style="font-family: monospace; font-size: 0.875rem; font-weight: 700; color: var(--text-primary);">ASMI-BD-894021-IN</span>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-hairline); padding-top: 0.75rem;">
+            <div>
+              <span class="label-micro" style="color: var(--text-muted); display: block;">Armored Carrier</span>
+              <span id="trk_courier" style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);">BlueDart Armored Logistics</span>
+            </div>
+            <div>
+              <span class="label-micro" style="color: var(--text-muted); display: block;">Delivery Span (10 to 12 Days)</span>
+              <span id="trk_deliverySpan" style="font-size: 0.8125rem; font-weight: 600; color: #10B981;">10 - 12 Business Days</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-Stage Step-by-Step Milestones Timeline -->
+        <div id="trackerStepsContainer" style="padding: 0 0.5rem;">
+          <!-- Dynamically generated 5 steps with live statuses -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SUBMIT REVIEW & PHOTO UPLOAD MODAL
+       ========================================================================== -->
+  <div class="orders-modal-backdrop" id="reviewModalBackdrop" onclick="if(event.target === this) reviewsManager.closeSubmitReviewModal();">
+    <div class="orders-modal-container" style="max-width: 640px;">
+      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-surface);">
+        <div>
+          <span class="label-micro" style="color: var(--gold-primary);">Client Experience &amp; Authenticity</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary);">Share Your Jewelry Review</h3>
+        </div>
+        <button onclick="reviewsManager.closeSubmitReviewModal()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;" title="Close Review Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div style="padding: 1.5rem 2rem; flex: 1; overflow-y: auto;">
+        <form id="submitReviewForm" onsubmit="reviewsManager.handleReviewSubmit(event)" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          
+          <!-- Product Selector -->
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Select Jewelry Piece *</label>
+            <select id="rev_product" required class="form-input"></select>
+          </div>
+
+          <!-- Interactive Star Rating Picker (1 to 5 Stars) -->
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Your Rating *</label>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <div style="display: flex; gap: 0.25rem;">
+                <button type="button" class="star-picker-btn" data-value="1" onclick="reviewsManager.setRating(1)" title="1 Star"><i class="fa-solid fa-star" style="color: var(--gold-primary);"></i></button>
+                <button type="button" class="star-picker-btn" data-value="2" onclick="reviewsManager.setRating(2)" title="2 Stars"><i class="fa-solid fa-star" style="color: var(--gold-primary);"></i></button>
+                <button type="button" class="star-picker-btn" data-value="3" onclick="reviewsManager.setRating(3)" title="3 Stars"><i class="fa-solid fa-star" style="color: var(--gold-primary);"></i></button>
+                <button type="button" class="star-picker-btn" data-value="4" onclick="reviewsManager.setRating(4)" title="4 Stars"><i class="fa-solid fa-star" style="color: var(--gold-primary);"></i></button>
+                <button type="button" class="star-picker-btn" data-value="5" onclick="reviewsManager.setRating(5)" title="5 Stars"><i class="fa-solid fa-star" style="color: var(--gold-primary);"></i></button>
+              </div>
+              <span id="starRatingLabel" style="font-size: 0.8125rem; font-weight: 600; color: var(--gold-primary); margin-left: 0.5rem;">5 Stars - Exceptional Haute Joaillerie!</span>
+            </div>
+          </div>
+
+          <!-- Reviewer Info -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Your Name *</label>
+              <input type="text" id="rev_name" required class="form-input" placeholder="e.g. Priyadarshini Mehta"/>
+            </div>
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">City / State *</label>
+              <input type="text" id="rev_city" required class="form-input" placeholder="e.g. Mumbai, Maharashtra"/>
+            </div>
+          </div>
+
+          <!-- Headline / Title -->
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Headline / Title *</label>
+            <input type="text" id="rev_title" required class="form-input" placeholder="e.g. Absolute Royalty! Stunning Luster and Finish"/>
+          </div>
+
+          <!-- Comment Text -->
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Your Detailed Review *</label>
+            <textarea id="rev_comment" required rows="4" class="form-input" placeholder="Tell other patrons about the shine, pearl quality, packaging, and how it felt wearing it..."></textarea>
+          </div>
+
+          <!-- JPEG / PNG Image Upload Dropzone -->
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Upload Product Photo (JPEG or PNG)</label>
+            <div class="image-dropzone" onclick="document.getElementById('reviewImageInput').click();">
+              <input type="file" id="reviewImageInput" accept="image/jpeg,image/png,image/webp" style="display: none;" onchange="reviewsManager.handleImageUpload(event)" />
+              <i class="fa-solid fa-cloud-arrow-up" style="font-size: 1.75rem; color: var(--gold-primary); margin-bottom: 0.5rem; display: block;"></i>
+              <p style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+                Click to Upload Jewelry Photo
+              </p>
+              <p class="label-micro" style="color: var(--text-muted);">
+                Supports JPEG and PNG formats (Max 10MB). Opens in wide lightbox view.
+              </p>
+            </div>
+            <div id="uploadedPhotoPreview" style="margin-top: 0.75rem; display: none;"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-primary" style="padding: 0.85rem; font-size: 0.75rem; margin-top: 0.5rem;">
+            Publish Review Universally
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       WIDE VIEW FULL-SCREEN PHOTO LIGHTBOX MODAL
+       ========================================================================== -->
+  <div class="photo-lightbox-backdrop" id="photoLightboxModal" onclick="if(event.target === this) reviewsManager.closePhotoLightbox();">
+    <div class="photo-lightbox-box">
+      <!-- Lightbox Header -->
+      <div style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-surface);">
+        <div>
+          <span class="label-micro" style="color: var(--gold-primary);"><i class="fa-solid fa-camera"></i> Verified Patron High-Res Photo</span>
+          <h3 id="lightboxJewelTitle" style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-top: 2px;">ASMI Masterpiece</h3>
+        </div>
+        <button onclick="reviewsManager.closePhotoLightbox()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.4rem; padding: 0.25rem;" title="Close Wide View">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Stage -->
+      <div class="lightbox-image-stage">
+        <img id="lightboxFullImage" src="" alt="Full-size client jewelry photo" />
+      </div>
+
+      <!-- Lightbox Footer -->
+      <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-card); flex-wrap: wrap; gap: 0.75rem;">
+        <div>
+          <p id="lightboxReviewer" style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);"></p>
+          <span id="lightboxDate" class="label-micro" style="color: var(--text-muted);"></span>
+        </div>
+        <div id="lightboxStars" style="display: flex; gap: 0.25rem; font-size: 0.875rem;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ORDER ITEM CANCELLATION MODAL
+       ========================================================================== -->
+  <div class="orders-modal-backdrop" id="orderCancelModalBackdrop" onclick="if(event.target === this) ordersManager.closeCancelItemModal();">
+    <div class="orders-modal-container" style="max-width: 580px;">
+      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-surface);">
+        <div>
+          <span class="label-micro" style="color: #ef4444;"><i class="fa-solid fa-ban"></i> Item Cancellation Protocol</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-primary); margin-top: 2px;">Cancel Ordered Item</h3>
+        </div>
+        <button onclick="ordersManager.closeCancelItemModal()" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;" title="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div style="padding: 1.5rem; flex: 1; overflow-y: auto;">
+        <form onsubmit="ordersManager.submitCancelItem(event)" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <input type="hidden" id="cancelModalOrderNumber" value="" />
+          <input type="hidden" id="cancelModalItemId" value="" />
+          <input type="hidden" id="cancelModalItemIndex" value="0" />
+
+          <!-- Selected Item Preview -->
+          <div id="cancelItemSummary"></div>
+
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Reason for Cancellation *</label>
+            <select id="cancelReasonSelect" required class="form-input" style="font-size: 0.8125rem;">
+              <option value="Changed mind / Ordered by mistake">Changed mind / Ordered by mistake</option>
+              <option value="Selected incorrect necklace length or gold finish">Selected incorrect necklace length or gold finish</option>
+              <option value="Found alternative heirloom design">Found alternative heirloom design</option>
+              <option value="Delivery window timeline (10-12 days) not suitable">Delivery window timeline (10-12 days) not suitable</option>
+              <option value="Bespoke customization / custom order request">Bespoke customization / custom order request</option>
+              <option value="Other reason">Other reason</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Additional Notes / Comments for Master Atelier Desk (Optional)</label>
+            <textarea id="cancelReasonNotes" class="form-input" rows="3" placeholder="Provide any extra details or instructions regarding your refund/exchange..."></textarea>
+          </div>
+
+          <!-- Email notification disclosure box -->
+          <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); padding: 1rem; border-radius: 6px; font-size: 0.775rem; color: var(--text-secondary); line-height: 1.5;">
+            <i class="fa-solid fa-envelope-circle-check" style="color: #ef4444; margin-right: 0.35rem;"></i>
+            <strong>Instant Email Notifications:</strong> Upon confirming cancellation, our Master Atelier Admin is immediately dispatched an alert email containing all your patron details, order info, and reason. A cancellation confirmation receipt is also delivered to your registered email address.
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem;">
+            <button type="button" class="btn-secondary" onclick="ordersManager.closeCancelItemModal()" style="font-size: 0.75rem; padding: 0.75rem 1.25rem;">
+              Keep Item
+            </button>
+            <button type="submit" class="btn-primary" style="background: #ef4444; border-color: #ef4444; color: #fff; font-size: 0.75rem; padding: 0.75rem 1.5rem;">
+              <i class="fa-solid fa-ban" style="margin-right: 0.35rem;"></i> Confirm Item Cancellation
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CUSTOMER SUPPORT & HAUTE JOAILLERIE AI CONCIERGE MODAL
+       ========================================================================== -->
+  <div class="asmi-support-modal-backdrop" id="asmiSupportModal" onclick="if(event.target === this) supportManager.closeSupportModal();">
+    <div class="asmi-support-modal-container">
+      <!-- Luxury Gold Top Shimmer Line -->
+      <div class="support-gold-shimmer-bar"></div>
+
+      <!-- Modal Header -->
+      <div class="asmi-support-header">
+        <div style="display: flex; align-items: center; gap: 0.85rem; min-width: 0;">
+          <div class="support-header-avatar">
+            <i class="fa-solid fa-crown"></i>
+            <span class="avatar-online-dot"></span>
+          </div>
+          <div style="min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin: 0; white-space: nowrap; letter-spacing: 0.02em;">ASMI Atelier Concierge</h3>
+              <span class="support-status-chip"><span class="chip-dot"></span> 24/7 Live AI</span>
+            </div>
+            <p class="label-micro" style="color: var(--text-muted); margin: 0.2rem 0 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              Hotline: <span id="suppHeaderPhone" style="color: var(--gold-primary); font-family: monospace; font-weight: 700;">+91 98765 43210</span> &bull; <span id="suppHeaderEmail">support@asmijewelry.com</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="support-header-actions">
+          <button type="button" onclick="supportManager.resetAiChat()" class="support-tool-btn" title="Restart Conversation">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+          <button type="button" onclick="supportManager.closeSupportModal()" class="support-tool-btn close-btn" title="Close Concierge">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Switcher (AI Concierge vs Live Admin Chat) -->
+      <div class="asmi-support-tab-nav">
+        <button id="suppTabAiBtn" class="support-tab-btn active" onclick="supportManager.switchChatTab('ai')">
+          <i class="fa-solid fa-sparkles gold-glow-icon"></i> AI Concierge Assistant
+        </button>
+        <button id="suppTabAdminBtn" class="support-tab-btn" onclick="supportManager.switchChatTab('admin')">
+          <i class="fa-solid fa-user-shield"></i> Master Jeweler Admin
+        </button>
+      </div>
+
+      <!-- Mode 1: AI Chat Assistant View -->
+      <div id="suppAiView" class="asmi-support-content-view">
+        <!-- Quick Carousel Shortcuts -->
+        <div class="support-carousel-strip">
+          <button class="support-shortcut-pill" onclick="supportManager.sendAiMessage('How do I cancel an ordered item?')">
+            <i class="fa-solid fa-ban" style="color: #ef4444;"></i> Cancel Item
+          </button>
+          <button class="support-shortcut-pill" onclick="supportManager.sendAiMessage('Where is my package / Track order')">
+            <i class="fa-solid fa-truck-fast" style="color: var(--gold-primary);"></i> Track Package (10-12 Days)
+          </button>
+          <button class="support-shortcut-pill" onclick="supportManager.sendAiMessage('Tell me about BIS 916 Hallmark and certificate')">
+            <i class="fa-solid fa-certificate" style="color: #10B981;"></i> BIS 916 Hallmark
+          </button>
+          <button class="support-shortcut-pill" onclick="supportManager.sendAiMessage('Custom Bridal Sizing & Lengths')">
+            <i class="fa-solid fa-ruler" style="color: #3B82F6;"></i> Custom Sizing
+          </button>
+          <button class="support-shortcut-pill" onclick="supportManager.sendAiMessage('How to care for natural pearls and emeralds?')">
+            <i class="fa-solid fa-gem" style="color: #D4AF37;"></i> Pearl Care
+          </button>
+          <button class="support-shortcut-pill" onclick="supportManager.switchChatTab('admin')">
+            <i class="fa-solid fa-comments" style="color: #A855F7;"></i> Live Admin Desk
+          </button>
+        </div>
+
+        <!-- Chat Conversation Messages Body -->
+        <div class="asmi-chat-messages-body" id="suppAiMessagesBody">
+          <!-- Dynamically rendered AI and Patron bubbles -->
+        </div>
+
+        <!-- Luxury Interactive Composer -->
+        <div class="asmi-chat-composer">
+          <div class="composer-input-wrapper">
+            <i class="fa-solid fa-sparkles composer-sparkle-icon"></i>
+            <input type="text" id="suppAiInput" placeholder="Ask anything about orders, item cancellations, sizing, hallmark..." class="composer-text-input" autocomplete="off" onkeydown="if(event.key === 'Enter') supportManager.sendAiMessage();" />
+            <button type="button" class="composer-mic-btn" onclick="supportManager.sendAiMessage('Tell me about BIS 916 Hallmark certification')" title="Quick Prompt suggestions">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+          </div>
+          <button class="composer-send-btn" onclick="supportManager.sendAiMessage();" title="Send Question (Enter)">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode 2: Live Admin Chat View -->
+      <div id="suppAdminView" class="asmi-support-content-view" style="display: none;">
+        <div id="suppAdminMessagesContainer" style="height: 100%; display: flex; flex-direction: column;">
+          <!-- Dynamically rendered thread list & conversation stream -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating AI Jewelry Concierge Action Charm (Bottom Left) -->
+  <div id="asmiSupportWidgetTrigger" class="asmi-support-floating-pill" onclick="supportManager.openSupportModal('ai')" title="AI Jewelry Concierge - 24/7 Bespoke Guidance">
+    <div class="pulse-ring"></div>
+    <div class="floating-pill-content">
+      <div class="floating-charm-crest">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span class="charm-pulse-dot"></span>
+      </div>
+      <div class="floating-text-stack">
+        <span class="pill-label">AI Jewelry Concierge</span>
+        <span class="pill-sub">24/7 Fine Jewelry AI</span>
+      </div>
+      <i class="fa-solid fa-sparkles gold-glow-icon"></i>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PATRON AUTHENTICATION & REGISTRATION MODAL (SIGN IN VS SIGN UP)
+       ========================================================================== -->
+  <div class="patron-modal-backdrop" id="patronAuthModal" onclick="if(event.target === this) authManager.closeAuthModal();">
+    <div class="patron-auth-card" style="max-width: 520px; max-height: 90vh; overflow-y: auto;">
+      <button type="button" onclick="authManager.closeAuthModal()" class="modal-close-btn" title="Close Authentication" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.25rem; z-index: 10;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Gated Purchase Alert Callout -->
+      <div id="authCheckoutGateNotice" style="display: none; background: rgba(212, 175, 55, 0.12); border: 1px solid var(--gold-primary); padding: 0.85rem 1rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fa-solid fa-lock" style="color: var(--gold-primary); font-size: 1.1rem; flex-shrink: 0;"></i>
+          <div>
+            <strong style="color: var(--gold-primary); font-size: 0.8125rem; display: block;">Mandatory Patron Verification</strong>
+            <p id="authCheckoutGateText" class="label-micro" style="color: var(--text-primary); margin: 0; line-height: 1.4;">
+              Signing up and creating an account with your delivery address is mandatory to acquire jewelry from ASMI.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Header -->
+      <div style="text-align: center; margin-bottom: 1.25rem;">
+        <div class="patron-auth-badge-icon">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.25rem;">ASMI Atelier VIP Portal</h3>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.4; max-width: 380px; margin: 0 auto;">
+          Sign in or register your customer profile to save delivery addresses, track insured shipments, and access heirloom collections.
+        </p>
+      </div>
+
+      <!-- Mode Switcher Tabs: Sign In vs Create Account -->
+      <div class="auth-method-tabs" style="margin-bottom: 1.25rem;">
+        <button type="button" class="auth-method-tab active" id="authTabModeSignin" onclick="authManager.setAuthMode('signin')">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+        <button type="button" class="auth-method-tab" id="authTabModeSignup" onclick="authManager.setAuthMode('signup')">
+          <i class="fa-solid fa-user-plus"></i> Create Account (Mandatory)
+        </button>
+      </div>
+
+      <!-- ================= VIEW A: SIGN IN ================= -->
+      <div id="authViewSignin">
+        <!-- STEP 1: Method Selection (Google 1-Click / Phone / Email) -->
+        <div id="authStep_1">
+          <!-- 1-Click Google / Gmail Button -->
+          <button type="button" class="btn-google-auth" onclick="authManager.signInWithGoogle()" title="Sign In with Google Account">
+            <svg class="google-svg-icon" viewBox="0 0 48 48" style="width: 20px; height: 20px; flex-shrink: 0;">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+            <span style="font-weight: 600;">Continue with Google (Gmail)</span>
+          </button>
+
+          <div class="auth-divider-line">
+            <span>OR SIGN IN WITH OTP</span>
+          </div>
+
+          <!-- Method Selector Tabs (Phone vs Email) -->
+          <div class="auth-method-tabs" style="margin-bottom: 1rem;">
+            <button type="button" class="auth-method-tab active" id="authTabPhone" onclick="authManager.setAuthMethod('phone')">
+              <i class="fa-solid fa-mobile-screen"></i> Mobile OTP
+            </button>
+            <button type="button" class="auth-method-tab" id="authTabEmail" onclick="authManager.setAuthMethod('email')">
+              <i class="fa-regular fa-envelope"></i> Email / Gmail OTP
+            </button>
+          </div>
+
+          <form onsubmit="authManager.handleSendOTP(event)" style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Your Full Name (Optional)</label>
+              <input type="text" id="authNameInput" class="form-input" placeholder="e.g. Gayatri Roy" autocomplete="name"/>
+            </div>
+
+            <!-- Phone Number Input -->
+            <div id="authPhoneGroup">
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Indian Mobile Number *</label>
+              <div style="display: flex; gap: 0.5rem;">
+                <div style="padding: 0.65rem 0.85rem; background: var(--bg-surface); border: 1px solid var(--border-color); color: var(--gold-primary); font-weight: 700; font-size: 0.8125rem; display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0;">
+                  <span>🇮🇳 +91</span>
+                </div>
+                <input type="tel" id="authPhoneInput" class="form-input" placeholder="98765 43210" maxlength="14" autocomplete="tel"/>
+              </div>
+            </div>
+
+            <!-- Email Input -->
+            <div id="authEmailGroup" style="display: none;">
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Gmail or Personal Email Address *</label>
+              <input type="email" id="authEmailInput" class="form-input" placeholder="patron@gmail.com" autocomplete="email"/>
+            </div>
+
+            <button type="submit" class="btn-primary" style="padding: 0.85rem; font-size: 0.75rem; width: 100%; margin-top: 0.35rem;">
+              <i class="fa-solid fa-paper-plane" style="margin-right: 0.4rem;"></i> Send 4-Digit Verification Passcode
+            </button>
+
+            <div style="text-align: center; margin-top: 0.25rem; font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 0.35rem;">
+              <i class="fa-solid fa-shield-halved" style="color: var(--gold-primary);"></i>
+              <span>256-Bit Encrypted OTP Verification | Perpetual VIP Recognition</span>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP 2: OTP Verification Screen -->
+        <div id="authStep_2" style="display: none;">
+          <div style="text-align: center; margin-bottom: 1.25rem;">
+            <div class="patron-auth-badge-icon" style="background: rgba(16, 185, 129, 0.15); border-color: #10B981; color: #10B981;">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <span class="label-caps" style="color: #10B981; display: block; margin-bottom: 0.25rem; font-size: 0.65rem;">Passcode Verification</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.35rem;">Enter Verification Code</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.4;">
+              We've sent a 4-digit code to <strong id="otpTargetDisplay" style="color: var(--text-primary);">+91 98765 43210</strong>
+            </p>
+          </div>
+
+          <!-- Live OTP Delivery Confirmation Card -->
+          <div id="otpDeliveryNotice" style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.25); padding: 0.85rem 1rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.65rem; border-radius: 2px;">
+            <i class="fa-solid fa-paper-plane" id="otpDeliveryIcon" style="color: var(--gold-primary); font-size: 1.1rem; flex-shrink: 0;"></i>
+            <span id="otpDeliveryText" style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45;">
+              A confidential 4-digit verification code has been dispatched. Please enter it below.
+            </span>
+          </div>
+
+          <!-- 4 Digit Boxes -->
+          <div class="otp-boxes-grid">
+            <input type="text" id="otpDigit_1" maxlength="1" class="otp-box-input" oninput="authManager.handleDigitInput(1, event)" onkeydown="authManager.handleDigitKeyDown(1, event)" autocomplete="off" />
+            <input type="text" id="otpDigit_2" maxlength="1" class="otp-box-input" oninput="authManager.handleDigitInput(2, event)" onkeydown="authManager.handleDigitKeyDown(2, event)" autocomplete="off" />
+            <input type="text" id="otpDigit_3" maxlength="1" class="otp-box-input" oninput="authManager.handleDigitInput(3, event)" onkeydown="authManager.handleDigitKeyDown(3, event)" autocomplete="off" />
+            <input type="text" id="otpDigit_4" maxlength="1" class="otp-box-input" oninput="authManager.handleDigitInput(4, event)" onkeydown="authManager.handleDigitKeyDown(4, event)" autocomplete="off" />
+          </div>
+
+          <button type="button" class="btn-primary" style="padding: 0.85rem; font-size: 0.75rem; width: 100%; margin-bottom: 1rem;" onclick="authManager.verifyOTP()">
+            <i class="fa-solid fa-shield-halved" style="margin-right: 0.4rem;"></i> Verify OTP &amp; Enter Atelier
+          </button>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; border-top: 1px solid var(--border-hairline); padding-top: 1rem;">
+            <button type="button" class="btn-link-action" onclick="authManager.backToStep1()">
+              <i class="fa-solid fa-arrow-left"></i> Change Destination
+            </button>
+            <div>
+              <span id="otpTimerText" style="color: var(--text-muted);">Resend in <strong id="otpCountdown" style="color: var(--gold-primary);">30</strong>s</span>
+              <button type="button" id="otpResendBtn" class="btn-link-action" style="display: none; color: var(--gold-primary);" onclick="authManager.resendOTP()">
+                <i class="fa-solid fa-rotate-right"></i> Resend OTP Code
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW B: CREATE ACCOUNT / REGISTRATION (MANDATORY ADDRESS) ================= -->
+      <div id="authViewSignup" style="display: none;">
+        <form onsubmit="authManager.handlePatronSignUp(event)" style="display: flex; flex-direction: column; gap: 0.85rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Full Legal Name *</label>
+              <input type="text" id="signup_name" required class="form-input" placeholder="e.g. Gayatri Roy" autocomplete="name"/>
+            </div>
+            <div>
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Email Address *</label>
+              <input type="email" id="signup_email" required class="form-input" placeholder="name@domain.com" autocomplete="email"/>
+            </div>
+          </div>
+
+          <div>
+            <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Mobile Number (For Courier OTP &amp; Updates) *</label>
+            <div style="display: flex; gap: 0.5rem;">
+              <div style="padding: 0.65rem 0.85rem; background: var(--bg-surface); border: 1px solid var(--border-color); color: var(--gold-primary); font-weight: 700; font-size: 0.8125rem; display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0;">
+                <span>🇮🇳 +91</span>
+              </div>
+              <input type="tel" id="signup_phone" required class="form-input" placeholder="98765 43210" maxlength="14" autocomplete="tel"/>
+            </div>
+          </div>
+
+          <!-- Mandatory Delivery Address Group -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 1rem; margin-top: 0.35rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+              <span class="label-caps" style="color: var(--gold-primary); font-size: 0.72rem;">
+                <i class="fa-solid fa-map-location-dot" style="margin-right: 0.3rem;"></i> Delivery Logistics Address
+              </span>
+              <span class="label-micro" style="color: #10B981; font-weight: 700;">Address 1 of 3 (Primary)</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;">
+              <div>
+                <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.2rem;">Address Tag *</label>
+                <select id="signup_addr_tag" class="form-input" style="font-size: 0.78rem;">
+                  <option value="Primary Residence">Primary Residence</option>
+                  <option value="Corporate Office">Corporate Office</option>
+                  <option value="Heritage Villa">Heritage Villa</option>
+                  <option value="Vacation Home">Vacation Home</option>
+                </select>
+              </div>
+              <div>
+                <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.2rem;">PIN Code (6 Digits) *</label>
+                <input type="text" id="signup_addr_pincode" required maxlength="6" class="form-input" placeholder="e.g. 400018" style="font-size: 0.78rem;"/>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 0.75rem;">
+              <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.2rem;">Flat, Building, Street Address *</label>
+              <input type="text" id="signup_addr_street" required class="form-input" placeholder="e.g. 402, Sea Face Manor, Worli Sea Face" style="font-size: 0.78rem;"/>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
+              <div>
+                <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.2rem;">Landmark / Area</label>
+                <input type="text" id="signup_addr_landmark" class="form-input" placeholder="Near Promenade" style="font-size: 0.78rem;"/>
+              </div>
+              <div>
+                <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.2rem;">City *</label>
+                <input type="text" id="signup_addr_city" required class="form-input" value="Mumbai" style="font-size: 0.78rem;"/>
+              </div>
+              <div>
+                <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.2rem;">State *</label>
+                <input type="text" id="signup_addr_state" required class="form-input" value="Maharashtra" style="font-size: 0.78rem;"/>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="padding: 0.85rem; font-size: 0.78rem; width: 100%; margin-top: 0.5rem;">
+            <i class="fa-solid fa-user-check" style="margin-right: 0.4rem;"></i> Create Account &amp; Save Details
+          </button>
+
+          <p class="label-micro" style="text-align: center; color: var(--text-muted); margin: 0.25rem 0 0 0;">
+            By signing up, your details and addresses will be synced with the Atelier Logistics Panel for armored BlueDart dispatch. You can add up to 3 addresses later in your profile.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PATRON ACCOUNT & VIP PROFILE MODAL (WITH 3-ADDRESS BOOK)
+       ========================================================================== -->
+  <div class="patron-modal-backdrop" id="patronAccountModal" onclick="if(event.target === this) authManager.closeAccountModal();">
+    <div class="patron-account-card" style="max-width: 580px; max-height: 90vh; overflow-y: auto;">
+      <button type="button" onclick="authManager.closeAccountModal()" class="modal-close-btn" title="Close Profile" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.25rem; z-index: 10;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div style="display: flex; align-items: center; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem; margin-bottom: 1.25rem;">
+        <div id="accPatronAvatar" class="patron-avatar-large">G</div>
+        <div>
+          <span class="label-micro" style="color: var(--gold-primary); letter-spacing: 0.15em;">Recognized VIP Patron</span>
+          <h3 id="accPatronName" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-primary); margin: 0; line-height: 1.2;">Gayatri Roy</h3>
+          <span id="accPatronTier" class="label-micro" style="color: #10B981; font-weight: 700;">👑 Royal Heirloom Patron</span>
+        </div>
+      </div>
+
+      <!-- Patron Specs Card -->
+      <div class="patron-details-panel">
+        <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+          <span style="color: var(--text-muted);">Member Passkey ID:</span>
+          <span id="accPatronMemberId" style="font-family: monospace; font-weight: 700; color: var(--gold-primary);">ASMI-VIP-9160</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+          <span style="color: var(--text-muted);">Registered Phone:</span>
+          <span id="accPatronPhone" style="font-weight: 600; color: var(--text-primary);">+91 98200 12345</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+          <span style="color: var(--text-muted);">Registered Email:</span>
+          <span id="accPatronEmail" style="font-weight: 600; color: var(--text-primary);">gayatri.roy@gmail.com</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+          <span style="color: var(--text-muted);">Member Since:</span>
+          <span id="accPatronJoined" style="color: var(--text-secondary);">January 2025</span>
+        </div>
+      </div>
+
+      <!-- Address Book Container (Up to 3 Delivery Addresses) -->
+      <div id="accountAddressBookContainer"></div>
+
+      <!-- Action Buttons -->
+      <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 1.5rem;">
+        <button type="button" class="btn-primary" style="padding: 0.75rem; font-size: 0.75rem; width: 100%;" onclick="authManager.closeAccountModal(); ordersManager.openOrdersModal();">
+          <i class="fa-solid fa-truck-fast" style="margin-right: 0.4rem;"></i> Track My Orders &amp; Logistics (5 Steps)
+        </button>
+        <button type="button" class="btn-secondary" style="padding: 0.75rem; font-size: 0.75rem; width: 100%;" onclick="authManager.closeAccountModal(); document.getElementById('reviewsSection').scrollIntoView({behavior: 'smooth'});">
+          <i class="fa-solid fa-star" style="margin-right: 0.4rem; color: var(--gold-primary);"></i> View Reviews &amp; Upload Jewelry Photos
+        </button>
+        <button type="button" class="btn-solid-dark" style="padding: 0.75rem; font-size: 0.75rem; width: 100%; border-color: #EF4444; color: #EF4444; margin-top: 0.25rem;" onclick="authManager.logout()">
+          <i class="fa-solid fa-right-from-bracket" style="margin-right: 0.4rem;"></i> Sign Out / Switch Account
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Printable Invoice Template -->
+  <div id="printableInvoice"></div>
+
+  <!-- External Payment & PDF Libraries -->
+  <script defer src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Application Core Scripts -->
+  <script src="js/sync.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/support.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js?v=9.0.0"></script>
+</body>
+</html>

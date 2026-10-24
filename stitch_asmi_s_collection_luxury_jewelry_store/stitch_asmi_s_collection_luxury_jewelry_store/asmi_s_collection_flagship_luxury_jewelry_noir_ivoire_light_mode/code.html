@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" name="viewport"/>
+<meta name="theme-color" content="#070707"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>ASMI's Collection | Haute Joaillerie, Fine Pearls &amp; American Diamonds</title>
+<!-- Google Fonts: Cormorant Garamond & Montserrat -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#040404',
+              900: '#070707',
+              800: '#0E0E0E',
+              700: '#161616',
+              600: '#222222',
+            },
+            gold: {
+              light: '#F5DE93',
+              DEFAULT: '#D4AF37',
+              dark: '#997B1E',
+              metallic: '#C5A059'
+            },
+            ruby: {
+              DEFAULT: '#800020',
+              deep: '#540015',
+              vibrant: '#9E1B32'
+            },
+            pearl: '#F8F6F0'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+            'gold-inner': 'inset 0 0 15px rgba(212, 175, 55, 0.2)',
+            'ruby-glow': '0 0 20px rgba(158, 27, 50, 0.4)'
+          },
+          backgroundImage: {
+            'gold-gradient': 'linear-gradient(135deg, #F5DE93 0%, #D4AF37 50%, #997B1E 100%)',
+            'fabric-pattern': 'radial-gradient(circle at 50% 50%, #171717 0%, #0a0a0a 100%)'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom CSS for specialized haute joaillerie effects & Light/Dark Mode Transitions -->
+<style data-purpose="custom-animations">
+    * {
+      transition: background-color 0.4s ease, border-color 0.4s ease, color 0.3s ease, box-shadow 0.4s ease;
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+    .gold-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .gold-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(245, 222, 147, 0.35), transparent);
+      animation: shimmer 3.5s infinite;
+    }
+    .zipper-tooth-left {
+      clip-path: polygon(0 0, 100% 20%, 80% 80%, 0 100%);
+    }
+    .zipper-tooth-right {
+      clip-path: polygon(0 20%, 100% 0, 100% 100%, 20% 80%);
+    }
+    /* Smooth transition for zipper flap opening */
+    .jacket-flap-left {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease;
+    }
+    .jacket-flap-right {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease;
+    }
+    .unzipped .jacket-flap-left {
+      transform: translateX(-102%);
+    }
+    .unzipped .jacket-flap-right {
+      transform: translateX(102%);
+    }
+    .unzipped #zipperPuller {
+      top: 92%;
+    }
+  </style>
+<style data-purpose="scrollbar-and-utilities">
+    /* Custom Luxury Gold Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F5DE93;
+    }
+    .turntable-blur {
+      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+    }
+
+    /* =========================================
+       HAUTE JOAILLERIE 'IVOIRE & GOLD' LIGHT MODE
+       ========================================= */
+    body.light-mode {
+      background-color: #f9f8f5 !important;
+      color: #1a1816 !important;
+      selection-background-color: #D4AF37;
+      selection-color: #ffffff;
+    }
+    body.light-mode ::-webkit-scrollbar-track {
+      background: #f1eee7;
+    }
+    body.light-mode ::-webkit-scrollbar-thumb {
+      background: #bfa142;
+    }
+
+    /* Light Mode Top Bar & Header */
+    body.light-mode [data-purpose="top-ticker"] {
+      background-color: #f2eee6 !important;
+      border-color: rgba(184, 134, 11, 0.2) !important;
+      color: #555048 !important;
+    }
+    body.light-mode [data-purpose="top-ticker"] select {
+      color: #2b2824 !important;
+    }
+    body.light-mode [data-purpose="top-ticker"] option {
+      background-color: #fcfbf9 !important;
+      color: #1a1816 !important;
+    }
+    body.light-mode #mainHeader {
+      background-color: rgba(255, 255, 255, 0.94) !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+      box-shadow: 0 4px 20px -2px rgba(184, 134, 11, 0.08);
+    }
+    body.light-mode #mainHeader a,
+    body.light-mode #mainHeader button,
+    body.light-mode #mainHeader nav a {
+      color: #2b2824 !important;
+    }
+    body.light-mode #mainHeader a:hover,
+    body.light-mode #mainHeader button:hover,
+    body.light-mode #mainHeader nav a:hover {
+      color: #997B1E !important;
+    }
+    body.light-mode #mainHeader nav a.text-gold {
+      color: #8c6e17 !important;
+    }
+    body.light-mode #searchBarDropdown {
+      background-color: #f6f3eb !important;
+      border-color: rgba(184, 134, 11, 0.25) !important;
+    }
+    body.light-mode #searchBarDropdown input {
+      color: #1c1b18 !important;
+    }
+    body.light-mode #searchBarDropdown input::placeholder {
+      color: #827b70 !important;
+    }
+
+    /* Light Mode Hero & Zipper Reveal */
+    body.light-mode #heroSection {
+      background-color: #fcfbf9 !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] {
+      background: radial-gradient(circle at 50% 50%, #fcfbf9 0%, #f4f0e6 65%, #ece6d8 100%) !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] h1 {
+      color: #141311 !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] p {
+      color: #4a453e !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] .border-white\/10 {
+      border-color: rgba(184, 134, 11, 0.2) !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] .text-stone-400 {
+      color: #635c52 !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] .bg-obsidian-800\/90 {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-color: rgba(212, 175, 55, 0.45) !important;
+      box-shadow: 0 10px 30px rgba(184, 134, 11, 0.12);
+    }
+    body.light-mode [data-purpose="unveiled-stage"] .bg-obsidian-800\/90 p {
+      color: #1a1816 !important;
+    }
+    body.light-mode [data-purpose="unveiled-stage"] .bg-obsidian-900\/90 {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-color: rgba(184, 134, 11, 0.3) !important;
+      color: #2b2824 !important;
+    }
+
+    /* Light Mode Fabric Zipper Flaps (Rich Ecru/Champagne Silk & Alabaster) */
+    body.light-mode .jacket-flap-left {
+      background-color: #f7f4ec !important;
+      border-color: rgba(212, 175, 55, 0.4) !important;
+    }
+    body.light-mode .jacket-flap-right {
+      background-color: #f4efe4 !important;
+      border-color: rgba(212, 175, 55, 0.4) !important;
+    }
+    body.light-mode .jacket-flap-left h2,
+    body.light-mode .jacket-flap-right h2 {
+      color: #1e1c19 !important;
+    }
+    body.light-mode .jacket-flap-left p,
+    body.light-mode .jacket-flap-right p {
+      color: #5d564b !important;
+    }
+    body.light-mode #unzipToggleBtn .bg-obsidian-900 {
+      background-color: #f9f6ee !important;
+    }
+    body.light-mode #unzipToggleBtn .bg-obsidian-900:hover {
+      background-color: #ffffff !important;
+    }
+    body.light-mode #zipperHint {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      color: #8c6e17 !important;
+      border-color: rgba(212, 175, 55, 0.6) !important;
+    }
+    body.light-mode #floatingZipControl {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      color: #7a5f11 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+
+    /* Light Mode 360° Atelier */
+    body.light-mode #atelier360 {
+      background: linear-gradient(180deg, #f7f5ef 0%, #efebe1 50%, #f7f5ef 100%) !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+    }
+    body.light-mode #atelier360 h2,
+    body.light-mode #atelier360 h3 {
+      color: #1a1816 !important;
+    }
+    body.light-mode #atelier360 p {
+      color: #4a453e !important;
+    }
+    body.light-mode #atelier360 .bg-obsidian-900\/80 {
+      background-color: rgba(255, 255, 255, 0.88) !important;
+      border-color: rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 0 20px 45px -10px rgba(184, 134, 11, 0.12);
+    }
+    body.light-mode #atelier360 .bg-radial {
+      background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f4f0e6 100%) !important;
+      border-color: rgba(184, 134, 11, 0.2) !important;
+    }
+    body.light-mode #degreeIndicator {
+      color: #2b2824 !important;
+    }
+    body.light-mode #atelier360 .bg-obsidian-800 {
+      background-color: #f7f4ec !important;
+      border-color: rgba(212, 175, 55, 0.3) !important;
+      color: #2b2824 !important;
+    }
+    body.light-mode #atelier360 .border-white\/10 {
+      border-color: rgba(184, 134, 11, 0.2) !important;
+    }
+    body.light-mode #atelier360 .text-stone-200 {
+      color: #1e1c19 !important;
+    }
+    body.light-mode #atelier360 .text-stone-300 {
+      color: #3b3730 !important;
+    }
+    body.light-mode #atelier360 .text-stone-400 {
+      color: #635c52 !important;
+    }
+    body.light-mode #atelier360 .border-gold\/20 {
+      border-color: rgba(184, 134, 11, 0.25) !important;
+    }
+    body.light-mode .finish-btn:not(.active),
+    body.light-mode .length-btn:not(.text-gold) {
+      background-color: #f8f6f0 !important;
+      border-color: rgba(184, 134, 11, 0.25) !important;
+      color: #3b3730 !important;
+    }
+    body.light-mode #prevAngleBtn,
+    body.light-mode #nextAngleBtn {
+      background-color: #fcfbf9 !important;
+      border-color: rgba(184, 134, 11, 0.3) !important;
+      color: #2b2824 !important;
+    }
+    body.light-mode #prevAngleBtn:hover,
+    body.light-mode #nextAngleBtn:hover {
+      border-color: #D4AF37 !important;
+      color: #8c6e17 !important;
+    }
+
+    /* Light Mode Vault Product Grid */
+    body.light-mode #vaultGrid {
+      background-color: #fbfaf7 !important;
+      color: #1c1b18 !important;
+    }
+    body.light-mode #vaultGrid h2,
+    body.light-mode #vaultGrid h3 {
+      color: #161513 !important;
+    }
+    body.light-mode #vaultGrid .bg-obsidian-800 {
+      background-color: #ffffff !important;
+      border-color: rgba(212, 175, 55, 0.22) !important;
+      box-shadow: 0 10px 30px -5px rgba(184, 134, 11, 0.08);
+    }
+    body.light-mode #vaultGrid .bg-obsidian-800:hover {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 15px 35px -5px rgba(184, 134, 11, 0.18);
+    }
+    body.light-mode #vaultGrid .bg-stone-950 {
+      background-color: #f8f6f0 !important;
+    }
+    body.light-mode #vaultGrid .text-stone-400 {
+      color: #5a544b !important;
+    }
+    body.light-mode #vaultGrid .text-stone-300 {
+      color: #2e2b26 !important;
+    }
+    body.light-mode #vaultGrid .border-white\/10 {
+      border-color: rgba(184, 134, 11, 0.18) !important;
+    }
+    body.light-mode .filter-pill:not(.active) {
+      background-color: #f7f4ec !important;
+      border-color: rgba(184, 134, 11, 0.25) !important;
+      color: #3b3730 !important;
+    }
+    body.light-mode .filter-pill:not(.active):hover {
+      border-color: #D4AF37 !important;
+      color: #8c6e17 !important;
+    }
+    body.light-mode #vaultGrid .bg-gradient-to-r {
+      background: linear-gradient(90deg, #f6f3ea 0%, #ece5d6 50%, #f6f3ea 100%) !important;
+      border-color: rgba(212, 175, 55, 0.35) !important;
+    }
+    body.light-mode #vaultGrid .bg-gradient-to-r h4 {
+      color: #181715 !important;
+    }
+
+    /* Light Mode Editorial Muses */
+    body.light-mode #editorialCampaign {
+      background-color: #f5f2e9 !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+    }
+    body.light-mode #editorialCampaign h2 {
+      color: #141311 !important;
+    }
+    body.light-mode #editorialCampaign .text-stone-400 {
+      color: #4a453e !important;
+    }
+    body.light-mode #editorialCampaign .bg-stone-950 {
+      border-color: rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 0 15px 40px -10px rgba(184, 134, 11, 0.15);
+    }
+    body.light-mode #editorialCampaign .bg-obsidian-900\/95 {
+      background-color: rgba(255, 255, 255, 0.96) !important;
+      border-color: rgba(212, 175, 55, 0.7) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    body.light-mode #editorialCampaign .bg-obsidian-900\/95 h4 {
+      color: #161513 !important;
+    }
+    body.light-mode #editorialCampaign .bg-obsidian-900\/95 .text-gold {
+      color: #8c6e17 !important;
+    }
+
+    /* Light Mode Trust & Provenance */
+    body.light-mode #artisanalProvenance {
+      background-color: #f9f7f2 !important;
+      border-color: rgba(212, 175, 55, 0.2) !important;
+    }
+    body.light-mode #artisanalProvenance .bg-obsidian-900\/60 {
+      background-color: #ffffff !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+      box-shadow: 0 10px 25px -5px rgba(184, 134, 11, 0.07);
+    }
+    body.light-mode #artisanalProvenance .bg-obsidian-900\/60:hover {
+      border-color: #D4AF37 !important;
+    }
+    body.light-mode #artisanalProvenance h3 {
+      color: #181715 !important;
+    }
+    body.light-mode #artisanalProvenance p {
+      color: #544e45 !important;
+    }
+
+    /* Light Mode Consultation & Testimonials */
+    body.light-mode #bespokeConsultation {
+      background-color: #f6f3eb !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+    }
+    body.light-mode #bespokeConsultation h2,
+    body.light-mode #bespokeConsultation h3 {
+      color: #141311 !important;
+    }
+    body.light-mode #bespokeConsultation .bg-obsidian-800 {
+      background-color: #ffffff !important;
+      border-color: rgba(212, 175, 55, 0.3) !important;
+      box-shadow: 0 15px 40px -10px rgba(184, 134, 11, 0.1);
+    }
+    body.light-mode #bespokeConsultation p.text-stone-300,
+    body.light-mode #bespokeConsultation p.text-stone-400 {
+      color: #4a453e !important;
+    }
+    body.light-mode #bespokeConsultation .text-white {
+      color: #181715 !important;
+    }
+    body.light-mode #bespokeConsultation .border-white\/10 {
+      border-color: rgba(184, 134, 11, 0.22) !important;
+    }
+    body.light-mode #consultationForm input,
+    body.light-mode #consultationForm select,
+    body.light-mode #consultationForm textarea {
+      background-color: #faf9f6 !important;
+      border-color: rgba(184, 134, 11, 0.3) !important;
+      color: #1c1b18 !important;
+    }
+    body.light-mode #consultationForm label {
+      color: #635c52 !important;
+    }
+
+    /* Light Mode Footer */
+    body.light-mode footer {
+      background-color: #f1ede4 !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+      color: #4b463e !important;
+    }
+    body.light-mode footer h3,
+    body.light-mode footer h4,
+    body.light-mode footer .text-white {
+      color: #181715 !important;
+    }
+    body.light-mode footer .border-white\/10 {
+      border-color: rgba(184, 134, 11, 0.2) !important;
+    }
+    body.light-mode footer input {
+      background-color: #ffffff !important;
+      border-color: rgba(184, 134, 11, 0.3) !important;
+      color: #1a1816 !important;
+    }
+    body.light-mode footer .bg-obsidian-900 {
+      background-color: #ffffff !important;
+      border-color: rgba(184, 134, 11, 0.2) !important;
+      color: #2b2824 !important;
+    }
+    body.light-mode footer a {
+      color: #555047 !important;
+    }
+    body.light-mode footer a:hover {
+      color: #997B1E !important;
+    }
+  </style>
+</head>
+<body class="bg-obsidian-900 text-pearl font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-obsidian-900">
+<!-- BEGIN: AnnouncementBar -->
+<div class="bg-obsidian-800 border-b border-gold/20 text-xs py-2 px-4 relative z-50" data-purpose="top-ticker">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-[11px] tracking-widest uppercase text-stone-300">
+<!-- Scrolling or highlighted benefits ticker -->
+<div class="flex items-center space-x-4 overflow-hidden text-center md:text-left">
+<span class="inline-flex items-center text-gold"><i class="fa-solid fa-gem mr-1.5 text-[10px]"></i> Haute Joaillerie</span>
+<span class="hidden sm:inline text-gold/40">|</span>
+<span class="hidden sm:inline text-stone-300">Complimentary Insured Worldwide Delivery</span>
+<span class="hidden md:inline text-gold/40">|</span>
+<span class="hidden md:inline text-stone-300">BIS Hallmarked &amp; 100% Authenticity Guaranteed</span>
+<span class="hidden lg:inline text-gold/40">|</span>
+<span class="hidden lg:inline text-stone-300">Private Atelier Consultations Available</span>
+</div>
+<!-- Theme Switcher, Currency Switcher & Concierge hotline -->
+<div class="flex items-center space-x-4 sm:space-x-6">
+<!-- Luxury Theme Mode Switcher -->
+<button aria-label="Toggle Noir or Ivoire Mode" class="flex items-center space-x-1.5 border border-gold/40 hover:border-gold px-2.5 py-0.5 rounded-full text-[10px] tracking-widest uppercase font-semibold text-gold transition-all duration-300 hover:scale-105" id="themeModeToggle" title="Switch Noir / Ivoire Mode">
+<i class="fa-solid fa-moon text-gold text-xs transition-transform" id="themeModeIcon"></i>
+<span id="themeModeLabel">Noir</span>
+</button>
+<div class="flex items-center space-x-1">
+<label class="sr-only" for="currency-selector">Currency</label>
+<i class="fa-solid fa-earth-americas text-gold/80 text-xs"></i>
+<select class="bg-transparent text-stone-200 border-none text-[11px] focus:ring-0 cursor-pointer uppercase py-0 pr-6 pl-1 font-medium" data-purpose="currency-switch" id="currency-selector">
+<option class="bg-obsidian-800 text-white" value="INR">INR (₹)</option>
+<option class="bg-obsidian-800 text-white" selected="" value="USD">USD ($)</option>
+<option class="bg-obsidian-800 text-white" value="AED">AED (د.إ)</option>
+<option class="bg-obsidian-800 text-white" value="GBP">GBP (£)</option>
+</select>
+</div>
+<a class="hover:text-gold transition-colors flex items-center space-x-1 hidden sm:flex" href="tel:+18002764539">
+<i class="fa-solid fa-phone text-[10px] text-gold"></i>
+<span>VIP Concierge: +1 (800) ASMI-GEM</span>
+</a>
+</div>
+</div>
+</div>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 bg-obsidian-900/90 backdrop-blur-md border-b border-gold/15 transition-all duration-300" id="mainHeader">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Mobile menu trigger -->
+<div class="flex items-center lg:hidden">
+<button aria-label="Open navigation menu" class="text-pearl hover:text-gold p-2" id="mobileMenuBtn">
+<i class="fa-solid fa-bars-staggered text-xl"></i>
+</button>
+</div>
+<!-- Brand Logo / Identity -->
+<div class="flex-1 lg:flex-none text-center lg:text-left">
+<a class="inline-block group text-center" href="#">
+<span class="block font-serif text-2xl sm:text-3xl tracking-[0.25em] text-white font-normal group-hover:text-gold transition-colors duration-300">
+            ASMI'S <span class="font-light italic text-gold">Collection</span>
+</span>
+<span class="block text-[9px] tracking-[0.35em] uppercase text-gold/80 -mt-1 font-sans">
+            Haute Joaillerie &amp; Handcrafted Heirlooms
+          </span>
+</a>
+</div>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden lg:flex items-center space-x-7 text-xs uppercase tracking-[0.18em] font-medium text-stone-300">
+<a class="hover:text-gold transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all" href="#heroSection">High Jewelry</a>
+<a class="hover:text-gold transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all" href="#vaultGrid">The Pearl Vault</a>
+<a class="hover:text-gold transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all" href="#vaultGrid">Polki &amp; AD Stones</a>
+<a class="hover:text-gold transition-colors py-1 text-gold relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all" href="#atelier360">360° Atelier</a>
+<a class="hover:text-gold transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all" href="#editorialCampaign">Editorial Muse</a>
+<a class="hover:text-gold transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all" href="#artisanalProvenance">Provenance</a>
+</nav>
+<!-- Utility Actions (Search, Wishlist, Bag, Concierge Button) -->
+<div class="flex items-center space-x-5">
+<!-- Search Trigger -->
+<button aria-label="Search Collection" class="text-stone-300 hover:text-gold transition-colors" id="searchToggleBtn">
+<i class="fa-solid fa-magnifying-glass text-sm"></i>
+</button>
+<!-- Wishlist with Count -->
+<a class="text-stone-300 hover:text-gold transition-colors relative" href="#wishlist" title="Saved Heirlooms">
+<i class="fa-regular fa-heart text-sm"></i>
+<span class="absolute -top-2 -right-2 bg-ruby text-white font-sans text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold border border-obsidian-900">3</span>
+</a>
+<!-- Shopping Bag Trigger -->
+<button class="text-stone-300 hover:text-gold transition-colors relative" id="cartDrawerBtn" title="View Shopping Bag">
+<i class="fa-solid fa-bag-shopping text-sm"></i>
+<span class="absolute -top-2 -right-2 bg-gold text-obsidian-900 font-sans text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold border border-obsidian-900" id="cartCountBadge">1</span>
+</button>
+<!-- Book Concierge Action -->
+<a class="hidden sm:inline-flex items-center text-[11px] uppercase tracking-wider font-semibold border border-gold/70 text-gold px-4 py-2 hover:bg-gold hover:text-obsidian-900 transition-all duration-300" href="#bespokeConsultation">
+          Book Concierge
+        </a>
+</div>
+</div>
+<!-- Hidden Search Bar Popdown -->
+<div class="hidden bg-obsidian-800 border-b border-gold/20 py-4 px-6" id="searchBarDropdown">
+<div class="max-w-4xl mx-auto flex items-center space-x-3">
+<i class="fa-solid fa-magnifying-glass text-gold"></i>
+<input class="w-full bg-transparent text-white border-none focus:ring-0 text-sm font-light placeholder-stone-400" placeholder="Search handcrafted baroque pearls, diamond chokers, jhumkas, bridal sets..." type="text"/>
+<button class="text-stone-400 hover:text-white text-sm" id="searchCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroZipperReveal -->
+<section class="relative min-h-[90vh] lg:min-h-[96vh] flex items-center justify-center overflow-hidden bg-obsidian-900" id="heroSection">
+<!-- Revealed Content Layer (Always directly behind the fabric flaps) -->
+<div class="absolute inset-0 z-10 flex items-center justify-center bg-radial from-stone-900 via-obsidian-900 to-black px-4 sm:px-8 py-12" data-purpose="unveiled-stage">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Hero Typography -->
+<div class="lg:col-span-6 text-center lg:text-left order-2 lg:order-1 pt-6 lg:pt-0">
+<div class="inline-flex items-center space-x-2 border border-gold/30 px-3 py-1 mb-5 bg-gold/5 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-gold animate-ping"></span>
+<span class="text-[10px] tracking-[0.3em] uppercase text-gold font-medium">Bespoke 2025 Royal Collection</span>
+</div>
+<h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-wide leading-[1.1] mb-6">
+            Unveiling Handcrafted <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold to-yellow-600">Opulence</span>
+</h1>
+<p class="text-stone-300 font-light text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed mb-8">
+            An imperial symphony of luminous baroque pearls, rare dual-toned stones, and pavé-set American Diamonds — meticulously sculpted for contemporary royalty.
+          </p>
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+<a class="w-full sm:w-auto px-8 py-4 bg-gold text-obsidian-900 text-xs uppercase tracking-[0.2em] font-semibold hover:bg-gold-light transition-all shadow-gold-glow text-center" href="#vaultGrid">
+              Explore The Collection
+            </a>
+<a class="w-full sm:w-auto px-8 py-4 border border-ruby text-stone-200 hover:border-gold hover:text-gold text-xs uppercase tracking-[0.2em] font-medium transition-all backdrop-blur-sm flex items-center justify-center space-x-2" href="#atelier360">
+<i class="fa-solid fa-arrows-rotate text-gold text-xs"></i>
+<span>Experience 360° View</span>
+</a>
+</div>
+<div class="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 text-center lg:text-left">
+<div>
+<p class="font-serif text-2xl text-gold font-normal">AAA+</p>
+<p class="text-[10px] uppercase tracking-wider text-stone-400">Pearl Lustre Grade</p>
+</div>
+<div>
+<p class="font-serif text-2xl text-gold font-normal">VVS-Sim</p>
+<p class="text-[10px] uppercase tracking-wider text-stone-400">Micro-Pavé Stones</p>
+</div>
+<div>
+<p class="font-serif text-2xl text-gold font-normal">22K</p>
+<p class="text-[10px] uppercase tracking-wider text-stone-400">Pure Gold Vermeil</p>
+</div>
+</div>
+</div>
+<!-- Right Hero Floating Masterpiece Image -->
+<div class="lg:col-span-6 flex items-center justify-center relative order-1 lg:order-2">
+<!-- Ambient Glow Backdrop -->
+<div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gold/15 filter blur-3xl pointer-events-none"></div>
+<!-- Masterpiece Jewelry Float Card -->
+<div class="relative group z-10">
+<div class="relative w-64 sm:w-80 md:w-96 transition-transform duration-700 hover:scale-105">
+<img alt="The Rajkumari Triple-Strand Rose Pearl Collar &amp; Jhumka Set" class="w-full h-auto drop-shadow-[0_20px_35px_rgba(212,175,55,0.35)] object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Ug0OS-B8kGuUESpLArgMBmWkyRcgxPYPPfWXUsTYjgpNX1MuNfeG4BN7d-OXqrZ_GrjF26L-dImvRz1eBqsDaDuiYTan9y5AW7o6BSVAI00mzIizQM-fq-r3HInbuXtjJuN2MS0PADeIYPMYGWiUtIfEeBz54ZSYc6b78u6xxjmgVvF2H4p2xGjhIqZTBCuhce18mXWfisMigfHz_CelSbgPzNG3PMeDW4bsOnomAvIUuSOPcZPIO-rlxr54_3wugw"/>
+</div>
+<!-- Float Tag Badge -->
+<div class="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-2 bg-obsidian-800/90 border border-gold/40 backdrop-blur-md p-3 px-4 shadow-xl">
+<span class="text-[9px] uppercase tracking-widest text-gold block">Heirloom of the Month</span>
+<p class="font-serif text-sm text-white font-medium">Rajkumari Rose Pearl &amp; AD Collar</p>
+<p class="text-xs text-stone-400 font-sans mt-0.5"><span class="text-gold font-semibold">₹62,000</span> <span class="text-[10px]">($750 USD)</span></p>
+</div>
+<!-- Certified Badge -->
+<div class="absolute top-4 right-0 bg-obsidian-900/90 border border-white/20 px-3 py-1.5 rounded-full flex items-center space-x-2 text-[10px] text-stone-300">
+<i class="fa-solid fa-certificate text-gold"></i>
+<span>BIS Hallmarked</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- The Interactive Split Zipper Flaps (Covers the Hero until unzipped) -->
+<div class="absolute inset-0 z-20 pointer-events-none flex w-full h-full overflow-hidden transition-all" id="zipperContainer">
+<!-- Left Fabric Flap -->
+<div class="jacket-flap-left pointer-events-auto relative w-1/2 h-full bg-stone-950 border-r border-gold/30 shadow-2xl flex flex-col justify-between p-8 sm:p-14 overflow-hidden">
+<!-- Fabric Weave Texture Effect -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#262626_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="relative z-10">
+<span class="text-[10px] uppercase tracking-[0.4em] text-gold block">Haute Couture Atelier</span>
+<h2 class="font-serif text-2xl sm:text-4xl text-stone-200 mt-2 font-light">The Vault Chamber</h2>
+</div>
+<div class="relative z-10 hidden sm:block">
+<p class="text-xs text-stone-400 font-light max-w-xs leading-relaxed">
+            Locked within these hand-stitched velvet drapes lies ASMI's private high-jewelry archive.
+          </p>
+</div>
+<!-- Left Zipper Teeth Ridge -->
+<div class="absolute right-0 top-0 bottom-0 w-4 flex flex-col justify-between py-2 space-y-1 overflow-hidden z-20">
+<!-- Generated zipper teeth -->
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-r from-gold-dark to-gold rounded-l-sm shadow-sm zipper-tooth-left mb-1"></div>
+</div>
+</div>
+<!-- Right Fabric Flap -->
+<div class="jacket-flap-right pointer-events-auto relative w-1/2 h-full bg-stone-950 border-l border-gold/30 shadow-2xl flex flex-col justify-between p-8 sm:p-14 text-right overflow-hidden">
+<!-- Fabric Weave Texture Effect -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#262626_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="relative z-10">
+<span class="text-[10px] uppercase tracking-[0.4em] text-gold block">Secret Collection</span>
+<h2 class="font-serif text-2xl sm:text-4xl text-stone-200 mt-2 font-light">Unzip Opulence</h2>
+</div>
+<div class="relative z-10 hidden sm:block">
+<p class="text-xs text-stone-400 font-light max-w-xs ml-auto leading-relaxed">
+            Slide the golden medallion or toggle the reveal button to unveil the royal masterworks.
+          </p>
+</div>
+<!-- Right Zipper Teeth Ridge -->
+<div class="absolute left-0 top-0 bottom-0 w-4 flex flex-col justify-between py-2 space-y-1 overflow-hidden z-20">
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+<div class="h-2 w-3 bg-gradient-to-l from-gold-dark to-gold rounded-r-sm shadow-sm zipper-tooth-right mb-1"></div>
+</div>
+</div>
+<!-- Center Zipper Slider Puller Medallion -->
+<div class="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 z-40 transition-all duration-700 pointer-events-auto flex flex-col items-center" id="zipperPuller">
+<!-- Gold Medallion Puller -->
+<button aria-label="Toggle Zipper Reveal" class="group relative flex flex-col items-center focus:outline-none" id="unzipToggleBtn">
+<div class="w-12 h-14 bg-gradient-to-b from-yellow-200 via-gold to-yellow-800 rounded-sm p-0.5 shadow-2xl flex items-center justify-center border border-gold-light">
+<div class="w-full h-full bg-obsidian-900 flex flex-col items-center justify-center p-1 group-hover:bg-obsidian-800 transition-colors">
+<i class="fa-solid fa-gem text-gold text-xs group-hover:rotate-180 transition-transform duration-500"></i>
+<span class="text-[8px] tracking-tighter uppercase text-gold font-bold mt-1">ASMI</span>
+</div>
+</div>
+<!-- Dangling Puller Tag -->
+<div class="w-8 h-12 bg-gradient-to-b from-gold to-yellow-700 rounded-b-md shadow-2xl border-t border-yellow-200 flex items-center justify-center p-1 -mt-0.5 group-hover:scale-105 transition-transform">
+<i class="fa-solid fa-arrows-up-down text-obsidian-900 text-xs animate-bounce"></i>
+</div>
+</button>
+<!-- Tooltip Pill -->
+<div class="mt-4 px-4 py-1.5 bg-obsidian-900/90 border border-gold/60 text-gold text-[10px] tracking-widest uppercase font-semibold whitespace-nowrap shadow-lg animate-pulse" id="zipperHint">
+          Click to Unzip &amp; Reveal
+        </div>
+</div>
+</div>
+<!-- Quick Floating Toggle Button on bottom left for user convenience -->
+<button class="absolute bottom-6 left-6 z-30 bg-obsidian-800/90 border border-gold/50 px-4 py-2 text-xs uppercase tracking-wider text-gold hover:bg-gold hover:text-obsidian-900 transition-all flex items-center space-x-2" id="floatingZipControl">
+<i class="fa-solid fa-sliders"></i>
+<span id="floatingZipLabel">Unzip Couture</span>
+</button>
+</section>
+<!-- END: HeroZipperReveal -->
+<!-- BEGIN: Interactive360Atelier -->
+<section class="py-24 bg-gradient-to-b from-obsidian-900 via-obsidian-800 to-obsidian-900 border-t border-b border-gold/15 relative" data-purpose="360-turntable-inspector" id="atelier360">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-gold text-xs uppercase tracking-[0.35em] font-medium block mb-2">Haute Joaillerie Inspection</span>
+<h2 class="font-serif text-3xl sm:text-5xl font-light text-white tracking-wide">The 360° Atelier Experience</h2>
+<div class="w-16 h-[1px] bg-gold mx-auto mt-4 mb-4"></div>
+<p class="text-stone-300 font-light text-sm sm:text-base leading-relaxed">
+          Examine the intricate pavilion facets, hand-drilled baroque Tahitian pearls, and micro-pavé setting from every cardinal angle.
+        </p>
+</div>
+<!-- Atelier Interactive Card -->
+<div class="bg-obsidian-900/80 border border-gold/30 p-6 lg:p-12 rounded-none backdrop-blur-md shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: 360 Turntable Canvas / Viewer Area -->
+<div class="lg:col-span-7 flex flex-col items-center justify-center relative">
+<!-- Degree & Mode HUD -->
+<div class="w-full flex items-center justify-between mb-4 text-xs font-mono">
+<div class="flex items-center space-x-2 bg-obsidian-800 px-3 py-1.5 border border-gold/30">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-stone-200" id="degreeIndicator">Angle: 0° — Dual-Strand Frontal View</span>
+</div>
+<div class="text-gold flex items-center space-x-2">
+<span class="text-[11px] uppercase tracking-widest text-stone-400">Resolution:</span>
+<span class="bg-gold/10 px-2 py-0.5 border border-gold/40 text-[10px]">Macro 4K</span>
+</div>
+</div>
+<!-- Turntable Stage Container with Glow -->
+<div class="relative w-full aspect-square max-w-[460px] flex items-center justify-center bg-radial from-stone-900/90 to-obsidian-900 border border-white/10 overflow-hidden group">
+<!-- Subtle Pedestal Shadow -->
+<div class="absolute bottom-6 w-3/4 h-8 bg-black/80 rounded-full filter blur-md"></div>
+<!-- Active Turntable Jewelry Graphic -->
+<img alt="The Empress Tahitian Blue Pearl &amp; Pavé Diamond Choker Set" class="turntable-blur max-h-[85%] max-w-[85%] object-contain drop-shadow-[0_15px_30px_rgba(212,175,55,0.3)] transition-transform duration-300 select-none cursor-grab active:cursor-grabbing" id="turntableImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwE2zahBHUzFzCI3tamavddv0jQF19DDBNED2l6q_C3HlgF7Fj401UjM14AdIDZ9RT7TmUbAkC2xG0-oObeNLWVO219Gs01UMQ0uqT_wlj5dlEBmDp6lPOxV-uAY1doqypL7hDGGbxyUbnK0ChWzkWQAMoJoBsINeeL91pANRUrDYzmUTn99OGmx2gi4QlWEUzHqjFW19jVtB7MnyrPEOLV5r5Iwu3-8v6WJZYygsuLf3pqUPS0aUrVufJwTrZdxQ0g"/>
+<!-- Magnifier Loupe Floating Indicator -->
+<div class="absolute top-4 right-4 flex flex-col space-y-2">
+<button class="w-9 h-9 bg-obsidian-800/90 border border-gold/40 text-stone-300 hover:text-gold hover:border-gold transition-all flex items-center justify-center text-xs" id="zoomToggleBtn" title="Zoom In">
+<i class="fa-solid fa-magnifying-glass-plus"></i>
+</button>
+<button class="w-9 h-9 bg-obsidian-800/90 border border-gold/40 text-stone-300 hover:text-gold hover:border-gold transition-all flex items-center justify-center text-xs" id="lightToggleBtn" title="Lighting Contrast">
+<i class="fa-regular fa-sun"></i>
+</button>
+</div>
+<!-- Interactive Drag Overlay Instruction -->
+<div class="absolute bottom-4 inset-x-0 text-center pointer-events-none">
+<span class="text-[10px] tracking-widest uppercase bg-black/60 backdrop-blur-sm text-stone-300 px-3 py-1 border border-white/10">
+<i class="fa-solid fa-arrows-left-right text-gold mr-1"></i> Drag or Use Controls Below
+                </span>
+</div>
+</div>
+<!-- 360° Controls Bar -->
+<div class="w-full max-w-[460px] mt-6 flex flex-col space-y-4">
+<!-- Slider Controller -->
+<div class="flex items-center space-x-3">
+<span class="text-[10px] font-mono text-stone-400">0°</span>
+<input class="w-full h-1.5 bg-stone-800 accent-gold cursor-pointer rounded-lg border border-gold/30" id="rotationSlider" max="360" min="0" step="45" type="range" value="0"/>
+<span class="text-[10px] font-mono text-stone-400">360°</span>
+</div>
+<!-- Buttons Navigation -->
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 py-2 px-3 bg-obsidian-800 border border-stone-700 hover:border-gold text-stone-300 hover:text-gold text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-1" id="prevAngleBtn">
+<i class="fa-solid fa-chevron-left text-[10px]"></i>
+<span>Rotate -45°</span>
+</button>
+<button class="py-2 px-4 bg-gold/10 border border-gold text-gold text-xs uppercase tracking-wider hover:bg-gold hover:text-obsidian-900 transition-all flex items-center justify-center space-x-1 font-semibold" id="autoSpinBtn">
+<i class="fa-solid fa-rotate text-xs"></i>
+<span id="autoSpinLabel">Auto Spin</span>
+</button>
+<button class="flex-1 py-2 px-3 bg-obsidian-800 border border-stone-700 hover:border-gold text-stone-300 hover:text-gold text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-1" id="nextAngleBtn">
+<span>Rotate +45°</span>
+<i class="fa-solid fa-chevron-right text-[10px]"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Masterpiece Specification & Bespoke Options -->
+<div class="lg:col-span-5 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-gold/20 lg:pl-10 pt-8 lg:pt-0">
+<div class="flex items-center space-x-2 text-gold text-xs uppercase tracking-widest mb-2 font-medium">
+<i class="fa-solid fa-crown text-xs"></i>
+<span>Imperial Signature Suite</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-4xl text-white font-normal leading-tight mb-2">
+              The Noor Jahan Dual-Strand Pearl &amp; AD Medallion
+            </h3>
+<!-- Price with Dynamic Currency Display -->
+<div class="flex items-baseline space-x-3 mb-6">
+<span class="font-serif text-3xl text-gold font-normal" id="specPriceDisplay">₹84,500</span>
+<span class="text-sm text-stone-400 font-light" id="specAltPriceDisplay">($1,020 USD)</span>
+<span class="text-[10px] bg-ruby/30 text-ruby-vibrant border border-ruby/50 px-2 py-0.5 tracking-wider uppercase font-semibold">In Stock • 1 of 5 Crafted</span>
+</div>
+<!-- Craftsmanship specs bullet list -->
+<div class="space-y-3 mb-8 text-xs text-stone-300 font-light border-y border-white/10 py-5">
+<div class="flex justify-between items-center">
+<span class="text-stone-400 uppercase tracking-wider">Primary Gemstones:</span>
+<span class="text-stone-200 font-medium">Micro-Pavé VVS-Sim American Diamonds</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-stone-400 uppercase tracking-wider">Pearls Selection:</span>
+<span class="text-stone-200 font-medium">Lustrous Metallic Peacock Blue/Silver Grade AAA</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-stone-400 uppercase tracking-wider">Core Metallurgy:</span>
+<span class="text-stone-200 font-medium">Solid Silver Base with 22K Triple Vermeil</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-stone-400 uppercase tracking-wider">Earring Pairing:</span>
+<span class="text-gold font-medium">Matching Pavé Stud Climbers Included</span>
+</div>
+</div>
+<!-- Customization Selectors -->
+<div class="space-y-4 mb-8">
+<!-- Finish Selector -->
+<div>
+<label class="block text-[11px] uppercase tracking-widest text-stone-400 mb-2">Precious Metal Finish:</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="finish-btn active py-2 px-3 text-xs border border-gold bg-gold/15 text-gold text-center tracking-wider transition-all">
+                    Champagne Gold
+                  </button>
+<button class="finish-btn py-2 px-3 text-xs border border-stone-700 bg-obsidian-800 text-stone-300 hover:border-gold text-center tracking-wider transition-all">
+                    White Rhodium
+                  </button>
+<button class="finish-btn py-2 px-3 text-xs border border-stone-700 bg-obsidian-800 text-stone-300 hover:border-gold text-center tracking-wider transition-all">
+                    Rose Vermeil
+                  </button>
+</div>
+</div>
+<!-- Length Selector -->
+<div>
+<label class="block text-[11px] uppercase tracking-widest text-stone-400 mb-2">Necklace Collar Length:</label>
+<div class="flex space-x-3">
+<button class="length-btn py-1.5 px-4 text-xs border border-gold bg-gold/10 text-gold font-medium">16" Choker</button>
+<button class="length-btn py-1.5 px-4 text-xs border border-stone-700 bg-obsidian-800 text-stone-300 hover:border-stone-500 font-medium">18" Princess</button>
+<button class="length-btn py-1.5 px-4 text-xs border border-stone-700 bg-obsidian-800 text-stone-300 hover:border-stone-500 font-medium">20" Matinee</button>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="flex-1 py-4 bg-gold text-obsidian-900 text-xs font-semibold uppercase tracking-[0.2em] hover:bg-gold-light transition-all shadow-gold-glow flex items-center justify-center space-x-2" id="acquire360Btn">
+<i class="fa-solid fa-lock text-xs"></i>
+<span>Acquire Heirloom</span>
+</button>
+<button class="py-4 px-6 border border-gold/50 text-gold text-xs uppercase tracking-[0.15em] hover:bg-gold/10 transition-all text-center" id="bespokeInquiryBtn">
+                Bespoke Sizing
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Interactive360Atelier -->
+<!-- BEGIN: ShopTheVaultGrid -->
+<section class="py-24 bg-obsidian-900 text-pearl" id="vaultGrid">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Headline -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gold/20 pb-8">
+<div>
+<span class="text-gold text-xs uppercase tracking-[0.3em] font-medium block mb-2">Curated Signature Suites</span>
+<h2 class="font-serif text-3xl sm:text-5xl font-light text-white tracking-wide">The Imperial Jewelry Vault</h2>
+</div>
+<!-- Filter pills -->
+<div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+<button class="filter-pill active px-4 py-1.5 text-xs tracking-wider uppercase bg-gold text-obsidian-900 font-semibold transition-all">All Heirlooms</button>
+<button class="filter-pill px-4 py-1.5 text-xs tracking-wider uppercase border border-stone-700 hover:border-gold text-stone-300 transition-all">Lustre Pearls</button>
+<button class="filter-pill px-4 py-1.5 text-xs tracking-wider uppercase border border-stone-700 hover:border-gold text-stone-300 transition-all">Pavé Diamonds</button>
+<button class="filter-pill px-4 py-1.5 text-xs tracking-wider uppercase border border-stone-700 hover:border-gold text-stone-300 transition-all">Bridal Suites</button>
+</div>
+</div>
+<!-- 4-Column High Contrast Vault Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1: The Rajkumari -->
+<div class="group bg-obsidian-800 border border-gold/20 hover:border-gold transition-all duration-500 flex flex-col justify-between" data-purpose="product-card">
+<div class="relative overflow-hidden aspect-square bg-stone-950 p-6 flex items-center justify-center">
+<span class="absolute top-3 left-3 bg-gold text-obsidian-900 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 z-10">Royal Heritage</span>
+<img alt="The Rajkumari Triple-Strand Rose Pearl Collar &amp; Jhumka Set" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtR5PTYkxwzrSFyL0b1W56yzRZrOX7u6G_zKymnHfq_xXrQ--0uZaZpCD1jB5H7pO8UGR3z1IkJVppIS22EFc-3HpsC0T2kS_Z8Cdmrv_kzVSbbbrFK5M3rqM1enjXPEX6NZ6X58XcOO1-AfUJKCjtv-DiCMnk0MLRsgZyjV8ZGYl-TzYLNVsrbKOBkonXVkibpdAFkPywZitJ0O501EmHF6Yg1uWJP4XxNTPXY0YYfgyDZGQZtV7ROvkLB1uWNGGfkw"/>
+<!-- Quick Action Overlay -->
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3">
+<button class="w-10 h-10 bg-gold text-obsidian-900 rounded-full flex items-center justify-center hover:scale-110 transition-transform" onclick="triggerQuickAdd('The Rajkumari Triple-Strand Rose Pearl Set', '₹62,000')" title="Quick Add to Bag">
+<i class="fa-solid fa-plus text-xs"></i>
+</button>
+<a class="w-10 h-10 bg-obsidian-900 text-gold border border-gold rounded-full flex items-center justify-center hover:scale-110 transition-transform" href="#atelier360" title="View 360 Inspection">
+<i class="fa-solid fa-arrows-rotate text-xs"></i>
+</a>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between text-[10px] text-gold uppercase tracking-wider mb-1">
+<span>Handcrafted Choker</span>
+<span>Includes Jhumkas</span>
+</div>
+<h3 class="font-serif text-lg text-white group-hover:text-gold transition-colors line-clamp-2">
+                The Rajkumari Triple-Strand Rose Pearl Collar
+              </h3>
+<p class="text-xs text-stone-400 mt-2 font-light">Triple tiered pink freshwater pearls bound by filigree American Diamond dividers.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+<div>
+<p class="font-serif text-xl text-gold font-normal">₹62,000</p>
+<p class="text-[10px] text-stone-400 font-mono">$750 USD</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-stone-300 hover:text-gold font-medium transition-colors" onclick="triggerQuickAdd('The Rajkumari Triple-Strand Rose Pearl Collar', '₹62,000')">
+                + Add To Bag
+              </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2: The Niloufer -->
+<div class="group bg-obsidian-800 border border-gold/20 hover:border-gold transition-all duration-500 flex flex-col justify-between" data-purpose="product-card">
+<div class="relative overflow-hidden aspect-square bg-stone-950 p-6 flex items-center justify-center">
+<span class="absolute top-3 left-3 bg-ruby text-white text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 z-10">Bespoke Suite</span>
+<img alt="The Niloufer Tahitian Pavé Pendant &amp; Ear Climbers" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgVBQl-MCf1Gps6dXe6sVA1rUIEEihX8ppH6u63Q4YlBPKa9O7UBa2XCtloyKGSbaCjLxbdx9VFZ6YLimCvwHy8oPvlCWf-HvTJzUssGRabypUi-oW_iV5cdYcmtv-aWjmdSCkc7rKEOxtQMoQuDga1MyyoAcEdf0eIJ_tlVlVecMKaOamcABt4ayLHa8V2ld73bEzPfjNGhuYGU7dwa2A5WPhMbp98NVC8hLMnQp-k62HOCTQySxYBhTzA72La3ystw"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3">
+<button class="w-10 h-10 bg-gold text-obsidian-900 rounded-full flex items-center justify-center hover:scale-110 transition-transform" onclick="triggerQuickAdd('The Niloufer Tahitian Pavé Pendant Suite', '₹84,500')" title="Quick Add to Bag">
+<i class="fa-solid fa-plus text-xs"></i>
+</button>
+<a class="w-10 h-10 bg-obsidian-900 text-gold border border-gold rounded-full flex items-center justify-center hover:scale-110 transition-transform" href="#atelier360" title="View 360 Inspection">
+<i class="fa-solid fa-arrows-rotate text-xs"></i>
+</a>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between text-[10px] text-gold uppercase tracking-wider mb-1">
+<span>Peacock Pearls</span>
+<span>Stud Climbers</span>
+</div>
+<h3 class="font-serif text-lg text-white group-hover:text-gold transition-colors line-clamp-2">
+                The Niloufer Tahitian Pavé Pendant &amp; Climbers
+              </h3>
+<p class="text-xs text-stone-400 mt-2 font-light">Dual-strand silver-blue pearls crowned with an oval botanical pavé medallion.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+<div>
+<p class="font-serif text-xl text-gold font-normal">₹84,500</p>
+<p class="text-[10px] text-stone-400 font-mono">$1,020 USD</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-stone-300 hover:text-gold font-medium transition-colors" onclick="triggerQuickAdd('The Niloufer Tahitian Pavé Pendant &amp; Climbers', '₹84,500')">
+                + Add To Bag
+              </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3: The Gulbahar -->
+<div class="group bg-obsidian-800 border border-gold/20 hover:border-gold transition-all duration-500 flex flex-col justify-between" data-purpose="product-card">
+<div class="relative overflow-hidden aspect-square bg-stone-950 p-6 flex items-center justify-center">
+<span class="absolute top-3 left-3 bg-stone-700 text-stone-200 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 z-10">Pendant Solitaire</span>
+<img alt="The Gulbahar Micro-Set American Diamond Floral Brooch Pendant" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-X4ZpyZY2gI10Rkul7DGMugGmys-GcAnBxDi28JXuIkdMT2JhI_i52KmIyXcZemh8_-jJ6twcg7vumtDqcYf5JBujAsPpParLZMMNFGSacLoFoeGveT9C4Cb6dvPD9-D3sfDGFwoDECne6PwZOE8yb3eE0NZ3QBqUTCM8bKjpdGKbGro3bIZUUFnG1usBPjdFjt8czzamxjMLw_FDGMxF1ZmMspeXtH1Eps6LUPl-szT3qO5KcqtPMCgTnaw7lUFHPQ"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3">
+<button class="w-10 h-10 bg-gold text-obsidian-900 rounded-full flex items-center justify-center hover:scale-110 transition-transform" onclick="triggerQuickAdd('The Gulbahar Micro-Set Floral Pendant', '₹46,000')" title="Quick Add to Bag">
+<i class="fa-solid fa-plus text-xs"></i>
+</button>
+<a class="w-10 h-10 bg-obsidian-900 text-gold border border-gold rounded-full flex items-center justify-center hover:scale-110 transition-transform" href="#atelier360" title="View 360 Inspection">
+<i class="fa-solid fa-arrows-rotate text-xs"></i>
+</a>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between text-[10px] text-gold uppercase tracking-wider mb-1">
+<span>Pavé Sculpt</span>
+<span>Detachable Bail</span>
+</div>
+<h3 class="font-serif text-lg text-white group-hover:text-gold transition-colors line-clamp-2">
+                The Gulbahar Micro-Set AD Floral Brooch
+              </h3>
+<p class="text-xs text-stone-400 mt-2 font-light">Botanical blooming bouquet encrusted with over 180 brilliant-cut American Diamonds.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+<div>
+<p class="font-serif text-xl text-gold font-normal">₹46,000</p>
+<p class="text-[10px] text-stone-400 font-mono">$550 USD</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-stone-300 hover:text-gold font-medium transition-colors" onclick="triggerQuickAdd('The Gulbahar Micro-Set AD Floral Brooch', '₹46,000')">
+                + Add To Bag
+              </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4: The Sitara -->
+<div class="group bg-obsidian-800 border border-gold/20 hover:border-gold transition-all duration-500 flex flex-col justify-between" data-purpose="product-card">
+<div class="relative overflow-hidden aspect-square bg-stone-950 p-6 flex items-center justify-center">
+<span class="absolute top-3 left-3 bg-gold-dark text-white text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 z-10">Limited Atelier</span>
+<div class="w-full h-full flex items-center justify-center">
+<img alt="The Sitara Royal Choker &amp; Pearl Bauble Set" class="w-full h-full object-contain filter hue-rotate-15 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgmdZHV4fcle5I0hJ7l3usPAYiHZQZqf0VSA0StKeieuZGJphTMIPHG5ezjQs-v98bnOTmow-e1c7fuc4jpEMR14QlbSkPJP-oYEzJDrkyvzIaVU6pfsuqqN17PtJuVp-QG9vuzAkUPvkUcXRDplPEDeA7cSWWq9_-hFMzcHwtd8g77mIjfmFfs3wcLNDms10ziqDDO7GYem6q4iOEe0awTdfQtLIrCbOf9fRCuEjlwCke5ckcz5wyik65O6fchhHfpw"/>
+</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3">
+<button class="w-10 h-10 bg-gold text-obsidian-900 rounded-full flex items-center justify-center hover:scale-110 transition-transform" onclick="triggerQuickAdd('The Sitara Emerald &amp; Baguette AD Royal Choker', '₹95,000')" title="Quick Add to Bag">
+<i class="fa-solid fa-plus text-xs"></i>
+</button>
+<a class="w-10 h-10 bg-obsidian-900 text-gold border border-gold rounded-full flex items-center justify-center hover:scale-110 transition-transform" href="#atelier360" title="View 360 Inspection">
+<i class="fa-solid fa-arrows-rotate text-xs"></i>
+</a>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between text-[10px] text-gold uppercase tracking-wider mb-1">
+<span>Imperial Choker</span>
+<span>Certified Karigari</span>
+</div>
+<h3 class="font-serif text-lg text-white group-hover:text-gold transition-colors line-clamp-2">
+                The Sitara Royal Choker &amp; Pearl Bauble Suite
+              </h3>
+<p class="text-xs text-stone-400 mt-2 font-light">Architectural filigree lattice embellished with rare natural button pearls.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+<div>
+<p class="font-serif text-xl text-gold font-normal">₹95,000</p>
+<p class="text-[10px] text-stone-400 font-mono">$1,150 USD</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-stone-300 hover:text-gold font-medium transition-colors" onclick="triggerQuickAdd('The Sitara Royal Choker Suite', '₹95,000')">
+                + Add To Bag
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vault Banner Callout -->
+<div class="mt-16 bg-gradient-to-r from-obsidian-800 via-stone-900 to-obsidian-800 border border-gold/30 p-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6">
+<div>
+<h4 class="font-serif text-2xl text-white">Seeking an Heirloom Commission?</h4>
+<p class="text-xs text-stone-400 font-light mt-1">Our master karigars craft tailored bridal suites in natural Basra pearls and uncut Polki diamonds upon bespoke request.</p>
+</div>
+<a class="px-6 py-3 border border-gold text-gold hover:bg-gold hover:text-obsidian-900 transition-colors uppercase text-xs tracking-widest font-semibold whitespace-nowrap" href="#bespokeConsultation">
+          Schedule Atelier Appointment
+        </a>
+</div>
+</div>
+</section>
+<!-- END: ShopTheVaultGrid -->
+<!-- BEGIN: EditorialHighFashionCampaign -->
+<section class="py-24 bg-black border-t border-gold/15 relative overflow-hidden" id="editorialCampaign">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Editorial Title -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-gold text-xs uppercase tracking-[0.35em] font-medium block mb-2">Editorial Campaign Vol. IV</span>
+<h2 class="font-serif text-3xl sm:text-5xl font-light text-white tracking-wide">The Royal Muses of Asmi</h2>
+<p class="text-stone-400 font-light italic text-sm mt-3 font-serif">
+          "Born from royal court ateliers, re-imagined for the contemporary muse."
+        </p>
+</div>
+<!-- Split Magazine Editorial Spread -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Muse 1: https://lh3.googleusercontent.com/aida/AEtjO1Ux7ZAMokG72VcUNYoY9eNGt3i5z2UyGOPfy3uVO7pUBXmPff1ouvE7PjaAd5YHGKYJ4m2USJp75LFqsPM19y96P22Q53WHwdV4pAh9Mpj_8ssRJgCqiktFFe8xPYhPIDUdSJSnv9aFfO98jHU0zCTZW7wblKPoLDv92Zd5obEtw3BAIoYaUgxlTx-jPjJwJyiPT-INl-Ey4XBXiEqCzmQLtrABAUfIoJ0Jq4qEy_7_yJ-57tkbWpT7QoM with interactive hotspot -->
+<div class="lg:col-span-6 relative group">
+<div class="relative overflow-hidden bg-stone-950 border border-gold/20 shadow-2xl">
+<img alt="Close-up high-end luxury editorial photography of an Indian muse in monochrome wearing pearl chokers" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1Ux7ZAMokG72VcUNYoY9eNGt3i5z2UyGOPfy3uVO7pUBXmPff1ouvE7PjaAd5YHGKYJ4m2USJp75LFqsPM19y96P22Q53WHwdV4pAh9Mpj_8ssRJgCqiktFFe8xPYhPIDUdSJSnv9aFfO98jHU0zCTZW7wblKPoLDv92Zd5obEtw3BAIoYaUgxlTx-jPjJwJyiPT-INl-Ey4XBXiEqCzmQLtrABAUfIoJ0Jq4qEy_7_yJ-57tkbWpT7QoM"/>
+<!-- Hotspot 1: Multi-Strand Pearls -->
+<div class="absolute top-[68%] left-[48%] -translate-x-1/2 -translate-y-1/2 z-20">
+<button aria-label="Inspect Multi-Tier Pearl Choker" class="hotspot-trigger relative group/spot">
+<span class="absolute -inset-2 rounded-full bg-gold/40 animate-ping"></span>
+<span class="relative w-7 h-7 rounded-full bg-obsidian-900 border-2 border-gold flex items-center justify-center text-[10px] text-gold shadow-gold-glow">
+<i class="fa-solid fa-plus"></i>
+</span>
+<!-- Tooltip Card -->
+<div class="opacity-0 group-hover/spot:opacity-100 transition-opacity absolute bottom-9 left-1/2 -translate-x-1/2 w-56 bg-obsidian-900/95 border border-gold p-3 text-left shadow-2xl pointer-events-none z-30">
+<span class="text-[9px] uppercase tracking-widest text-gold block">Worn by Muse</span>
+<h4 class="font-serif text-xs text-white">Shahi Basra Multi-Row Choker</h4>
+<p class="text-[11px] text-gold font-mono mt-1">₹1,12,000 / $1,350</p>
+</div>
+</button>
+</div>
+<!-- Hotspot 2: Royal Chandelier Drop Earrings -->
+<div class="absolute top-[52%] right-[28%] -translate-x-1/2 -translate-y-1/2 z-20">
+<button aria-label="Inspect Emerald &amp; AD Drop Earrings" class="hotspot-trigger relative group/spot">
+<span class="absolute -inset-2 rounded-full bg-gold/40 animate-ping"></span>
+<span class="relative w-7 h-7 rounded-full bg-obsidian-900 border-2 border-gold flex items-center justify-center text-[10px] text-gold shadow-gold-glow">
+<i class="fa-solid fa-plus"></i>
+</span>
+<!-- Tooltip Card -->
+<div class="opacity-0 group-hover/spot:opacity-100 transition-opacity absolute bottom-9 left-1/2 -translate-x-1/2 w-56 bg-obsidian-900/95 border border-gold p-3 text-left shadow-2xl pointer-events-none z-30">
+<span class="text-[9px] uppercase tracking-widest text-gold block">Handcrafted Bauble</span>
+<h4 class="font-serif text-xs text-white">Chandelier AD Drop Earrings</h4>
+<p class="text-[11px] text-gold font-mono mt-1">₹38,000 / $460</p>
+</div>
+</button>
+</div>
+<!-- Caption Bottom Strip -->
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 flex justify-between items-end">
+<div>
+<span class="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold">Plate No. 08</span>
+<p class="font-serif text-lg text-white font-light">The Nizami Pearl Cascade</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-gold border-b border-gold pb-0.5 hover:text-white transition-colors" onclick="triggerQuickAdd('The Nizami Pearl Cascade', '₹1,12,000')">
+                Acquire The Look
+              </button>
+</div>
+</div>
+</div>
+<!-- Muse 2: https://lh3.googleusercontent.com/aida/AEtjO1WLnNUlFpFdND_59DI4poD_ZHl65L8FK4KwmJh_omaZjomDHbeJwJKVkm3jm8-4wTkTqlr7slmeluZp9MLAMErq_FNT-ocndxsKN5qtuLOgxkZDuyyQLtUSauzV9RAuYYrEvJLCPlGxxBZdTAimNBa90apGS1l1c8JypqOrrcVRMeW1GM1xjeMNEFw3Aoz7AvxeMXawzABkDXEPKWkwlZsbepQOGGZYQtma90QGj53KiT-pXJbmQnkiQw with high-couture mood -->
+<div class="lg:col-span-6 relative group">
+<div class="relative overflow-hidden bg-stone-950 border border-gold/20 shadow-2xl">
+<img alt="High fashion black and white editorial photography of an Indian muse wearing ornate handcrafted pearl and diamond bib necklace" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1WLnNUlFpFdND_59DI4poD_ZHl65L8FK4KwmJh_omaZjomDHbeJwJKVkm3jm8-4wTkTqlr7slmeluZp9MLAMErq_FNT-ocndxsKN5qtuLOgxkZDuyyQLtUSauzV9RAuYYrEvJLCPlGxxBZdTAimNBa90apGS1l1c8JypqOrrcVRMeW1GM1xjeMNEFw3Aoz7AvxeMXawzABkDXEPKWkwlZsbepQOGGZYQtma90QGj53KiT-pXJbmQnkiQw"/>
+<!-- Hotspot 3: Grand Bib Collar -->
+<div class="absolute top-[64%] left-[46%] -translate-x-1/2 -translate-y-1/2 z-20">
+<button aria-label="Inspect Grand Bib Collar" class="hotspot-trigger relative group/spot">
+<span class="absolute -inset-2 rounded-full bg-gold/40 animate-ping"></span>
+<span class="relative w-7 h-7 rounded-full bg-obsidian-900 border-2 border-gold flex items-center justify-center text-[10px] text-gold shadow-gold-glow">
+<i class="fa-solid fa-plus"></i>
+</span>
+<!-- Tooltip Card -->
+<div class="opacity-0 group-hover/spot:opacity-100 transition-opacity absolute bottom-9 left-1/2 -translate-x-1/2 w-60 bg-obsidian-900/95 border border-gold p-3 text-left shadow-2xl pointer-events-none z-30">
+<span class="text-[9px] uppercase tracking-widest text-gold block">Couture Masterpiece</span>
+<h4 class="font-serif text-xs text-white">The Sitara Royal Bib Choker</h4>
+<p class="text-[11px] text-gold font-mono mt-1">₹1,45,000 / $1,750</p>
+</div>
+</button>
+</div>
+<!-- Caption Bottom Strip -->
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 flex justify-between items-end">
+<div>
+<span class="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold">Plate No. 09</span>
+<p class="font-serif text-lg text-white font-light">The Koh-i-Durr Diamond Bib</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-gold border-b border-gold pb-0.5 hover:text-white transition-colors" onclick="triggerQuickAdd('The Koh-i-Durr Diamond Bib', '₹1,45,000')">
+                Acquire The Look
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EditorialHighFashionCampaign -->
+<!-- BEGIN: ArtisanalProvenanceAndTrust -->
+<section class="py-20 bg-obsidian-950 border-t border-gold/15" id="artisanalProvenance">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Assurance Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Pillar 1 -->
+<div class="p-8 bg-obsidian-900/60 border border-gold/20 hover:border-gold transition-colors text-center group">
+<div class="w-14 h-14 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-hands-holding-circle text-xl"></i>
+</div>
+<h3 class="font-serif text-lg text-white mb-2">100% Handcrafted Intricacy</h3>
+<p class="text-xs text-stone-400 font-light leading-relaxed">
+            Every prong, pearl strand knot, and pavé setting is delicately anchored by fourth-generation master karigars.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="p-8 bg-obsidian-900/60 border border-gold/20 hover:border-gold transition-colors text-center group">
+<div class="w-14 h-14 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-certificate text-xl"></i>
+</div>
+<h3 class="font-serif text-lg text-white mb-2">Certified &amp; Hallmarked</h3>
+<p class="text-xs text-stone-400 font-light leading-relaxed">
+            Each bespoke jewel arrives with an individual laboratory authenticity certificate verifying sim-diamond grade &amp; pearl origin.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="p-8 bg-obsidian-900/60 border border-gold/20 hover:border-gold transition-colors text-center group">
+<div class="w-14 h-14 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-shield-halved text-xl"></i>
+</div>
+<h3 class="font-serif text-lg text-white mb-2">Armored Insured Transit</h3>
+<p class="text-xs text-stone-400 font-light leading-relaxed">
+            Dispatched in tamper-evident sealed velvet vaults with full transit insurance across 65+ countries worldwide.
+          </p>
+</div>
+<!-- Pillar 4 -->
+<div class="p-8 bg-obsidian-900/60 border border-gold/20 hover:border-gold transition-colors text-center group">
+<div class="w-14 h-14 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-sparkles text-xl"></i>
+</div>
+<h3 class="font-serif text-lg text-white mb-2">Lifetime Polish &amp; Setting Care</h3>
+<p class="text-xs text-stone-400 font-light leading-relaxed">
+            Complimentary annual ultrasonic cleaning, prong tightening, and vermeil re-dip at our flagship ateliers.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ArtisanalProvenanceAndTrust -->
+<!-- BEGIN: BespokeConsultationAndReviews -->
+<section class="py-24 bg-obsidian-900 border-t border-gold/15" id="bespokeConsultation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Collector Testimonials -->
+<div class="lg:col-span-5">
+<span class="text-gold text-xs uppercase tracking-[0.3em] font-medium block mb-2">Patron Accolades</span>
+<h2 class="font-serif text-3xl sm:text-4xl font-light text-white tracking-wide mb-6">Heirlooms Revered Worldwide</h2>
+<!-- Testimonial Slider / Quote Item -->
+<div class="bg-obsidian-800 border border-gold/20 p-8 relative mb-6">
+<div class="flex text-gold text-xs mb-4">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<p class="font-serif text-stone-300 italic text-base leading-relaxed mb-4">
+              "The Noor Jahan dual-strand Tahitian pearl choker was the crown jewel of my Udaipur wedding. The pavé diamonds catch low candlelight with an ethereal fire indistinguishable from natural VVS solitaires."
+            </p>
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-serif font-bold text-sm">
+                MK
+              </div>
+<div>
+<p class="text-xs font-semibold text-white">Meera &amp; Kabir Singhania</p>
+<p class="text-[10px] text-stone-400">London &amp; Mumbai • Bespoke Bridal Commission</p>
+</div>
+</div>
+</div>
+<!-- Mini trust counter -->
+<div class="grid grid-cols-2 gap-4 text-center">
+<div class="border border-white/10 p-4">
+<p class="font-serif text-2xl text-gold">4.98 / 5.0</p>
+<p class="text-[10px] text-stone-400 uppercase tracking-widest mt-1">Patron Rating (840+ Reviews)</p>
+</div>
+<div class="border border-white/10 p-4">
+<p class="font-serif text-2xl text-gold">100%</p>
+<p class="text-[10px] text-stone-400 uppercase tracking-widest mt-1">Hallmarked Authenticity</p>
+</div>
+</div>
+</div>
+<!-- Right: VIP Atelier Concierge Appointment Booking Form -->
+<div class="lg:col-span-7 bg-obsidian-800 border border-gold/40 p-8 sm:p-12 shadow-2xl relative">
+<div class="absolute -top-3 right-8 bg-ruby text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-ruby-vibrant">
+            VIP Private Salon
+          </div>
+<h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-2">Book a Private Atelier Consultation</h3>
+<p class="text-xs text-stone-300 font-light mb-8">
+            Consult directly with Asmi and our gemological artisans to customize neck-piece lengths, pearl grades, or commission unique bridal suites.
+          </p>
+<form class="space-y-4" id="consultationForm" onsubmit="event.preventDefault(); handleConsultationSubmit();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-1">Full Legal Name *</label>
+<input class="w-full bg-obsidian-900 border border-stone-700 text-white text-xs px-4 py-3 focus:border-gold focus:ring-0" placeholder="e.g. Princess Gayatri Roy" required="" type="text"/>
+</div>
+<div>
+<label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-1">Private Email *</label>
+<input class="w-full bg-obsidian-900 border border-stone-700 text-white text-xs px-4 py-3 focus:border-gold focus:ring-0" placeholder="name@domain.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-1">Consultation Preference *</label>
+<select class="w-full bg-obsidian-900 border border-stone-700 text-stone-300 text-xs px-4 py-3 focus:border-gold focus:ring-0">
+<option>Virtual High-Def Video Salon</option>
+<option>Private Atelier — Flagship Salon</option>
+<option>Destination Bridal Consultation</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-1">Estimated Commission Budget</label>
+<select class="w-full bg-obsidian-900 border border-stone-700 text-stone-300 text-xs px-4 py-3 focus:border-gold focus:ring-0">
+<option>₹50,000 – ₹1,00,000 ($600 – $1,200)</option>
+<option>₹1,00,000 – ₹3,00,000 ($1,200 – $3,600)</option>
+<option>₹3,00,000+ ($3,600+ Bespoke Bridal)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-1">Specific Heirloom or Pearl Preferences</label>
+<textarea class="w-full bg-obsidian-900 border border-stone-700 text-white text-xs px-4 py-3 focus:border-gold focus:ring-0" placeholder="Specify choker lengths, baroque pearl tones, wedding dates, or pairing requirements..." rows="3"></textarea>
+</div>
+<button class="w-full py-4 bg-gold text-obsidian-900 uppercase text-xs tracking-[0.2em] font-semibold hover:bg-gold-light transition-all shadow-gold-glow" type="submit">
+              Request Exclusive Appointment
+            </button>
+<p class="hidden text-center text-xs text-gold font-medium mt-2" id="consultationSuccess">
+              ✓ Consultation request confirmed. Our Head Concierge will reach out via WhatsApp &amp; Email within 4 hours.
+            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BespokeConsultationAndReviews -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-black border-t border-gold/20 pt-16 pb-12 text-stone-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Row: Newsletter & Club Asmi -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10 items-center">
+<div class="lg:col-span-6">
+<span class="text-gold text-xs uppercase tracking-[0.3em] font-medium block mb-2">The Inner Circle</span>
+<h3 class="font-serif text-3xl text-white font-light">Join the Royal Collectors Guild</h3>
+<p class="text-xs text-stone-400 font-light mt-1 max-w-md leading-relaxed">
+            Receive private vault previews, invite-only salon gatherings, and archival heirloom monographs.
+          </p>
+</div>
+<div class="lg:col-span-6">
+<form class="flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Welcome to the ASMI Inner Circle.');">
+<input class="bg-obsidian-900 border border-stone-700 text-white text-xs px-4 py-3 flex-1 focus:border-gold focus:ring-0" placeholder="Enter your high-society email..." required="" type="email"/>
+<button class="px-8 py-3 bg-gold text-obsidian-900 text-xs font-semibold uppercase tracking-widest hover:bg-gold-light transition-colors whitespace-nowrap" type="submit">
+              Join Guild
+            </button>
+</form>
+</div>
+</div>
+<!-- Mid Links Matrix -->
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16 border-b border-white/10 text-xs">
+<!-- Brand Info -->
+<div class="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-2">
+<span class="block font-serif text-2xl tracking-[0.2em] text-white font-normal mb-2">
+            ASMI'S <span class="italic text-gold">Collection</span>
+</span>
+<p class="text-xs text-stone-400 font-light leading-relaxed max-w-sm mb-6">
+            Handcrafting imperial-grade heirloom jewelry since 2012. Sustaining classical Indian karigari traditions with modern ethical sensibilities.
+          </p>
+<div class="flex space-x-4 text-stone-300">
+<a class="w-8 h-8 rounded-full border border-stone-700 hover:border-gold hover:text-gold flex items-center justify-center transition-colors" href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+<a class="w-8 h-8 rounded-full border border-stone-700 hover:border-gold hover:text-gold flex items-center justify-center transition-colors" href="#"><i class="fa-brands fa-pinterest-p text-xs"></i></a>
+<a class="w-8 h-8 rounded-full border border-stone-700 hover:border-gold hover:text-gold flex items-center justify-center transition-colors" href="#"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+<a class="w-8 h-8 rounded-full border border-stone-700 hover:border-gold hover:text-gold flex items-center justify-center transition-colors" href="#"><i class="fa-brands fa-youtube text-xs"></i></a>
+</div>
+</div>
+<!-- Column 1: Collections -->
+<div>
+<h4 class="text-white text-xs uppercase tracking-widest font-semibold mb-4">Vault Chambers</h4>
+<ul class="space-y-2.5">
+<li><a class="hover:text-gold transition-colors" href="#vaultGrid">Baroque Pearl Chokers</a></li>
+<li><a class="hover:text-gold transition-colors" href="#vaultGrid">Pavé Diamond Solitaires</a></li>
+<li><a class="hover:text-gold transition-colors" href="#vaultGrid">Polki Kundan Sets</a></li>
+<li><a class="hover:text-gold transition-colors" href="#vaultGrid">Royal Nizam Collars</a></li>
+<li><a class="hover:text-gold transition-colors" href="#vaultGrid">Ear Climbers &amp; Jhumkas</a></li>
+</ul>
+</div>
+<!-- Column 2: Atelier Services -->
+<div>
+<h4 class="text-white text-xs uppercase tracking-widest font-semibold mb-4">Concierge &amp; Care</h4>
+<ul class="space-y-2.5">
+<li><a class="hover:text-gold transition-colors" href="#bespokeConsultation">Book Private Salon</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Bespoke Size Guide</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Pearl Lustre Care</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Insured Global Transit</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Certificate Validation</a></li>
+</ul>
+</div>
+<!-- Column 3: Legal & Trust -->
+<div>
+<h4 class="text-white text-xs uppercase tracking-widest font-semibold mb-4">Vault Disclosures</h4>
+<ul class="space-y-2.5">
+<li><a class="hover:text-gold transition-colors" href="#">BIS Hallmarking Policy</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Simulated Stone Clarity</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">14-Day Vault Exchange</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Privacy &amp; VIP Protocol</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Terms of Haute Joaillerie</a></li>
+</ul>
+</div>
+</div>
+<!-- Payment Gateways & Trust Seals Bar -->
+<div class="py-8 flex flex-col md:flex-row justify-between items-center gap-6 border-b border-white/10 text-xs">
+<!-- Payment Badges -->
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-4 text-stone-400">
+<span class="text-[10px] uppercase tracking-widest text-stone-500 font-semibold">Verified Payment Gateways:</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-brands fa-cc-visa text-blue-400 text-sm"></i> <span>VISA</span>
+</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-brands fa-cc-mastercard text-red-400 text-sm"></i> <span>Mastercard</span>
+</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-brands fa-cc-amex text-blue-300 text-sm"></i> <span>Amex</span>
+</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-brands fa-apple-pay text-white text-base"></i>
+</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-brands fa-google-pay text-white text-base"></i>
+</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-solid fa-bolt text-gold text-xs"></i> <span>UPI &amp; NetBanking</span>
+</span>
+<span class="px-2.5 py-1 bg-obsidian-900 border border-white/10 rounded text-[11px] font-semibold text-white flex items-center space-x-1">
+<i class="fa-solid fa-shield-check text-green-400 text-xs"></i> <span>Razorpay Secure</span>
+</span>
+</div>
+<!-- Security Badge -->
+<div class="flex items-center space-x-4 text-[11px] text-stone-400">
+<div class="flex items-center space-x-1 text-gold">
+<i class="fa-solid fa-lock text-xs"></i>
+<span>256-Bit SSL Encrypted Vault</span>
+</div>
+<div class="flex items-center space-x-1 text-stone-300">
+<i class="fa-solid fa-gem text-xs text-gold"></i>
+<span>BIS Hallmarked</span>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright Line -->
+<div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-stone-400">
+<p>© 2025 ASMI's Collection. All Handcrafted Rights Reserved.</p>
+<p class="mt-2 sm:mt-0 font-light">
+          Sculpted with devotion for connoisseurs of pearls, diamonds &amp; royal stones.
+        </p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: ToastNotification -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 max-w-sm w-full bg-obsidian-800 border border-gold shadow-2xl p-4 flex items-center space-x-3 pointer-events-none" id="toastNotification">
+<div class="w-10 h-10 bg-gold/10 border border-gold flex items-center justify-center text-gold shrink-0">
+<i class="fa-solid fa-check text-sm"></i>
+</div>
+<div class="flex-1">
+<p class="text-[10px] uppercase tracking-widest text-gold font-bold">Added To Vault Bag</p>
+<p class="text-xs text-white font-medium truncate" id="toastMessage">Item acquired successfully.</p>
+</div>
+</div>
+<!-- END: ToastNotification -->
+<!-- BEGIN: JavaScriptInteractivity -->
+<!-- Script for Light / Dark Mode Switcher -->
+<script data-purpose="theme-switcher">
+    const themeModeToggle = document.getElementById('themeModeToggle');
+    const themeModeIcon = document.getElementById('themeModeIcon');
+    const themeModeLabel = document.getElementById('themeModeLabel');
+
+    function applyTheme(isLight) {
+      if (isLight) {
+        document.body.classList.add('light-mode');
+        document.documentElement.classList.remove('dark');
+        if (themeModeIcon) {
+          themeModeIcon.classList.remove('fa-moon');
+          themeModeIcon.classList.add('fa-sun');
+        }
+        if (themeModeLabel) {
+          themeModeLabel.textContent = 'Ivoire';
+        }
+        localStorage.setItem('asmi_theme_mode', 'light');
+      } else {
+        document.body.classList.remove('light-mode');
+        document.documentElement.classList.add('dark');
+        if (themeModeIcon) {
+          themeModeIcon.classList.remove('fa-sun');
+          themeModeIcon.classList.add('fa-moon');
+        }
+        if (themeModeLabel) {
+          themeModeLabel.textContent = 'Noir';
+        }
+        localStorage.setItem('asmi_theme_mode', 'dark');
+      }
+    }
+
+    // Initialize theme based on preference or system
+    const savedTheme = localStorage.getItem('asmi_theme_mode');
+    if (savedTheme === 'light') {
+      applyTheme(true);
+    } else {
+      applyTheme(false);
+    }
+
+    if (themeModeToggle) {
+      themeModeToggle.addEventListener('click', () => {
+        const isCurrentLight = document.body.classList.contains('light-mode');
+        applyTheme(!isCurrentLight);
+      });
+    }
+  </script>
+<!-- Script for Hero Zipper Reveal Mechanics -->
+<script data-purpose="zipper-interaction">
+    const heroSection = document.getElementById('heroSection');
+    const unzipToggleBtn = document.getElementById('unzipToggleBtn');
+    const floatingZipControl = document.getElementById('floatingZipControl');
+    const floatingZipLabel = document.getElementById('floatingZipLabel');
+    const zipperHint = document.getElementById('zipperHint');
+
+    let isUnzipped = false;
+
+    function toggleZipper() {
+      isUnzipped = !isUnzipped;
+      if (isUnzipped) {
+        heroSection.classList.add('unzipped');
+        floatingZipLabel.textContent = 'Zip Couture Back';
+        if (zipperHint) zipperHint.textContent = 'Unzipped — Opulence Revealed';
+      } else {
+        heroSection.classList.remove('unzipped');
+        floatingZipLabel.textContent = 'Unzip Couture';
+        if (zipperHint) zipperHint.textContent = 'Click to Unzip & Reveal';
+      }
+    }
+
+    if (unzipToggleBtn) {
+      unzipToggleBtn.addEventListener('click', toggleZipper);
+    }
+    if (floatingZipControl) {
+      floatingZipControl.addEventListener('click', toggleZipper);
+    }
+
+    // Auto unzip on smooth scroll down if user passes top
+    let autoTriggered = false;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80 && !isUnzipped && !autoTriggered) {
+        toggleZipper();
+        autoTriggered = true;
+      }
+    });
+  </script>
+<!-- Script for 360° Turntable Angle Inspector -->
+<script data-purpose="360-turntable-controls">
+    const turntableImage = document.getElementById('turntableImage');
+    const rotationSlider = document.getElementById('rotationSlider');
+    const degreeIndicator = document.getElementById('degreeIndicator');
+    const prevAngleBtn = document.getElementById('prevAngleBtn');
+    const nextAngleBtn = document.getElementById('nextAngleBtn');
+    const autoSpinBtn = document.getElementById('autoSpinBtn');
+    const autoSpinLabel = document.getElementById('autoSpinLabel');
+    const zoomToggleBtn = document.getElementById('zoomToggleBtn');
+    const lightToggleBtn = document.getElementById('lightToggleBtn');
+
+    // Turntable Asset Views provided by snapshot
+    const anglesData = [
+      { deg: 0, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuACN2AMuxl_pypFxRyGAbnp28fXS2tUT4_CG9YHdNeDxvyRAQJYi5uXqKYBB4ydHsKDUywHTrPWO8rNeDiOHJK1dCMWyqmdetRsSC4Desw9vwhjzmvYhiLGY5oxGESPGyVGCOFVQMzwpIF6or6o0tibrz-4RhteswNMKnODpx9iF2EfpaDzGzFjpLr-R0tvRwlkQB5oJvSEdrtlKxQ24armXZA1RnZyoiLO57e7mSOdvr5_EeJtJg4z3KzzO1i0d1cRHg", desc: "0° — Dual-Strand Frontal View" },
+      { deg: 45, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxr8YAi6KT1G5c4oq2H831V0HD3AK9yOOP0HQs7MPqF48lR7JF58hjxCRW6Vgl7WwgInQwMER9vgZgHGDxLNB0VpaCBBdhNarfOaH4SCC-9wUlA3r9hMNIu_bNtjn9cuadFi-_Z3j1w8nQ2hQDnA88tSm9zqbpBAqUrsKgTVOpbjfnmoKFVGpofMF5byJ5K6ZEVjGzDcNTdjKItcdQYPrUT8JlgP5RGQVTSFj6rQcflFnUj3ZhbV00Z_bY6xsC7kWZ9w", desc: "45° — Pavé Floral Medallion Macro Focus" },
+      { deg: 90, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDHfL82OyaVUdzxbL9G4zNgrErzPMO6_c2EBi7vuczskXXN3KC7OqL9KISgc0EEGxMk-B0wLEBiTKni48VdmuqILW5D7kvyZVJCkXXQjEMO5KEOg_mfpy1QBSc8NRHSmuOEApafjFhyAPNL25l07KDk3G6NHkvYwmc0ioyqLwa_PnpyQp-jm1eepy8_Fkmaubyrhki_J2n1A6QGJjuW3Om5vPdqp3KQ5UFG2pW6qSh_ACrFBMBhroIzm8E-qsqHg4E8TA", desc: "90° — Lateral Pearl String Tension" },
+      { deg: 135, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB8wD3sYsaQwad7swpnZYVkhB4pKkPyqwBZccsNxooEkkx1R9j9-Ht4SgxnGmCSL1W3DSlAzuzQ8VpHT0qRxsaXfpb4E7_4lrquo0vZNDuYDekykYK3jNkHmOlW8aQ_XSR_R2Ei4LIZI3uS6U3Vy-zMgXdZFXGYkVN94Yey7KEjpvs6af98qTWzNr8BzqvA4g2uSY1Gz6uSfvmnqs2KIQ5irdDu4zBwDRuCtr0xY1yTAWL6f0s-NuzNFAXGlSfrYvf-mg", desc: "135° — Three-Quarter Bail Setting" },
+      { deg: 180, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuASB-825T-HR5t5gv-CTaWRP3LOC8umZz9eenKl_kiKSliMXL9EUJNtpXRCZWjAxzZv73PkNY48hYbwAj93tOlC7nqs2dtRoB0kYdEv1-jdVnHRE5abDZuRqyAM-kK53ejvft1A2CQmgCRavH2HMfZOa0KeBjkPQxJz9v_9QHu0_Ngcdb22eFyLltzq0TqhV23bGBUhrrb32SZger58-f6cdF--y4_I4OL_tHX1DWYlIOU3SXOReONKsL-ION29N_va4w", desc: "180° — Reverse Filigree Comfort Finish" },
+      { deg: 225, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBY4TPbylAPrOZ79_29umeb2at-LpFkUaxkLJsNQuTVKIicCx0MgRN00fK3hYa8CUD9qi1bSH-KusM02BqQ6FC9rJ4qbJMk_pn89H5xl2NF9nH84b0OG_G1kmHpTIkjSurywgKlyBYjioZRZ34aTI1BUnrzUoASJmxJB7h-IbuUPt3CSqCWaG2_UZMpJKauRkjHXEKftEKve3DT8hAtOBTMQIqBbOBO9FCMLCsIIjBkTTp37ZCzwOdOA1tsHLc5rnix7g", desc: "225° — Micro-Prong Diamond Pavé Cluster" },
+      { deg: 270, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB2iv6mVqN_FpngYijMGO9ld_x2VuVz_o9C9Sobt7XDnBe5CA1UHiHrvwYUcg996sOkwRzWz8CIT1s5awwA3jwEzGfyRpiqnj6XJLKg1Qpdxped2zwgYTq2KJWs6DfmbUXwE5SnupBf1fGjbbAjLfEUAtaHQPSnRXD33gu2gd1X7bcvJHTE-zf54zEfXAXQ2mIVckbCLY87bOKsq6ta5VXTSZo3Glis1r5BX1c0-P58VYDnd4h5L0YbVjxRVaBocux9ug", desc: "270° — Ear Climber Complement Pairing" },
+      { deg: 315, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAeJzAQb51fYUnrUCv6WmxrSxszrCFzfpygcGxUqO2RHzrrEPAezTQJk2fUuzKnEvrCykxTTCAHzxPmABTX2EKEXWx87h9uFqGC2te_8MQ0Wpfq3G3dx-QEkfc8zPvoVZlipPmZKgiG_BUecYAlVuLgM0oONnTrXvhnRYT_3KROt6AJH92mrUYCdxAeuXS4OT0klvGsQixcCGSKXGdVfSjXW0KA5vllTGX8QD-alpNBbNZNmngbqsVoZPAcQZ1tJLX1ag", desc: "315° — High-Angle Light Refraction" },
+      { deg: 360, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCuDAyqe1taHaivG_1PCu6QqmEYmalMd-vZ5McTrlG9Rql0-v45ZpeaEsIIleNgOh5wXM3cDSmNs3NnXx7QN7Z9e6ysK93h7Q5AV7UDV5LXkA_mmJBLgvYXotGsGgPnbjEHprf6TDG-PQJfN0He3CAnNzNRUr-sV2GsM9rNbFaPfdnvbF-VoYHkU2LgWT08mmWhu8VZgobCkQQnSYqPRG9jIgQBP77KmWJaxkZi_lkkGSbnV3BueBMFEJjAE7KCPVemTA", desc: "360° — Full Orbit Complete" }
+    ];
+
+    let currentAngleIndex = 0;
+    let autoSpinInterval = null;
+    let isZoomed = false;
+    let isHighContrast = false;
+
+    function applyAngle(index) {
+      currentAngleIndex = (index + anglesData.length) % anglesData.length;
+      const data = anglesData[currentAngleIndex];
+      
+      // Update image & description
+      turntableImage.style.opacity = '0.7';
+      turntableImage.style.transform = `scale(${isZoomed ? 1.3 : 1}) rotate(${(data.deg % 20) - 10}deg)`;
+      
+      setTimeout(() => {
+        turntableImage.src = data.image;
+        degreeIndicator.textContent = `Angle: ${data.desc}`;
+        turntableImage.style.opacity = '1';
+        rotationSlider.value = data.deg;
+      }, 120);
+    }
+
+    // Slider control
+    if (rotationSlider) {
+      rotationSlider.addEventListener('input', (e) => {
+        const val = parseInt(e.target.value, 10);
+        const closestIndex = Math.round(val / 45);
+        applyAngle(closestIndex);
+      });
+    }
+
+    if (prevAngleBtn) {
+      prevAngleBtn.addEventListener('click', () => applyAngle(currentAngleIndex - 1));
+    }
+    if (nextAngleBtn) {
+      nextAngleBtn.addEventListener('click', () => applyAngle(currentAngleIndex + 1));
+    }
+
+    // Auto-spin toggle
+    if (autoSpinBtn) {
+      autoSpinBtn.addEventListener('click', () => {
+        if (autoSpinInterval) {
+          clearInterval(autoSpinInterval);
+          autoSpinInterval = null;
+          autoSpinLabel.textContent = 'Auto Spin';
+          autoSpinBtn.classList.remove('bg-gold', 'text-obsidian-900');
+        } else {
+          autoSpinLabel.textContent = 'Stop Orbit';
+          autoSpinBtn.classList.add('bg-gold', 'text-obsidian-900');
+          autoSpinInterval = setInterval(() => {
+            applyAngle(currentAngleIndex + 1);
+          }, 1400);
+        }
+      });
+    }
+
+    // Zoom Toggle
+    if (zoomToggleBtn) {
+      zoomToggleBtn.addEventListener('click', () => {
+        isZoomed = !isZoomed;
+        turntableImage.style.transform = `scale(${isZoomed ? 1.35 : 1})`;
+        zoomToggleBtn.classList.toggle('text-gold', isZoomed);
+      });
+    }
+
+    // Light / Contrast toggle
+    if (lightToggleBtn) {
+      lightToggleBtn.addEventListener('click', () => {
+        isHighContrast = !isHighContrast;
+        turntableImage.classList.toggle('brightness-125', isHighContrast);
+        turntableImage.classList.toggle('contrast-125', isHighContrast);
+        lightToggleBtn.classList.toggle('text-gold', isHighContrast);
+      });
+    }
+  </script>
+<!-- Script for Currency Switcher, Toast and Cart Counter -->
+<script data-purpose="ecommerce-utilities">
+    let cartCount = 1;
+    const cartCountBadge = document.getElementById('cartCountBadge');
+    const toastNotification = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+    const currencySelector = document.getElementById('currency-selector');
+    const specPriceDisplay = document.getElementById('specPriceDisplay');
+    const specAltPriceDisplay = document.getElementById('specAltPriceDisplay');
+
+    // Dynamic Currency Exchange Rates Map
+    const rates = {
+      INR: { symbol: '₹', rate: 1, alt: '$1,020 USD' },
+      USD: { symbol: '$', rate: 0.012, alt: '₹84,500 INR' },
+      AED: { symbol: 'د.إ ', rate: 0.044, alt: '$1,020 USD' },
+      GBP: { symbol: '£', rate: 0.0095, alt: '$1,020 USD' }
+    };
+
+    if (currencySelector) {
+      currencySelector.addEventListener('change', (e) => {
+        const curr = e.target.value;
+        if (curr === 'USD') {
+          specPriceDisplay.textContent = '$1,020';
+          specAltPriceDisplay.textContent = '(₹84,500 INR)';
+        } else if (curr === 'INR') {
+          specPriceDisplay.textContent = '₹84,500';
+          specAltPriceDisplay.textContent = '($1,020 USD)';
+        } else if (curr === 'AED') {
+          specPriceDisplay.textContent = 'د.إ 3,745';
+          specAltPriceDisplay.textContent = '($1,020 USD)';
+        } else if (curr === 'GBP') {
+          specPriceDisplay.textContent = '£805';
+          specAltPriceDisplay.textContent = '($1,020 USD)';
+        }
+      });
+    }
+
+    window.triggerQuickAdd = function(itemName, price) {
+      cartCount++;
+      if (cartCountBadge) {
+        cartCountBadge.textContent = cartCount;
+        cartCountBadge.classList.add('scale-125');
+        setTimeout(() => cartCountBadge.classList.remove('scale-125'), 300);
+      }
+      
+      // Trigger toast
+      if (toastNotification && toastMessage) {
+        toastMessage.textContent = `${itemName} (${price}) placed into bag.`;
+        toastNotification.classList.remove('translate-y-24', 'opacity-0');
+        toastNotification.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(() => {
+          toastNotification.classList.remove('translate-y-0', 'opacity-100');
+          toastNotification.classList.add('translate-y-24', 'opacity-0');
+        }, 3200);
+      }
+    };
+
+    // Acquire 360 button listener
+    const acquire360Btn = document.getElementById('acquire360Btn');
+    if (acquire360Btn) {
+      acquire360Btn.addEventListener('click', () => {
+        triggerQuickAdd('The Noor Jahan Dual-Strand Pearl Medallion', '₹84,500');
+      });
+    }
+
+    // Search Bar dropdown toggle
+    const searchToggleBtn = document.getElementById('searchToggleBtn');
+    const searchBarDropdown = document.getElementById('searchBarDropdown');
+    const searchCloseBtn = document.getElementById('searchCloseBtn');
+
+    if (searchToggleBtn && searchBarDropdown) {
+      searchToggleBtn.addEventListener('click', () => {
+        searchBarDropdown.classList.toggle('hidden');
+      });
+    }
+    if (searchCloseBtn && searchBarDropdown) {
+      searchCloseBtn.addEventListener('click', () => {
+        searchBarDropdown.classList.add('hidden');
+      });
+    }
+
+    // Consultation submission confirmation
+    window.handleConsultationSubmit = function() {
+      const successEl = document.getElementById('consultationSuccess');
+      if (successEl) {
+        successEl.classList.remove('hidden');
+      }
+    };
+
+    // Filter pills toggling
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-pill').forEach(b => {
+          b.classList.remove('active', 'bg-gold', 'text-obsidian-900', 'font-semibold');
+          b.classList.add('border-stone-700', 'text-stone-300');
+        });
+        this.classList.add('active', 'bg-gold', 'text-obsidian-900', 'font-semibold');
+        this.classList.remove('border-stone-700', 'text-stone-300');
+      });
+    });
+
+    // Option selectors (Finish & Length)
+    document.querySelectorAll('.finish-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.finish-btn').forEach(b => {
+          b.classList.remove('border-gold', 'bg-gold/15', 'text-gold', 'active');
+          b.classList.add('border-stone-700', 'bg-obsidian-800', 'text-stone-300');
+        });
+        this.classList.add('border-gold', 'bg-gold/15', 'text-gold', 'active');
+        this.classList.remove('border-stone-700', 'bg-obsidian-800', 'text-stone-300');
+      });
+    });
+
+    document.querySelectorAll('.length-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.length-btn').forEach(b => {
+          b.classList.remove('border-gold', 'bg-gold/10', 'text-gold');
+          b.classList.add('border-stone-700', 'bg-obsidian-800', 'text-stone-300');
+        });
+        this.classList.add('border-gold', 'bg-gold/10', 'text-gold');
+        this.classList.remove('border-stone-700', 'bg-obsidian-800', 'text-stone-300');
+      });
+    });
+  </script>
+<!-- END: JavaScriptInteractivity -->
+</body></html>

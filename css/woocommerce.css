@@ -1,0 +1,363 @@
+/**
+ * ASMI Haute Joaillerie — WooCommerce Luxury Design System
+ * 
+ * Provides seamless high-end styling for native WooCommerce Checkout,
+ * Cart, Order Confirmation, and Account pages.
+ */
+
+:root {
+  --wc-gold: #d4af37;
+  --wc-gold-hover: #b8972e;
+  --wc-bg: #070707;
+  --wc-card: #111111;
+  --wc-card-border: rgba(212, 175, 55, 0.25);
+  --wc-input-bg: #18181b;
+  --wc-input-border: #27272a;
+  --wc-text: #f8fafc;
+  --wc-text-muted: #94a3b8;
+  --wc-font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --wc-font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body.light-mode {
+  --wc-gold: #996515;
+  --wc-gold-hover: #7a500f;
+  --wc-bg: #faf8f5;
+  --wc-card: #ffffff;
+  --wc-card-border: rgba(153, 101, 21, 0.25);
+  --wc-input-bg: #f8fafc;
+  --wc-input-border: #cbd5e1;
+  --wc-text: #0f172a;
+  --wc-text-muted: #64748b;
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT
+   ========================================================================== */
+
+.asmi-woocommerce-page-content,
+.woocommerce-page .site-main,
+.woocommerce .woocommerce-container {
+  color: var(--wc-text);
+  font-family: var(--wc-font-sans);
+}
+
+.woocommerce-container {
+  border-radius: 6px;
+  background: var(--wc-card);
+  border: 1px solid var(--wc-card-border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Titles */
+.woocommerce h2,
+.woocommerce h3,
+.woocommerce-billing-fields h3,
+.woocommerce-shipping-fields h3,
+#order_review_heading {
+  font-family: var(--wc-font-serif) !important;
+  color: var(--wc-gold) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  font-size: 1.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid var(--wc-card-border) !important;
+}
+
+/* ==========================================================================
+   NOTICES & ALERTS
+   ========================================================================== */
+
+.woocommerce-NoticeGroup,
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+  border-radius: 4px !important;
+  padding: 1rem 1.25rem 1rem 3rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 2rem !important;
+}
+
+.woocommerce-info {
+  background: rgba(212, 175, 55, 0.08) !important;
+  border-left: 4px solid var(--wc-gold) !important;
+  color: var(--wc-text) !important;
+}
+.woocommerce-info::before {
+  color: var(--wc-gold) !important;
+}
+
+.woocommerce-message {
+  background: rgba(16, 185, 129, 0.08) !important;
+  border-left: 4px solid #10b981 !important;
+  color: var(--wc-text) !important;
+}
+
+.woocommerce-error {
+  background: rgba(239, 68, 68, 0.08) !important;
+  border-left: 4px solid #ef4444 !important;
+  color: var(--wc-text) !important;
+}
+
+/* ==========================================================================
+   CHECKOUT FORM & FIELDS
+   ========================================================================== */
+
+.woocommerce form.checkout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+@media (max-width: 960px) {
+  .woocommerce form.checkout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.woocommerce form .form-row {
+  margin-bottom: 1rem !important;
+  padding: 0 !important;
+}
+
+.woocommerce form .form-row label {
+  display: block !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--wc-text-muted) !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.woocommerce form .form-row .required {
+  color: var(--wc-gold) !important;
+  text-decoration: none !important;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row select,
+.select2-container--default .select2-selection--single {
+  width: 100% !important;
+  background: var(--wc-input-bg) !important;
+  border: 1px solid var(--wc-input-border) !important;
+  color: var(--wc-text) !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-family: var(--wc-font-sans) !important;
+  border-radius: 4px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  box-sizing: border-box !important;
+}
+
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus,
+.woocommerce form .form-row select:focus,
+.select2-container--default.select2-container--open .select2-selection--single {
+  border-color: var(--wc-gold) !important;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2) !important;
+  outline: none !important;
+}
+
+/* ==========================================================================
+   ORDER REVIEW & PAYMENT BOX (RIGHT COLUMN)
+   ========================================================================== */
+
+#order_review {
+  background: var(--wc-input-bg);
+  border: 1px solid var(--wc-card-border);
+  border-radius: 6px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Shop Table */
+table.shop_table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border: none !important;
+  margin-bottom: 1.5rem !important;
+}
+
+table.shop_table th {
+  background: transparent !important;
+  color: var(--wc-gold) !important;
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.75rem 0.5rem !important;
+  border-bottom: 1px solid var(--wc-card-border) !important;
+  text-align: left !important;
+}
+
+table.shop_table td {
+  padding: 0.85rem 0.5rem !important;
+  border-bottom: 1px solid var(--wc-input-border) !important;
+  color: var(--wc-text) !important;
+  font-size: 0.85rem !important;
+}
+
+table.shop_table .order-total th,
+table.shop_table .order-total td {
+  font-size: 1.15rem !important;
+  font-family: var(--wc-font-serif) !important;
+  color: var(--wc-gold) !important;
+  font-weight: 700 !important;
+  border-top: 1px solid var(--wc-card-border) !important;
+  padding-top: 1rem !important;
+}
+
+/* Payment Gateway Accordion */
+#payment {
+  background: transparent !important;
+  border: none !important;
+}
+
+#payment ul.payment_methods {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 1.5rem 0 !important;
+  border: none !important;
+}
+
+#payment ul.payment_methods li {
+  background: var(--wc-card) !important;
+  border: 1px solid var(--wc-card-border) !important;
+  border-radius: 4px !important;
+  padding: 0.85rem 1rem !important;
+  margin-bottom: 0.75rem !important;
+  color: var(--wc-text) !important;
+  font-size: 0.875rem !important;
+}
+
+#payment ul.payment_methods li label {
+  cursor: pointer !important;
+  color: var(--wc-text) !important;
+  font-weight: 600 !important;
+  margin-left: 0.4rem !important;
+}
+
+#payment div.payment_box {
+  background: var(--wc-input-bg) !important;
+  color: var(--wc-text-muted) !important;
+  font-size: 0.8125rem !important;
+  padding: 0.85rem 1rem !important;
+  border-radius: 4px !important;
+  margin-top: 0.75rem !important;
+  border: 1px solid var(--wc-input-border) !important;
+}
+#payment div.payment_box::before {
+  display: none !important;
+}
+
+/* Place Order Button (Gold Luxury) */
+#payment #place_order,
+.woocommerce button.button.alt,
+.woocommerce a.button.alt,
+.woocommerce input.button.alt {
+  background: var(--wc-gold) !important;
+  color: #070707 !important;
+  font-family: var(--wc-font-sans) !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  padding: 1rem 2rem !important;
+  width: 100% !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25) !important;
+}
+
+#payment #place_order:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background: var(--wc-gold-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Secondary Buttons */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  background: var(--wc-input-bg) !important;
+  border: 1px solid var(--wc-card-border) !important;
+  color: var(--wc-gold) !important;
+  font-family: var(--wc-font-sans) !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 0.65rem 1.25rem !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+}
+
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+  background: var(--wc-card-border) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   ORDER RECEIVED (THANK YOU PAGE)
+   ========================================================================== */
+
+.woocommerce-order {
+  padding: 1rem 0;
+}
+
+.woocommerce-thankyou-order-received {
+  font-family: var(--wc-font-serif);
+  font-size: 1.85rem;
+  color: var(--wc-gold);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.woocommerce-order-overview {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+  gap: 1rem !important;
+  background: var(--wc-input-bg) !important;
+  border: 1px solid var(--wc-card-border) !important;
+  padding: 1.5rem !important;
+  border-radius: 6px !important;
+  list-style: none !important;
+  margin: 0 0 2rem 0 !important;
+}
+
+.woocommerce-order-overview li {
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--wc-text-muted) !important;
+  border: none !important;
+}
+
+.woocommerce-order-overview li strong {
+  display: block !important;
+  font-size: 1.1rem !important;
+  color: var(--wc-text) !important;
+  margin-top: 0.35rem !important;
+  text-transform: none !important;
+}
+
+.woocommerce-customer-details {
+  background: var(--wc-input-bg);
+  border: 1px solid var(--wc-card-border);
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+}

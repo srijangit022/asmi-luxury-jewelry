@@ -1,0 +1,122 @@
+[
+  {
+    "id": "patron_1792752415104",
+    "name": "Patron asmi",
+    "email": "patron.asmi@gmail.com",
+    "phone": "+91 98200 12345",
+    "tier": "Royal Heirloom Patron",
+    "memberId": "ASMI-VIP-7061",
+    "joinedDate": "October 2026",
+    "loginMethod": "google",
+    "ordersCount": 0,
+    "totalSpentINR": 0,
+    "lastLogin": 1792752415105,
+    "addresses": [
+      {
+        "id": "addr_1792752415105",
+        "tag": "Primary Residence",
+        "recipientName": "Patron asmi",
+        "phone": "+91 98200 12345",
+        "street": "402, Sea Face Promenade, Marine Lines",
+        "landmark": "Near Gateway Grand Promenade",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400020",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "patron_1792744262492",
+    "name": "Srijan Chatterjee",
+    "email": "rajcertificate2005@gmail.com",
+    "phone": "+91 919073366465",
+    "tier": "Royal Heirloom Patron",
+    "memberId": "ASMI-VIP-7773",
+    "joinedDate": "October 2026",
+    "loginMethod": "form_registration",
+    "ordersCount": 0,
+    "totalSpentINR": 0,
+    "lastLogin": 1792752449109,
+    "addresses": [
+      {
+        "id": "addr_1792744262494",
+        "tag": "Primary Residence",
+        "recipientName": "Srijan Chatterjee",
+        "phone": "+91 919073366465",
+        "street": "Swapna Nirh Doltala Bauipur Kolkata 700144",
+        "landmark": "Water Tank",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "pincode": "700144",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "patron_default_01",
+    "name": "Gayatri Roy",
+    "email": "gayatri.roy@gmail.com",
+    "phone": "+91 98200 12345",
+    "tier": "Royal Heirloom Patron",
+    "memberId": "ASMI-VIP-9160",
+    "joinedDate": "January 2025",
+    "loginMethod": "otp_phone",
+    "ordersCount": 2,
+    "totalSpentINR": 17998,
+    "lastLogin": 1791977814138,
+    "addresses": [
+      {
+        "id": "addr_gr_1",
+        "tag": "Primary Residence",
+        "recipientName": "Gayatri Roy",
+        "phone": "+91 98200 12345",
+        "street": "402, Sea Face Manor, Worli Sea Face",
+        "landmark": "Opposite Coastline Promenade",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400018",
+        "isDefault": true
+      },
+      {
+        "id": "addr_gr_2",
+        "tag": "Corporate Office",
+        "recipientName": "Gayatri Roy",
+        "phone": "+91 98200 12345",
+        "street": "Suite 801, Express Towers, Nariman Point",
+        "landmark": "Near Marine Drive",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400021",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": "patron_default_02",
+    "name": "Aaryahi Roy",
+    "email": "aaryahi.roy@luxury.com",
+    "phone": "+91 98765 43210",
+    "tier": "Royal Heirloom Patron",
+    "memberId": "ASMI-VIP-7841",
+    "joinedDate": "August 2025",
+    "loginMethod": "google",
+    "ordersCount": 1,
+    "totalSpentINR": 6499,
+    "lastLogin": 1791977814138,
+    "addresses": [
+      {
+        "id": "addr_ar_1",
+        "tag": "Heritage Villa",
+        "recipientName": "Aaryahi Roy",
+        "phone": "+91 98765 43210",
+        "street": "12, Altamount Road, Cumballa Hill",
+        "landmark": "Near Villa Vista",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400026",
+        "isDefault": true
+      }
+    ]
+  }
+]

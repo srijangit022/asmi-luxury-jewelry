@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/$USER/public_html/
+    - /bin/cp -R index.html admin.html api.php .htaccess assets css js data $DEPLOYPATH
+    - /bin/chmod -R 755 $DEPLOYPATH/data
+    - /bin/chmod -R 755 $DEPLOYPATH/assets

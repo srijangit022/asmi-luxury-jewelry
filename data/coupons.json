@@ -1,0 +1,34 @@
+[
+  {
+    "code": "ROYAL10",
+    "type": "percent",
+    "value": 10,
+    "minOrder": 0,
+    "description": "10% VIP Privilege Discount",
+    "active": true
+  },
+  {
+    "code": "ASMI500",
+    "type": "flat",
+    "value": 500,
+    "minOrder": 3000,
+    "description": "₹500 Atelier Welcome Voucher",
+    "active": true
+  },
+  {
+    "code": "ASMI2025",
+    "type": "flat",
+    "value": 500,
+    "minOrder": 3000,
+    "description": "₹500 Festive Celebration Voucher",
+    "active": true
+  },
+  {
+    "code": "WELCOME",
+    "type": "flat",
+    "value": 300,
+    "minOrder": 2000,
+    "description": "₹300 First Acquisition Discount",
+    "active": true
+  }
+]

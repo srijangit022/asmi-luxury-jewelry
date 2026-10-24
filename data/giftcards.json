@@ -1,0 +1,36 @@
+[
+  {
+    "code": "GIFT-EMERALD-15000",
+    "balance": 15000,
+    "recipient": "Gayatri Roy",
+    "recipientEmail": "gayatri.roy@gmail.com",
+    "active": true,
+    "issuedDate": "4 Oct 2026",
+    "lastDispatched": 1791137422987,
+    "lastDispatchedDate": "4/10/2026, 11:40:22 pm"
+  },
+  {
+    "code": "GIFT-ROYAL-1000",
+    "balance": 1000,
+    "recipient": "Gayatri Roy",
+    "recipientEmail": "gayatri.roy@gmail.com",
+    "active": true,
+    "issuedDate": "15 Sep 2026"
+  },
+  {
+    "code": "GIFT-EMERALD-2500",
+    "balance": 2500,
+    "recipient": "Aaryahi Roy",
+    "recipientEmail": "aaryahi.roy@luxury.com",
+    "active": true,
+    "issuedDate": "18 Sep 2026"
+  },
+  {
+    "code": "GIFT-PEARL-5000",
+    "balance": 5000,
+    "recipient": "Meera Singhania",
+    "recipientEmail": "meera.singhania@gmail.com",
+    "active": true,
+    "issuedDate": "20 Sep 2026"
+  }
+]

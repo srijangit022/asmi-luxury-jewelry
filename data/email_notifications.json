@@ -1,0 +1,612 @@
+[
+  {
+    "id": "eml-1792771610167-164",
+    "type": "patron_order_confirmation",
+    "recipient": "gayatri.roy@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "✨ ORDER CONFIRMED: #ASM-2026-529124 - ASMI Haute Joaillerie Heirloom Order Confirmation",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-23T16:06:50.167Z",
+    "formattedTime": "23/10/2026, 9:36:50 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-529124",
+      "customerName": "Gayatri Roy",
+      "patronEmail": "gayatri.roy@gmail.com",
+      "amountINR": 91,
+      "isTest": false
+    },
+    "textSummary": "ASMI HAUTE JOAILLERIE - HEIRLOOM ORDER CONFIRMATION\n===================================================\n\nDear Esteemed Patron Gayatri Roy,\n\nThank you for choosing ASMI Haute Joaillerie. We are delighted to confirm that your bespoke fine jewelry order #ASM-2026-529124 has been officially confirmed and placed in our master artisan queue.\n\nORDER DETAI",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2ea94751ddasm2268145ad.28 - gsmtp"
+  },
+  {
+    "id": "eml-1792771607312-18",
+    "type": "order_notification",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-529124 - ₹91 - Gayatri Roy",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-23T16:06:47.312Z",
+    "formattedTime": "23/10/2026, 9:36:47 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-529124",
+      "customerName": "Gayatri Roy",
+      "amountINR": 91,
+      "isTest": false
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-529124\nPlaced At       : October 23, 2026\nGrand Total Paid: ₹91 (Razorpay Secure Gateway (CARD · ",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2ea94751661sm2198035ad.33 - gsmtp"
+  },
+  {
+    "id": "eml-1792753870990-338",
+    "type": "auth_otp",
+    "recipient": "rajcertificate2005@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔑 6010 is your ASMI Haute Joaillerie Verification Passcode",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-23T11:11:10.990Z",
+    "formattedTime": "23/10/2026, 4:41:10 pm",
+    "metadata": {
+      "code": "6010",
+      "customerName": "Srijan Chatterjee"
+    },
+    "textSummary": "ASMI Haute Joaillerie Atelier\n\nYour 4-Digit Verification Passcode: 6010\nValid for 5 minutes. Do not share with anyone.\n\nASMI Concierge: concierge@asmijewelry.com",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3adcb1b167fsm3165749a91.9 - gsmtp"
+  },
+  {
+    "id": "eml-1792753748225-642",
+    "type": "auth_otp",
+    "recipient": "test.queen@luxury.in",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔑 8166 is your ASMI Haute Joaillerie Verification Passcode",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-23T11:09:08.225Z",
+    "formattedTime": "23/10/2026, 4:39:08 pm",
+    "metadata": {
+      "code": "8166",
+      "customerName": "Queen Ananya"
+    },
+    "textSummary": "ASMI Haute Joaillerie Atelier\n\nYour 4-Digit Verification Passcode: 8166\nValid for 5 minutes. Do not share with anyone.\n\nASMI Concierge: concierge@asmijewelry.com",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3ada490e5f8sm8356213a91.9 - gsmtp"
+  },
+  {
+    "id": "eml-1792753720972-431",
+    "type": "auth_otp",
+    "recipient": "rajcertificate2005@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔑 1007 is your ASMI Haute Joaillerie Verification Passcode",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-23T11:08:40.972Z",
+    "formattedTime": "23/10/2026, 4:38:40 pm",
+    "metadata": {
+      "code": "1007",
+      "customerName": "Srijan Chatterjee"
+    },
+    "textSummary": "ASMI Haute Joaillerie Atelier\n\nYour 4-Digit Verification Passcode: 1007\nValid for 5 minutes. Do not share with anyone.\n\nASMI Concierge: concierge@asmijewelry.com",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3adca62e477sm3219735a91.2 - gsmtp"
+  },
+  {
+    "id": "eml-1792753718529-891",
+    "type": "auth_otp",
+    "recipient": "patron.vip@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔑 2121 is your ASMI Haute Joaillerie Verification Passcode",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-23T11:08:38.529Z",
+    "formattedTime": "23/10/2026, 4:38:38 pm",
+    "metadata": {
+      "code": "2121",
+      "customerName": "Maharani Priya"
+    },
+    "textSummary": "ASMI Haute Joaillerie Atelier\n\nYour 4-Digit Verification Passcode: 2121\nValid for 5 minutes. Do not share with anyone.\n\nASMI Concierge: concierge@asmijewelry.com",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2ea7b4fe14fsm8743315ad.70 - gsmtp"
+  },
+  {
+    "id": "eml-1791881255952-546",
+    "type": "order_notification",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-822945 - ₹6,126 - Srijan Chatterjee",
+    "status": "smtp_error_saved_to_vault",
+    "timestamp": "2026-10-13T08:47:35.953Z",
+    "formattedTime": "13/10/2026, 2:17:35 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-822945",
+      "customerName": "Srijan Chatterjee",
+      "amountINR": 6126,
+      "isTest": false
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-822945\nPlaced At       : October 13, 2026\nGrand Total Paid: ₹6,126 (Razorpay Secure Gateway (CARD",
+    "errorMessage": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3ab36ed0daesm20237877a91.5 - gsmtp"
+  },
+  {
+    "id": "eml-1791283034018-344",
+    "type": "order_notification",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔔 [TEST] ASMI Master Atelier Order Notification Dispatcher (Target: srijanofficial022@gmail.com)",
+    "status": "delivered",
+    "timestamp": "2026-10-06T10:37:14.018Z",
+    "formattedTime": "6/10/2026, 4:07:14 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-TEST-DELIVERY",
+      "customerName": "Maharani Gayatri",
+      "amountINR": 7774,
+      "isTest": true
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-TEST-DELIVERY\nPlaced At       : 6/10/2026, 4:07:14 pm\nGrand Total Paid: ₹7,774 (Online Payment Ga",
+    "messageId": "<c67c1596-1de3-ee78-295c-4e7194f7928f@gmail.com>"
+  },
+  {
+    "id": "eml-1791281652128-164",
+    "type": "order_cancellation_patron",
+    "recipient": "patron.asmi@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "✨ ASMI Haute Joaillerie: Confirmation of Cancellation - Order #ASM-2026-520702",
+    "status": "delivered",
+    "timestamp": "2026-10-06T10:14:12.128Z",
+    "formattedTime": "6/10/2026, 3:44:12 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-520702",
+      "patronName": "Patron asmi",
+      "patronEmail": "patron.asmi@gmail.com"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - CANCELLATION CONFIRMATION\n================================================================================\nDear Patron asmi,\n\nYour cancellation request for Order #ASM-2026-520702 has been processed.\n\nREFUND NOTICE:\nYour refund will be credited ",
+    "messageId": "<42ca07f4-2984-fae9-b751-5f01562d35ad@gmail.com>"
+  },
+  {
+    "id": "eml-1791281652117-103",
+    "type": "order_cancellation_admin",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🚨 [ORDER CANCELLATION] Full Order #ASM-2026-520702 Cancelled - Patron asmi",
+    "status": "delivered",
+    "timestamp": "2026-10-06T10:14:12.117Z",
+    "formattedTime": "6/10/2026, 3:44:12 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-520702",
+      "patronName": "Patron asmi",
+      "reason": "Changed mind regarding size, will order choker instead",
+      "isFullOrder": true
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - ORDER ITEM CANCELLATION ALERT\n================================================================================\nOrder Reference : #ASM-2026-520702\nCancelled At    : 6/10/2026, 3:44:12 pm\nPayment Mode    : Razorpay Secure Gateway (CARD · pay_TkYx",
+    "messageId": "<f434adaf-0aab-50a7-0f3d-14bcf5d1bf4c@gmail.com>"
+  },
+  {
+    "id": "eml-1791276770216-795",
+    "type": "order_cancellation_admin",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🚨 [ORDER CANCELLATION] Full Order #ASM-2026-520702 Cancelled - Patron asmi",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:52:50.216Z",
+    "formattedTime": "6/10/2026, 2:22:50 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-520702",
+      "patronName": "Patron asmi",
+      "reason": "Selected incorrect necklace length or gold finish",
+      "isFullOrder": true
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - ORDER ITEM CANCELLATION ALERT\n================================================================================\nOrder Reference : #ASM-2026-520702\nCancelled At    : 6/10/2026, 2:22:50 pm\nPayment Mode    : Razorpay Secure Gateway (CARD · pay_TkYx",
+    "messageId": "<4ec2c376-4ccf-544b-1947-cb16d96c23a9@gmail.com>"
+  },
+  {
+    "id": "eml-1791276770220-75",
+    "type": "order_cancellation_patron",
+    "recipient": "patron.asmi@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "✨ ASMI Haute Joaillerie: Confirmation of Cancellation - Order #ASM-2026-520702",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:52:50.220Z",
+    "formattedTime": "6/10/2026, 2:22:50 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-520702",
+      "patronName": "Patron asmi",
+      "patronEmail": "patron.asmi@gmail.com"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - CANCELLATION CONFIRMATION\n================================================================================\nDear Patron asmi,\n\nYour cancellation request for Order #ASM-2026-520702 has been processed.\n\nREFUND NOTICE:\nYour refund will be credited ",
+    "messageId": "<03c92e07-a756-1bc0-ed04-68e5d526a52e@gmail.com>"
+  },
+  {
+    "id": "eml-1791276719147-460",
+    "type": "order_notification",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-520702 - ₹5,046 - Patron asmi",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:51:59.147Z",
+    "formattedTime": "6/10/2026, 2:21:59 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-520702",
+      "customerName": "Patron asmi",
+      "amountINR": 5046,
+      "isTest": false
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-520702\nPlaced At       : October 6, 2026\nGrand Total Paid: ₹5,046 (Razorpay Secure Gateway (CARD ",
+    "messageId": "<b1b6a56f-43ac-4caa-6fa1-333ebe82d82a@gmail.com>"
+  },
+  {
+    "id": "eml-1791276256544-257",
+    "type": "order_cancellation_admin",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🚨 [ORDER CANCELLATION] Full Order #ASM-2026-784109 Cancelled - Aaryahi Roy",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:44:16.544Z",
+    "formattedTime": "6/10/2026, 2:14:16 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-784109",
+      "patronName": "Aaryahi Roy",
+      "reason": "Selected incorrect size / test",
+      "isFullOrder": true
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - ORDER ITEM CANCELLATION ALERT\n================================================================================\nOrder Reference : #ASM-2026-784109\nCancelled At    : 6/10/2026, 2:14:16 pm\nPayment Mode    : UPI QR (Instant Verified) (BIS-916-PRL84",
+    "messageId": "<71b10a76-2cda-efe6-8197-8f5874d88496@gmail.com>"
+  },
+  {
+    "id": "eml-1791276256550-543",
+    "type": "order_cancellation_patron",
+    "recipient": "aaryahi.roy@luxury.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "✨ ASMI Haute Joaillerie: Confirmation of Cancellation - Order #ASM-2026-784109",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:44:16.550Z",
+    "formattedTime": "6/10/2026, 2:14:16 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-784109",
+      "patronName": "Aaryahi Roy",
+      "patronEmail": "aaryahi.roy@luxury.com"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - CANCELLATION CONFIRMATION\n================================================================================\nDear Aaryahi Roy,\n\nYour cancellation request for Order #ASM-2026-784109 has been processed.\n\nREFUND NOTICE:\nYour refund will be credited ",
+    "messageId": "<08a34b53-d724-e61a-4a9f-9d9eaf9b4350@gmail.com>"
+  },
+  {
+    "id": "eml-1791276191723-242",
+    "type": "order_cancellation_patron",
+    "recipient": "aaryahi.roy@luxury.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "✨ ASMI Haute Joaillerie: Confirmation of Cancellation - Order #ASM-2026-784109",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:43:11.723Z",
+    "formattedTime": "6/10/2026, 2:13:11 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-784109",
+      "patronName": "Aaryahi Roy",
+      "patronEmail": "aaryahi.roy@luxury.com"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - CANCELLATION CONFIRMATION\n================================================================================\nDear Aaryahi Roy,\n\nYour cancellation request for Order #ASM-2026-784109 has been processed.\n\nREFUND NOTICE:\nYour refund will be credited ",
+    "messageId": "<558717d1-09b6-0aa5-0d07-c34ab71205e6@gmail.com>"
+  },
+  {
+    "id": "eml-1791276191717-349",
+    "type": "order_cancellation_admin",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🚨 [ORDER CANCELLATION] Full Order #ASM-2026-784109 Cancelled - Aaryahi Roy",
+    "status": "delivered",
+    "timestamp": "2026-10-06T08:43:11.717Z",
+    "formattedTime": "6/10/2026, 2:13:11 pm",
+    "metadata": {
+      "orderNumber": "ASM-2026-784109",
+      "patronName": "Aaryahi Roy",
+      "reason": "Bespoke customization / test request",
+      "isFullOrder": true
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - ORDER ITEM CANCELLATION ALERT\n================================================================================\nOrder Reference : #ASM-2026-784109\nCancelled At    : 6/10/2026, 2:13:11 pm\nPayment Mode    : UPI QR (Instant Verified) (BIS-916-PRL84",
+    "messageId": "<16c9148f-7ebd-3e5c-d7f9-1aecf78f21b8@gmail.com>"
+  },
+  {
+    "id": "eml-1791137428372-816",
+    "type": "coupon_broadcast",
+    "recipient": "patron.asmi@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 VIP Privilege Invitation: WELCOME (₹300 FLAT) | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:10:28.372Z",
+    "formattedTime": "4/10/2026, 11:40:28 pm",
+    "metadata": {
+      "campaignCode": "WELCOME",
+      "patronId": "patron_1790871561302",
+      "patronName": "Patron asmi",
+      "audience": "all"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Patron asmi,\n\nAtelier seasonal acquisition privileges.\n\nPROMOTION PRIVILEGE:\n------------------------------------------------",
+    "messageId": "<a6a2e152-0bdc-32be-913a-65e18d07bf08@gmail.com>"
+  },
+  {
+    "id": "eml-1791137428373-987",
+    "type": "coupon_broadcast",
+    "recipient": "gayatri.roy@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 VIP Privilege Invitation: WELCOME (₹300 FLAT) | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:10:28.373Z",
+    "formattedTime": "4/10/2026, 11:40:28 pm",
+    "metadata": {
+      "campaignCode": "WELCOME",
+      "patronId": "patron_default_01",
+      "patronName": "Gayatri Roy",
+      "audience": "all"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Gayatri Roy,\n\nAtelier seasonal acquisition privileges.\n\nPROMOTION PRIVILEGE:\n------------------------------------------------",
+    "messageId": "<2058479a-e5c7-e6a4-6aa2-90ad5cadd38e@gmail.com>"
+  },
+  {
+    "id": "eml-1791137428373-817",
+    "type": "coupon_broadcast",
+    "recipient": "aaryahi.roy@luxury.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 VIP Privilege Invitation: WELCOME (₹300 FLAT) | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:10:28.373Z",
+    "formattedTime": "4/10/2026, 11:40:28 pm",
+    "metadata": {
+      "campaignCode": "WELCOME",
+      "patronId": "patron_default_02",
+      "patronName": "Aaryahi Roy",
+      "audience": "all"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Aaryahi Roy,\n\nAtelier seasonal acquisition privileges.\n\nPROMOTION PRIVILEGE:\n------------------------------------------------",
+    "messageId": "<7c0f49fd-ad95-f1ba-6237-f36b81eeb37e@gmail.com>"
+  },
+  {
+    "id": "eml-1791137422989-227",
+    "type": "giftcard_dispatch",
+    "recipient": "gayatri.roy@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🎁 Your Digital Gift Card: ₹15,000 Store Credit | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:10:22.989Z",
+    "formattedTime": "4/10/2026, 11:40:22 pm",
+    "metadata": {
+      "giftCardCode": "GIFT-EMERALD-15000",
+      "recipient": "Gayatri Roy",
+      "recipientEmail": "gayatri.roy@gmail.com",
+      "balance": 15000
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - DIGITAL GIFT CARD STORE CREDIT\n================================================================================\nRecipient : Gayatri Roy\nBalance   : ₹15,000 INR\nCard Code : GIFT-EMERALD-15000\nIssued    : 4 Oct 2026\n\nComplimentary high-jewelry cr",
+    "messageId": "<35a41ff1-f869-276f-89f1-8b4e4f19f3db@gmail.com>"
+  },
+  {
+    "id": "eml-1791137419662-145",
+    "type": "coupon_dispatch",
+    "recipient": "gayatri.roy@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 Exclusive Privilege: ROYAL10 - 10% OFF | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:10:19.662Z",
+    "formattedTime": "4/10/2026, 11:40:19 pm",
+    "metadata": {
+      "couponCode": "ROYAL10",
+      "recipientName": "Gayatri Roy",
+      "recipientEmail": "gayatri.roy@gmail.com",
+      "discount": 10
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Gayatri Roy,\n\nEnjoy your 10% privilege discount on our new Rose Pearl collection.\n\nPROMOTION PRIVILEGE:\n---------------------",
+    "messageId": "<c72a2455-9920-be14-970f-7ab75810c6c7@gmail.com>"
+  },
+  {
+    "id": "eml-1791137379027-279",
+    "type": "coupon_broadcast",
+    "recipient": "patron.asmi@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 VIP Privilege Invitation: ASMI500 (₹500 FLAT) | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:09:39.027Z",
+    "formattedTime": "4/10/2026, 11:39:39 pm",
+    "metadata": {
+      "campaignCode": "ASMI500",
+      "patronId": "patron_1790871561302",
+      "patronName": "Patron asmi",
+      "audience": "all"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Patron asmi,\n\nFestive Season Celebrations Atelier Privilege Voucher.\n\nPROMOTION PRIVILEGE:\n----------------------------------",
+    "messageId": "<f9f36183-7c3a-d8c9-b524-64ff819a7e95@gmail.com>"
+  },
+  {
+    "id": "eml-1791137379028-184",
+    "type": "coupon_broadcast",
+    "recipient": "gayatri.roy@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 VIP Privilege Invitation: ASMI500 (₹500 FLAT) | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:09:39.028Z",
+    "formattedTime": "4/10/2026, 11:39:39 pm",
+    "metadata": {
+      "campaignCode": "ASMI500",
+      "patronId": "patron_default_01",
+      "patronName": "Gayatri Roy",
+      "audience": "all"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Gayatri Roy,\n\nFestive Season Celebrations Atelier Privilege Voucher.\n\nPROMOTION PRIVILEGE:\n----------------------------------",
+    "messageId": "<bb1da24e-779c-5129-2ddd-99378aef564c@gmail.com>"
+  },
+  {
+    "id": "eml-1791137379028-398",
+    "type": "coupon_broadcast",
+    "recipient": "aaryahi.roy@luxury.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 VIP Privilege Invitation: ASMI500 (₹500 FLAT) | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:09:39.028Z",
+    "formattedTime": "4/10/2026, 11:39:39 pm",
+    "metadata": {
+      "campaignCode": "ASMI500",
+      "patronId": "patron_default_02",
+      "patronName": "Aaryahi Roy",
+      "audience": "all"
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Aaryahi Roy,\n\nFestive Season Celebrations Atelier Privilege Voucher.\n\nPROMOTION PRIVILEGE:\n----------------------------------",
+    "messageId": "<b91a89a5-1d30-8d40-3d97-8664894e0539@gmail.com>"
+  },
+  {
+    "id": "eml-1791137375922-844",
+    "type": "giftcard_dispatch",
+    "recipient": "aaryahi.roy@luxury.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🎁 Your Digital Gift Card: ₹5,000 Store Credit | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:09:35.922Z",
+    "formattedTime": "4/10/2026, 11:39:35 pm",
+    "metadata": {
+      "giftCardCode": "GIFT-TEST-9999",
+      "recipient": "Aaryahi Roy",
+      "recipientEmail": "aaryahi.roy@luxury.com",
+      "balance": 5000
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - DIGITAL GIFT CARD STORE CREDIT\n================================================================================\nRecipient : Aaryahi Roy\nBalance   : ₹5,000 INR\nCard Code : GIFT-TEST-9999\nIssued    : 4 Oct 2026\n\nA special token of appreciation fo",
+    "messageId": "<c1520afd-9df4-b5b5-311e-e3b64dab9dbe@gmail.com>"
+  },
+  {
+    "id": "eml-1791137358396-535",
+    "type": "coupon_dispatch",
+    "recipient": "gayatri.roy@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "👑 Exclusive Privilege: ROYAL10 - 10% OFF | ASMI Haute Joaillerie",
+    "status": "delivered",
+    "timestamp": "2026-10-04T18:09:18.396Z",
+    "formattedTime": "4/10/2026, 11:39:18 pm",
+    "metadata": {
+      "couponCode": "ROYAL10",
+      "recipientName": "Gayatri Roy",
+      "recipientEmail": "gayatri.roy@gmail.com",
+      "discount": 10
+    },
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - EXCLUSIVE PATRON PRIVILEGE TOKEN\n================================================================================\nDear Gayatri Roy,\n\nEnjoy your bespoke privilege.\n\nPROMOTION PRIVILEGE:\n-----------------------------------------------------------",
+    "messageId": "<08295d08-0ed9-acdf-17ac-e74c2cb16c65@gmail.com>"
+  },
+  {
+    "id": "eml-1790968908220-948",
+    "orderNumber": "ASM-2026-628909",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-628909 - ₹6,076 - Patron asmi",
+    "customerName": "Patron asmi",
+    "amountINR": 6076,
+    "status": "delivered",
+    "timestamp": "2026-10-02T19:21:48.220Z",
+    "formattedTime": "3/10/2026, 12:51:48 am",
+    "isTest": false,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-628909\nPlaced At       : October 3, 2026\nGrand Total Paid: ₹6,076 (Instant UPI (Google Pay))\nPaym",
+    "messageId": "<ff2caf9e-8829-4d24-6295-498e47476420@gmail.com>"
+  },
+  {
+    "id": "eml-1790968875702-551",
+    "orderNumber": "ASM-2026-544882",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-544882 - ₹9,269 - Patron asmi",
+    "customerName": "Patron asmi",
+    "amountINR": 9269,
+    "status": "delivered",
+    "timestamp": "2026-10-02T19:21:15.702Z",
+    "formattedTime": "3/10/2026, 12:51:15 am",
+    "isTest": false,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-544882\nPlaced At       : October 3, 2026\nGrand Total Paid: ₹9,269 (Instant UPI (Google Pay))\nPaym",
+    "messageId": "<f2483587-9958-766b-74f9-84693f8a7f83@gmail.com>"
+  },
+  {
+    "id": "eml-1790968560944-217",
+    "orderNumber": "ASM-2026-425408",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-425408 - ₹6,076 - Patron asmi",
+    "customerName": "Patron asmi",
+    "amountINR": 6076,
+    "status": "delivered",
+    "timestamp": "2026-10-02T19:16:00.944Z",
+    "formattedTime": "3/10/2026, 12:46:00 am",
+    "isTest": false,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-425408\nPlaced At       : October 3, 2026\nGrand Total Paid: ₹6,076 (Instant UPI (Google Pay))\nPaym",
+    "messageId": "<f7559fff-c4eb-5a42-c72e-20708f5a1164@gmail.com>"
+  },
+  {
+    "id": "eml-1790968465539-738",
+    "orderNumber": "ASM-2026-496632",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-496632 - ₹6,694 - Patron asmi",
+    "customerName": "Patron asmi",
+    "amountINR": 6694,
+    "status": "delivered",
+    "timestamp": "2026-10-02T19:14:25.539Z",
+    "formattedTime": "3/10/2026, 12:44:25 am",
+    "isTest": false,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-496632\nPlaced At       : October 3, 2026\nGrand Total Paid: ₹6,694 (Instant UPI (Google Pay))\nPaym",
+    "messageId": "<daa75aca-8ac6-5304-6bfc-45b29fc3d8d7@gmail.com>"
+  },
+  {
+    "id": "eml-1790968238268-531",
+    "orderNumber": "ASM-2026-797511",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-797511 - ₹8,239 - Patron asmi",
+    "customerName": "Patron asmi",
+    "amountINR": 8239,
+    "status": "delivered",
+    "timestamp": "2026-10-02T19:10:38.268Z",
+    "formattedTime": "3/10/2026, 12:40:38 am",
+    "isTest": false,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-797511\nPlaced At       : October 3, 2026\nGrand Total Paid: ₹8,239 (Instant UPI (Google Pay))\nPaym",
+    "messageId": "<24516529-82bd-3291-902c-230f56cffb03@gmail.com>"
+  },
+  {
+    "id": "eml-1790967963865-421",
+    "orderNumber": "ASM-2026-146742",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔔 [TEST] ASMI Master Atelier Order Notification Dispatcher (Target: srijanofficial022@gmail.com)",
+    "customerName": "Her Highness Maharani Gayatri Devi",
+    "amountINR": 15294,
+    "status": "delivered",
+    "timestamp": "2026-10-02T19:06:03.865Z",
+    "formattedTime": "3/10/2026, 12:36:03 am",
+    "isTest": true,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-146742\nPlaced At       : 3 October 2026\nGrand Total Paid: ₹15,294 (Razorpay (Verified Instant UPI",
+    "messageId": "<c25af203-7e23-fc16-e94d-5e6e20d876b0@gmail.com>"
+  },
+  {
+    "id": "eml-1790967408808-524",
+    "orderNumber": "ASM-2026-240922",
+    "recipient": "srijanofficial022@gmail.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🛎️ NEW ORDER RECEIVED: #ASM-2026-240922 - ₹6,076 - Patron asmi",
+    "customerName": "Patron asmi",
+    "amountINR": 6076,
+    "status": "dispatched_vaulted",
+    "timestamp": "2026-10-02T18:56:48.808Z",
+    "formattedTime": "3/10/2026, 12:26:48 am",
+    "isTest": false,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-240922\nPlaced At       : October 3, 2026\nGrand Total Paid: ₹6,076 (Instant UPI (Google Pay))\nPaym",
+    "notes": "Email formatted and stored in persistent notification vault. (Ready for direct SMTP delivery if credentials provided)."
+  },
+  {
+    "id": "eml-1790966925359-315",
+    "orderNumber": "ASM-2026-156994",
+    "recipient": "orders@asmijewelry.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔔 [TEST] ASMI Master Atelier Order Notification Dispatcher (Target: orders@asmijewelry.com)",
+    "customerName": "Her Highness Maharani Gayatri Devi",
+    "amountINR": 15294,
+    "status": "dispatched_vaulted",
+    "timestamp": "2026-10-02T18:48:45.359Z",
+    "formattedTime": "3/10/2026, 12:18:45 am",
+    "isTest": true,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-156994\nPlaced At       : 3 October 2026\nGrand Total Paid: ₹15,294 (Razorpay (Verified Instant UPI",
+    "notes": "Email formatted and stored in persistent notification vault. (Ready for direct SMTP delivery if credentials provided)."
+  },
+  {
+    "id": "eml-1790966715552-913",
+    "orderNumber": "ASM-2026-585510",
+    "recipient": "orders@asmijewelry.com",
+    "senderName": "ASMI Master Atelier Orders",
+    "subject": "🔔 [TEST] ASMI Master Atelier Order Notification Dispatcher (Target: orders@asmijewelry.com)",
+    "customerName": "Her Highness Maharani Gayatri Devi",
+    "amountINR": 15294,
+    "status": "dispatched_vaulted",
+    "timestamp": "2026-10-02T18:45:15.552Z",
+    "formattedTime": "3/10/2026, 12:15:15 am",
+    "isTest": true,
+    "textSummary": "\n================================================================================\nASMI HAUTE JOAILLERIE - MASTER ATELIER NEW ORDER NOTIFICATION\n================================================================================\nOrder Reference : #ASM-2026-585510\nPlaced At       : 3 October 2026\nGrand Total Paid: ₹15,294 (Razorpay (Verified Instant UPI",
+    "notes": "Email formatted and stored in persistent notification vault. (Ready for direct SMTP delivery if credentials provided)."
+  }
+]

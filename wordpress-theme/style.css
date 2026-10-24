@@ -1,0 +1,18 @@
+/*
+Theme Name: ASMI Luxury Jewelry Store
+Theme URI: https://asmijewelry.com
+Author: ASMI Haute Joaillerie Atelier
+Author URI: https://asmijewelry.com
+Description: Haute Joaillerie Luxury E-Commerce Theme for Fine Pearls, Emeralds & Handcrafted BIS 916 Hallmarked Jewelry with full WooCommerce compatibility and Master Atelier Admin support.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: Proprietary
+License URI: https://asmijewelry.com/terms
+Text Domain: asmi-jewelry
+Tags: e-commerce, luxury, woocommerce, responsive-layout, custom-menu, featured-images, theme-options
+*/
+
+/* Core Theme Styles are loaded via css/styles.css through functions.php */
+@import url('css/styles.css');
