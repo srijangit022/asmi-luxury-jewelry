@@ -6631,7 +6631,7 @@ Logistics: BlueDart Armored Air Express (Insured)`;
             <form onsubmit="adminManager.handleChangePassword(event)" style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;">
               <div>
                 <label class="label-micro" style="color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Current Administrator Passkey *</label>
-                <input type="password" id="adminCurrentPassword" required class="form-input" placeholder="Enter current password (e.g. Asmi@2026)" autocomplete="current-password" />
+                <input type="password" id="adminCurrentPassword" required class="form-input" placeholder="Enter current password" autocomplete="current-password" />
               </div>
 
               <div>

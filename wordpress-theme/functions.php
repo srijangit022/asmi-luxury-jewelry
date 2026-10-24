@@ -2845,7 +2845,7 @@ function asmi_render_wp_admin_atelier_redirect() {
                 Access the full single-page administrative suite for live catalog editing, 10-slot multi-angle photo uploads, real-time theme palette switching, coupon issuance, SEO meta previews, and live client chat concierges.
             </p>
             <a href="<?php echo esc_url($store_url); ?>" target="_blank" style="background: #d4af37; color: #111111; font-weight: 700; padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em;">
-                <span class="dashicons dashicons-external"></span> Open Master Atelier Console (Password: Asmi@2026)
+                <span class="dashicons dashicons-external"></span> Open Master Atelier Console
             </a>
         </div>
     </div>
